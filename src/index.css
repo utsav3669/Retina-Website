@@ -1,0 +1,256 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  
+  /* Primary Brand Colors */
+  --color-brand-blue: #164B9B;
+  --color-brand-blue-hover: #0B2F6B;
+  --color-brand-navy: #0B2F6B;
+  
+  /* Red Accent Colors */
+  --color-brand-red: #E21F26;
+  --color-brand-red-hover: #B91C24;
+  --color-brand-red-deep: #B91C24;
+
+  /* Light Brand Colors */
+  --color-brand-blue-soft: #EAF3FF;
+  --color-brand-blue-light: #F4F8FD;
+
+  /* Neutral Colors */
+  --color-brand-white: #FFFFFF;
+  --color-brand-offwhite: #FAFBFC;
+  --color-brand-lightgray: #F3F5F8;
+  --color-brand-border: #E2E6EC;
+
+  /* Text Colors */
+  --color-brand-text-primary: #172033;
+  --color-brand-text-secondary: #667085;
+  --color-brand-text-muted: #98A2B3;
+}
+
+/* Base resets & typography */
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #172033;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
+  font-weight: 700;
+  color: inherit;
+}
+
+/* Light Glassmorphism (Section: Glassmorphism Colors) */
+.glass-frosted {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 15px 40px rgba(11, 47, 107, 0.08);
+  color: #172033;
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid #E2E6EC;
+  box-shadow: 0 8px 30px rgba(11, 47, 107, 0.04);
+}
+
+/* Dark Glassmorphism (Mandated Rule) */
+.glass-dark {
+  background: rgba(11, 47, 107, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 50px rgba(11, 47, 107, 0.25);
+  color: #FFFFFF;
+}
+
+/* ============================================================
+   GLOBAL DARK BACKGROUND AUTOMATIC CONTRAST ENGINE
+   ============================================================ */
+
+/* Any dark surface automatically forces light text hierarchy */
+.bg-\[\#0B2F6B\],
+.bg-\[\#164B9B\],
+.glass-dark,
+[data-theme="dark"],
+.dark-surface {
+  color: #FFFFFF;
+}
+
+/* Primary text on dark surfaces (#FFFFFF) */
+.bg-\[\#0B2F6B\] h1,
+.bg-\[\#0B2F6B\] h2,
+.bg-\[\#0B2F6B\] h3,
+.bg-\[\#0B2F6B\] h4,
+.bg-\[\#0B2F6B\] h5,
+.bg-\[\#0B2F6B\] h6,
+.bg-\[\#164B9B\] h1,
+.bg-\[\#164B9B\] h2,
+.bg-\[\#164B9B\] h3,
+.bg-\[\#164B9B\] h4,
+.bg-\[\#164B9B\] h5,
+.bg-\[\#164B9B\] h6,
+.glass-dark h1,
+.glass-dark h2,
+.glass-dark h3,
+.glass-dark h4,
+.glass-dark h5,
+.glass-dark h6 {
+  color: #FFFFFF;
+}
+
+/* Subtle editorial hero floating animation (5-8px, 6-8s) */
+@keyframes floatSubtle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-subtle {
+  animation: floatSubtle 7s ease-in-out infinite;
+}
+
+/* Subtle abstract background animations (6-16s, barely perceptible) */
+@keyframes routeDrift {
+  0%, 100% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-4px, 3px);
+  }
+}
+
+.animate-route-drift {
+  animation: routeDrift 14s ease-in-out infinite;
+}
+
+@keyframes subtlePulse {
+  0%, 100% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.015);
+  }
+}
+
+.animate-subtle-pulse {
+  animation: subtlePulse 12s ease-in-out infinite;
+}
+
+@keyframes orbitalSlow {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(1.2deg) scale(1.01);
+  }
+}
+
+.animate-orbital-slow {
+  transform-origin: center center;
+  animation: orbitalSlow 16s ease-in-out infinite;
+}
+
+/* Subtle route dashed line flow (very slow 20s) */
+@keyframes routeFlow {
+  from {
+    stroke-dashoffset: 40;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-route-flow {
+  animation: routeFlow 20s linear infinite;
+}
+
+/* Gentle destination points pulse */
+@keyframes pointsPulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+.animate-points-pulse {
+  animation: pointsPulse 10s ease-in-out infinite;
+}
+
+/* Nepal Origin gentle beacon ring */
+@keyframes originPing {
+  0%, 100% {
+    r: 10px;
+    stroke-opacity: 0.35;
+  }
+  50% {
+    r: 14px;
+    stroke-opacity: 0.15;
+  }
+}
+
+.animate-origin-ping {
+  animation: originPing 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-subtle,
+  .animate-route-drift,
+  .animate-subtle-pulse,
+  .animate-orbital-slow,
+  .animate-route-flow,
+  .animate-points-pulse,
+  .animate-origin-ping {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAFBFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #E2E6EC;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #98A2B3;
+}
