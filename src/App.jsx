@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { MotionConfig } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
@@ -20,11 +21,12 @@ import NotFoundPage from './pages/NotFoundPage';
 
 export default function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="flex flex-col min-h-screen bg-[#FAFBFC] text-[#172033] font-sans">
-        {/* Global Sticky Navigation */}
-        <Navbar />
+    <MotionConfig reducedMotion="user">
+      <Router>
+        <ScrollToTop />
+        <div className="flex flex-col min-h-screen bg-[#FAFBFC] text-[#172033] font-sans">
+          {/* Global Sticky Navigation */}
+          <Navbar />
 
         {/* Main Content Area */}
         <main className="flex-1">
@@ -63,5 +65,6 @@ export default function App() {
         <WhatsAppFloat />
       </div>
     </Router>
+  </MotionConfig>
   );
 }

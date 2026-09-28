@@ -15,17 +15,17 @@ export default function CourseCard({ course }) {
     : ['Speech Fluency & Pronunciation Algorithms', 'High-Weight Dictation & Blanks Practice', 'Partitioned Audio-Workstation Drills', 'Real-Time Pearson AI Score Reports'];
 
   return (
-    <div className="group relative flex flex-col bg-[#FFFFFF] rounded-3xl overflow-hidden border border-[#E2E6EC] shadow-xs hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1">
-      {/* 1. Large Image with subtle zoom and single frosted glass panel */}
+    <div className="group relative flex flex-col bg-[#FFFFFF] rounded-3xl overflow-hidden border border-[#E2E6EC] shadow-xs hover:shadow-xl transition-all duration-400 ease-out transform hover:-translate-y-1.5">
+      {/* 1. Large Image with gentle 1.03x scaling and frosted glass pill */}
       <div className="relative h-64 sm:h-72 overflow-hidden bg-[#0B2F6B]">
         <img
           src={course.image}
           alt={course.name}
-          className="w-full h-full object-cover object-center group-hover:scale-[1.04] transition-transform duration-700 ease-out"
+          className="w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-600 ease-out"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B2F6B]/80 via-transparent to-transparent" />
 
-        {/* Exactly One Small Dark Glass Information Panel (Dark Glassmorphism Rule) */}
+        {/* Small Dark Glass Information Panel */}
         <div className="absolute bottom-4 left-4 right-4 z-10">
           <div className="glass-dark py-2.5 px-4 rounded-xl text-xs font-medium border border-white/15 shadow-md flex items-center justify-between">
             <span className="font-semibold text-[#FFFFFF]">
@@ -46,7 +46,7 @@ export default function CourseCard({ course }) {
               <span className="text-xs font-semibold uppercase tracking-wider text-[#164B9B]">
                 {isIelts ? 'Test Preparation' : 'Computer-Based Prep'}
               </span>
-              <CardProgressMotif className="opacity-70 group-hover:opacity-100 transition-opacity" />
+              <CardProgressMotif className="opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-[#172033] tracking-tight font-display">
               {course.name}
@@ -70,14 +70,14 @@ export default function CourseCard({ course }) {
           </div>
         </div>
 
-        {/* 3. Refined CTA Button (#E21F26 for main action) */}
+        {/* 3. Refined CTA Button with smooth hover transition */}
         <div>
           <Link
             to={`/courses/${course.slug}`}
-            className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-xl bg-[#E21F26] hover:bg-[#B91C24] text-white text-xs font-semibold tracking-wide transition-all duration-200 transform hover:-translate-y-0.5 shadow-xs hover:shadow-md"
+            className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-xl bg-[#E21F26] hover:bg-[#B91C24] text-white text-xs font-semibold tracking-wide transition-all duration-300 ease-out transform hover:-translate-y-0.5 shadow-xs hover:shadow-md"
           >
             <span>Explore {course.shortName}</span>
-            <ArrowRight className="w-4 h-4 transform transition-transform duration-200 group-hover:translate-x-1" />
+            <ArrowRight className="w-4 h-4 transform transition-transform duration-300 ease-out group-hover:translate-x-1" />
           </Link>
         </div>
       </div>

@@ -1,9 +1,8 @@
 import React from 'react';
-import { 
-  MessageSquare 
-} from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import { companyData } from '../data/companyData';
+import { HeroFadeIn, ScrollReveal } from '../components/MotionReveal';
 
 function InstagramIcon({ className = "w-4 h-4" }) {
   return (
@@ -20,113 +19,121 @@ export default function ContactPage() {
     <div className="py-12 sm:py-20 bg-[#FFFFFF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Modern Split Layout (Section 133) */}
+        {/* Modern Split Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
-          {/* LEFT: Heading, Paragraph, Contact info, WhatsApp CTA */}
+          {/* LEFT: Heading, Paragraph, Contact info, WhatsApp CTA with soft entrance */}
           <div className="lg:col-span-5 space-y-8">
             
-            <div className="space-y-4">
-              <span className="text-xs font-semibold tracking-widest uppercase text-[#164B9B]">
-                GET IN TOUCH
-              </span>
-              <h1 className="text-4xl sm:text-5xl font-extrabold text-[#172033] tracking-tight leading-tight font-display">
-                Let's Talk About Your Next Step.
-              </h1>
-              <p className="text-base text-[#667085] leading-relaxed font-normal">
-                Have questions about IELTS, PTE preparation, or exploring international universities? Connect directly with our certified counselors and language instructors in Bhairahawa.
-              </p>
-            </div>
+            <HeroFadeIn delay={0.06} y={10}>
+              <div className="space-y-4">
+                <span className="text-xs font-semibold tracking-widest uppercase text-[#164B9B]">
+                  GET IN TOUCH
+                </span>
+                <h1 className="text-4xl sm:text-5xl font-extrabold text-[#172033] tracking-tight leading-tight font-display">
+                  Let's Talk About Your Next Step.
+                </h1>
+                <p className="text-base text-[#667085] leading-relaxed font-normal">
+                  Have questions about IELTS, PTE preparation, or exploring international universities? Connect directly with our certified counselors and language instructors in Bhairahawa.
+                </p>
+              </div>
+            </HeroFadeIn>
 
             {/* Direct WhatsApp Action Button */}
-            <div>
-              <a
-                href={companyData.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 h-13 px-7 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold tracking-wide transition-all duration-200 shadow-xs hover:shadow-md"
-              >
-                <MessageSquare className="w-4 h-4 fill-current" />
-                <span>Chat on WhatsApp ({companyData.whatsappNumber})</span>
-              </a>
-            </div>
-
-            {/* Clean Contact Information */}
-            <div className="space-y-6 pt-6 border-t border-[#E2E6EC]">
-              
-              {/* Location */}
-              <div className="space-y-1">
-                <div className="text-xs font-semibold text-[#98A2B3] uppercase tracking-wider">
-                  Campus Location
-                </div>
-                <div className="text-sm font-bold text-[#172033]">
-                  {companyData.location.fullAddress}
-                </div>
-                <div className="text-xs text-[#667085]">
-                  Directly opposite to Mahalakshmi Bank on Narayan Path.
-                </div>
-              </div>
-
-              {/* Phone */}
-              <div className="space-y-1">
-                <div className="text-xs font-semibold text-[#98A2B3] uppercase tracking-wider">
-                  Direct Phone
-                </div>
+            <HeroFadeIn delay={0.16} y={10}>
+              <div>
                 <a
-                  href={`tel:${companyData.phone}`}
-                  className="text-base font-bold text-[#172033] hover:text-[#164B9B] transition-colors font-mono"
+                  href={companyData.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2.5 h-13 px-7 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold tracking-wide transition-all duration-300 ease-out shadow-xs hover:shadow-md transform hover:-translate-y-0.5"
                 >
-                  {companyData.phone}
+                  <MessageSquare className="w-4 h-4 fill-current" />
+                  <span>Chat on WhatsApp ({companyData.whatsappNumber})</span>
                 </a>
               </div>
+            </HeroFadeIn>
 
-              {/* Hours */}
-              <div className="space-y-1">
-                <div className="text-xs font-semibold text-[#98A2B3] uppercase tracking-wider">
-                  Office Hours
+            {/* Clean Contact Information */}
+            <HeroFadeIn delay={0.24} y={10}>
+              <div className="space-y-6 pt-6 border-t border-[#E2E6EC]">
+                
+                {/* Location */}
+                <div className="space-y-1">
+                  <div className="text-xs font-semibold text-[#98A2B3] uppercase tracking-wider">
+                    Campus Location
+                  </div>
+                  <div className="text-sm font-bold text-[#172033]">
+                    {companyData.location.fullAddress}
+                  </div>
+                  <div className="text-xs text-[#667085]">
+                    Directly opposite to Mahalakshmi Bank on Narayan Path.
+                  </div>
                 </div>
-                <div className="text-sm text-[#172033]">
-                  Sunday – Friday: 7:00 AM – 6:00 PM
-                </div>
-                <div className="text-xs text-[#667085]">
-                  Saturday: Free Diagnostic Tests & Mock Exams (8:00 AM – 2:00 PM)
-                </div>
-              </div>
 
-              {/* Social Channels */}
-              <div className="space-y-2 pt-2">
-                <div className="text-xs font-semibold text-[#98A2B3] uppercase tracking-wider">
-                  Social Channels
-                </div>
-                <div className="flex items-center gap-4">
+                {/* Phone */}
+                <div className="space-y-1">
+                  <div className="text-xs font-semibold text-[#98A2B3] uppercase tracking-wider">
+                    Direct Phone
+                  </div>
                   <a
-                    href={companyData.socials.instagram.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-semibold text-[#667085] hover:text-[#164B9B] transition-colors"
+                    href={`tel:${companyData.phone}`}
+                    className="text-base font-bold text-[#172033] hover:text-[#164B9B] transition-colors duration-300 font-mono"
                   >
-                    <InstagramIcon className="w-4 h-4 text-pink-600" />
-                    <span>Instagram</span>
-                  </a>
-                  <a
-                    href={companyData.socials.tiktok.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-semibold text-[#667085] hover:text-[#164B9B] transition-colors"
-                  >
-                    <span className="font-bold text-[#172033]">♪</span>
-                    <span>TikTok</span>
+                    {companyData.phone}
                   </a>
                 </div>
-              </div>
 
-            </div>
+                {/* Hours */}
+                <div className="space-y-1">
+                  <div className="text-xs font-semibold text-[#98A2B3] uppercase tracking-wider">
+                    Office Hours
+                  </div>
+                  <div className="text-sm text-[#172033]">
+                    Sunday – Friday: 7:00 AM – 6:00 PM
+                  </div>
+                  <div className="text-xs text-[#667085]">
+                    Saturday: Free Diagnostic Tests & Mock Exams (8:00 AM – 2:00 PM)
+                  </div>
+                </div>
+
+                {/* Social Channels */}
+                <div className="space-y-2 pt-2">
+                  <div className="text-xs font-semibold text-[#98A2B3] uppercase tracking-wider">
+                    Social Channels
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <a
+                      href={companyData.socials.instagram.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-xs font-semibold text-[#667085] hover:text-[#164B9B] transition-colors duration-300"
+                    >
+                      <InstagramIcon className="w-4 h-4 text-pink-600" />
+                      <span>Instagram</span>
+                    </a>
+                    <a
+                      href={companyData.socials.tiktok.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-xs font-semibold text-[#667085] hover:text-[#164B9B] transition-colors duration-300"
+                    >
+                      <span className="font-bold text-[#172033]">♪</span>
+                      <span>TikTok</span>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </HeroFadeIn>
 
           </div>
 
           {/* RIGHT: Clean Minimal Form */}
           <div className="lg:col-span-7">
-            <ContactForm />
+            <ScrollReveal y={14} delay={0.12}>
+              <ContactForm />
+            </ScrollReveal>
           </div>
 
         </div>

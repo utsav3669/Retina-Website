@@ -123,27 +123,27 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFFFFF;
 }
 
-/* Subtle editorial hero floating animation (5-8px, 6-8s) */
+/* Subtle editorial hero floating animation (gentle 4-5px, 6-7s, restrained) */
 @keyframes floatSubtle {
   0%, 100% {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
   }
 }
 
 .animate-float-subtle {
-  animation: floatSubtle 7s ease-in-out infinite;
+  animation: floatSubtle 6.5s ease-in-out infinite;
 }
 
-/* Subtle abstract background animations (6-16s, barely perceptible) */
+/* Subtle abstract background drift (very slow, barely perceptible) */
 @keyframes routeDrift {
   0%, 100% {
     transform: translate(0px, 0px);
   }
   50% {
-    transform: translate(-4px, 3px);
+    transform: translate(-3px, 2px);
   }
 }
 
@@ -153,85 +153,75 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes subtlePulse {
   0%, 100% {
-    opacity: 0.85;
-    transform: scale(1);
+    opacity: 0.88;
   }
   50% {
     opacity: 1;
-    transform: scale(1.015);
   }
 }
 
 .animate-subtle-pulse {
-  animation: subtlePulse 12s ease-in-out infinite;
+  animation: subtlePulse 8s ease-in-out infinite;
 }
 
-@keyframes orbitalSlow {
-  0%, 100% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(1.2deg) scale(1.01);
-  }
-}
-
-.animate-orbital-slow {
-  transform-origin: center center;
-  animation: orbitalSlow 16s ease-in-out infinite;
-}
-
-/* Subtle route dashed line flow (very slow 20s) */
-@keyframes routeFlow {
-  from {
-    stroke-dashoffset: 40;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-.animate-route-flow {
-  animation: routeFlow 20s linear infinite;
-}
-
-/* Gentle destination points pulse */
+/* Gentle destination points pulse on marked world map locations */
 @keyframes pointsPulse {
   0%, 100% {
-    opacity: 0.8;
+    opacity: 0.65;
     transform: scale(1);
   }
   50% {
     opacity: 1;
-    transform: scale(1.04);
+    transform: scale(1.08);
   }
 }
 
 .animate-points-pulse {
-  animation: pointsPulse 10s ease-in-out infinite;
+  transform-origin: center;
+  animation: pointsPulse 4.5s ease-in-out infinite;
 }
 
 /* Nepal Origin gentle beacon ring */
 @keyframes originPing {
   0%, 100% {
-    r: 10px;
-    stroke-opacity: 0.35;
+    r: 6px;
+    stroke-opacity: 0.40;
   }
   50% {
-    r: 14px;
+    r: 9px;
     stroke-opacity: 0.15;
   }
 }
 
 .animate-origin-ping {
-  animation: originPing 6s ease-in-out infinite;
+  animation: originPing 4.5s ease-in-out infinite;
+}
+
+/* ============================================================
+   GLOBAL RESTRAINED TRANSITION SYSTEM (300-700ms ease-out)
+   ============================================================ */
+
+/* Smooth button transitions */
+button,
+a.inline-flex,
+a.block,
+.btn-smooth {
+  transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  transition-duration: 300ms;
 }
 
 @media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
   .animate-float-subtle,
   .animate-route-drift,
   .animate-subtle-pulse,
-  .animate-orbital-slow,
-  .animate-route-flow,
   .animate-points-pulse,
   .animate-origin-ping {
     animation: none !important;

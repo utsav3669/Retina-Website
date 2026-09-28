@@ -89,16 +89,11 @@ export default function AbstractWorldMap({
     let currentRouteIndex = 0;
     let state = 'FLIGHT'; // 'FLIGHT' | 'PAUSE' | 'RESET'
     let stateStartTime = performance.now();
-    let lastFrameTime = performance.now();
 
     const PAUSE_DURATION = 900; // ms to pause at destination
     const RESET_DURATION = 400; // ms to transition to next flight
 
     const animate = (now) => {
-      // Guard against frame lag spikes (e.g., when tab is hidden)
-      const delta = Math.min(now - lastFrameTime, 100);
-      lastFrameTime = now;
-
       const currentRoute = ROUTES[currentRouteIndex];
       const pathEl = pathRefs.current[currentRouteIndex];
       const planeEl = planeRef.current;
@@ -275,43 +270,43 @@ export default function AbstractWorldMap({
         <g>
           {/* 1. UK (London area) */}
           <g transform="translate(472, 118)">
-            <circle r="4" stroke={destRingColor} strokeWidth="0.8" fill="none" />
+            <circle r="4" stroke={destRingColor} strokeWidth="0.8" fill="none" className="animate-points-pulse" />
             <circle r="2" fill={destPointColor} />
           </g>
 
           {/* 2. Europe (Central/Western Europe) */}
           <g transform="translate(510, 130)">
-            <circle r="4" stroke={destRingColor} strokeWidth="0.8" fill="none" />
+            <circle r="4" stroke={destRingColor} strokeWidth="0.8" fill="none" className="animate-points-pulse" />
             <circle r="2" fill={destPointColor} />
           </g>
 
           {/* 3. Canada (Eastern / Toronto area) */}
           <g transform="translate(260, 115)">
-            <circle r="4" stroke={destRingColor} strokeWidth="0.8" fill="none" />
+            <circle r="4" stroke={destRingColor} strokeWidth="0.8" fill="none" className="animate-points-pulse" />
             <circle r="2" fill={destPointColor} />
           </g>
 
           {/* 4. USA (East Coast / Mid-Atlantic) */}
           <g transform="translate(215, 160)">
-            <circle r="4" stroke={destRingColor} strokeWidth="0.8" fill="none" />
+            <circle r="4" stroke={destRingColor} strokeWidth="0.8" fill="none" className="animate-points-pulse" />
             <circle r="2" fill={destPointColor} />
           </g>
 
           {/* 5. Australia (Sydney / Melbourne corridor) */}
           <g transform="translate(920, 395)">
-            <circle r="4" stroke={destRingColor} strokeWidth="0.8" fill="none" />
+            <circle r="4" stroke={destRingColor} strokeWidth="0.8" fill="none" className="animate-points-pulse" />
             <circle r="2" fill={destPointColor} />
           </g>
 
           {/* 6. New Zealand (Southeast of Australia) */}
           <g transform="translate(965, 435)">
-            <circle r="4" stroke={destRingColor} strokeWidth="0.8" fill="none" />
+            <circle r="4" stroke={destRingColor} strokeWidth="0.8" fill="none" className="animate-points-pulse" />
             <circle r="2" fill={destPointColor} />
           </g>
 
           {/* 7. StudyHub Origin Hub (Nepal - Bhairahawa) - Subtle Red Focal Point (#E21F26) */}
           <g transform="translate(712, 232)">
-            <circle r="6" stroke={originColor} strokeWidth="0.8" strokeOpacity="0.4" fill="none" />
+            <circle r="6" stroke={originColor} strokeWidth="0.8" strokeOpacity="0.4" fill="none" className="animate-origin-ping" />
             <circle r="2.2" fill={originColor} />
           </g>
 

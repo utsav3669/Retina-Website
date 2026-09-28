@@ -6,7 +6,7 @@ import { CardGridDetail } from './AbstractElements';
 export default function BlogCard({ blog, featured = false }) {
   if (featured) {
     return (
-      <article className="group grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#FFFFFF] rounded-3xl p-6 sm:p-8 border border-[#E2E6EC] shadow-xs hover:shadow-xl transition-all duration-350 transform hover:-translate-y-1">
+      <article className="group grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#FFFFFF] rounded-3xl p-6 sm:p-8 border border-[#E2E6EC] shadow-xs hover:shadow-xl transition-all duration-400 ease-out transform hover:-translate-y-1.5">
         <Link 
           to={`/blogs/${blog.slug}`}
           className="lg:col-span-7 relative h-72 sm:h-96 rounded-2xl overflow-hidden bg-[#0B2F6B] block"
@@ -15,7 +15,7 @@ export default function BlogCard({ blog, featured = false }) {
             src={blog.image}
             alt={blog.title}
             loading="lazy"
-            className="w-full h-full object-cover object-center group-hover:scale-[1.04] transition-transform duration-700 ease-out"
+            className="w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-600 ease-out"
           />
           <div className="absolute top-4 left-4 z-10">
             <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white/90 backdrop-blur-md text-[#164B9B]">
@@ -34,10 +34,10 @@ export default function BlogCard({ blog, featured = false }) {
                 {blog.readTime}
               </span>
             </div>
-            <CardGridDetail className="opacity-40 group-hover:opacity-80 transition-opacity" />
+            <CardGridDetail className="opacity-40 group-hover:opacity-80 transition-opacity duration-300" />
           </div>
 
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-[#172033] group-hover:text-[#164B9B] transition-colors leading-tight font-display">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-[#172033] group-hover:text-[#164B9B] transition-colors duration-300 leading-tight font-display">
             <Link to={`/blogs/${blog.slug}`}>
               {blog.title}
             </Link>
@@ -50,10 +50,10 @@ export default function BlogCard({ blog, featured = false }) {
           <div className="pt-2">
             <Link
               to={`/blogs/${blog.slug}`}
-              className="inline-flex items-center gap-2 text-xs font-semibold text-[#E21F26] hover:text-[#B91C24] transition-colors"
+              className="inline-flex items-center gap-2 text-xs font-semibold text-[#E21F26] hover:text-[#B91C24] transition-colors duration-300 group/link"
             >
               <span>Read Article</span>
-              <ArrowRight className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1" />
+              <ArrowRight className="w-4 h-4 transform transition-transform duration-300 ease-out group-hover/link:translate-x-1" />
             </Link>
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function BlogCard({ blog, featured = false }) {
   }
 
   return (
-    <article className="group flex flex-col bg-[#FFFFFF] rounded-3xl overflow-hidden border border-[#E2E6EC] shadow-2xs hover:shadow-lg transition-all duration-350 transform hover:-translate-y-1">
+    <article className="group flex flex-col bg-[#FFFFFF] rounded-3xl overflow-hidden border border-[#E2E6EC] shadow-2xs hover:shadow-xl transition-all duration-400 ease-out transform hover:-translate-y-1.5">
       <Link 
         to={`/blogs/${blog.slug}`}
         className="relative h-48 sm:h-52 overflow-hidden bg-[#0B2F6B] block"
@@ -71,7 +71,7 @@ export default function BlogCard({ blog, featured = false }) {
           src={blog.image}
           alt={blog.title}
           loading="lazy"
-          className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700 ease-out"
+          className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-600 ease-out"
         />
         <div className="absolute top-4 left-4 z-10">
           <span className="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-white/90 backdrop-blur-md text-[#164B9B]">
@@ -89,10 +89,10 @@ export default function BlogCard({ blog, featured = false }) {
               <span>•</span>
               <span>{blog.publishDate}</span>
             </div>
-            <CardGridDetail className="opacity-35 group-hover:opacity-75 transition-opacity" />
+            <CardGridDetail className="opacity-35 group-hover:opacity-75 transition-opacity duration-300" />
           </div>
 
-          <h3 className="text-base sm:text-lg font-bold text-[#172033] group-hover:text-[#164B9B] transition-colors leading-snug font-display">
+          <h3 className="text-base sm:text-lg font-bold text-[#172033] group-hover:text-[#164B9B] transition-colors duration-300 leading-snug font-display">
             <Link to={`/blogs/${blog.slug}`}>
               {blog.title}
             </Link>
@@ -106,10 +106,10 @@ export default function BlogCard({ blog, featured = false }) {
         <div className="pt-2 border-t border-[#E2E6EC] flex items-center justify-between">
           <Link
             to={`/blogs/${blog.slug}`}
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#E21F26] hover:text-[#B91C24] transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#E21F26] hover:text-[#B91C24] transition-colors duration-300 group/link"
           >
             <span>Read Article</span>
-            <ArrowRight className="w-3.5 h-3.5 transform transition-transform duration-300 group-hover:translate-x-1" />
+            <ArrowRight className="w-3.5 h-3.5 transform transition-transform duration-300 ease-out group-hover/link:translate-x-1" />
           </Link>
           <span className="text-[11px] text-[#98A2B3] font-normal">
             {blog.author}
