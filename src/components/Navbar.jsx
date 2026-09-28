@@ -207,7 +207,7 @@ export default function Navbar() {
             <NavLink to="/blogs" className={navLinkClass}>
               {({ isActive }) => (
                 <>
-                  <span>Journal</span>
+                  <span>Blogs</span>
                   {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[#E21F26]" />}
                 </>
               )}
@@ -341,7 +341,7 @@ export default function Navbar() {
             to="/blogs"
             className="block py-2 text-base font-semibold text-[#172033] border-b border-[#E2E6EC]"
           >
-            Journal & Insights
+            Blogs
           </Link>
           <Link
             to="/contact"
