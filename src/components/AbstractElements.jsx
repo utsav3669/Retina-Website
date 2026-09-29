@@ -21,7 +21,7 @@ export function HeroRouteBackground({ className = "" }) {
         {/* Main international flight / journey route */}
         <path
           d="M -50 520 C 320 480, 520 280, 940 220 S 1320 160, 1500 110"
-          stroke="#164B9B"
+          stroke="#0E4BA4"
           strokeWidth="1.2"
           strokeDasharray="5 7"
           strokeOpacity="0.07"
@@ -30,33 +30,33 @@ export function HeroRouteBackground({ className = "" }) {
         {/* Secondary subtle intersecting connection branch */}
         <path
           d="M 520 280 C 720 320, 880 390, 1140 410 S 1380 360, 1490 320"
-          stroke="#164B9B"
+          stroke="#0E4BA4"
           strokeWidth="0.9"
           strokeOpacity="0.045"
         />
 
         {/* Faint departure waypoint (Nepal / Origin hub) with very subtle red accent */}
         <g transform="translate(420, 360)">
-          <circle r="7" stroke="#E21F26" strokeWidth="0.8" strokeOpacity="0.14" fill="none" />
-          <circle r="2.5" fill="#E21F26" fillOpacity="0.18" />
+          <circle r="7" stroke="#FF914D" strokeWidth="0.8" strokeOpacity="0.14" fill="none" />
+          <circle r="2.5" fill="#FF914D" fillOpacity="0.18" />
         </g>
 
         {/* Intermediate transit waypoint */}
         <g transform="translate(730, 245)">
-          <circle r="6" stroke="#164B9B" strokeWidth="0.8" strokeOpacity="0.07" fill="none" />
-          <circle r="2" fill="#164B9B" fillOpacity="0.10" />
+          <circle r="6" stroke="#0E4BA4" strokeWidth="0.8" strokeOpacity="0.07" fill="none" />
+          <circle r="2" fill="#0E4BA4" fillOpacity="0.10" />
         </g>
 
         {/* Global academic destination waypoint 1 */}
         <g transform="translate(940, 220)">
-          <circle r="6" stroke="#164B9B" strokeWidth="0.8" strokeOpacity="0.08" fill="none" />
-          <circle r="2.5" fill="#164B9B" fillOpacity="0.11" />
+          <circle r="6" stroke="#0E4BA4" strokeWidth="0.8" strokeOpacity="0.08" fill="none" />
+          <circle r="2.5" fill="#0E4BA4" fillOpacity="0.11" />
         </g>
 
         {/* Global academic destination waypoint 2 */}
         <g transform="translate(1140, 410)">
-          <circle r="5" stroke="#164B9B" strokeWidth="0.8" strokeOpacity="0.06" fill="none" />
-          <circle r="2" fill="#164B9B" fillOpacity="0.08" />
+          <circle r="5" stroke="#0E4BA4" strokeWidth="0.8" strokeOpacity="0.06" fill="none" />
+          <circle r="2" fill="#0E4BA4" fillOpacity="0.08" />
         </g>
       </svg>
     </div>
@@ -85,7 +85,7 @@ export function AboutOrbitsBackground({ className = "" }) {
           cx="270"
           cy="240"
           r="190"
-          stroke="#164B9B"
+          stroke="#0E4BA4"
           strokeWidth="1"
           strokeDasharray="4 6"
           strokeOpacity="0.055"
@@ -96,7 +96,7 @@ export function AboutOrbitsBackground({ className = "" }) {
           cx="220"
           cy="200"
           r="140"
-          stroke="#0B2F6B"
+          stroke="#102A43"
           strokeWidth="1"
           strokeOpacity="0.045"
         />
@@ -107,7 +107,7 @@ export function AboutOrbitsBackground({ className = "" }) {
           y1="160"
           x2="460"
           y2="280"
-          stroke="#164B9B"
+          stroke="#0E4BA4"
           strokeWidth="0.75"
           strokeOpacity="0.035"
         />
@@ -117,7 +117,7 @@ export function AboutOrbitsBackground({ className = "" }) {
           cx="245"
           cy="340"
           r="2.5"
-          fill="#164B9B"
+          fill="#0E4BA4"
           fillOpacity="0.08"
         />
       </svg>
@@ -147,7 +147,7 @@ export function DestinationsPathBackground({ className = "" }) {
         {/* Route Corridor 1: Trans-Pacific / Northern corridor */}
         <path
           d="M 60 560 Q 420 220 860 380 T 1400 160"
-          stroke="#164B9B"
+          stroke="#0E4BA4"
           strokeWidth="1"
           strokeDasharray="6 8"
           strokeOpacity="0.05"
@@ -156,27 +156,27 @@ export function DestinationsPathBackground({ className = "" }) {
         {/* Route Corridor 2: European & Commonwealth corridor */}
         <path
           d="M 180 620 C 380 440, 780 480, 1120 310 S 1360 220, 1460 200"
-          stroke="#0B2F6B"
+          stroke="#102A43"
           strokeWidth="0.9"
           strokeOpacity="0.04"
         />
 
         {/* Destination Nodes (London, Toronto, Sydney, New York) */}
         <g transform="translate(340, 420)">
-          <circle r="5" stroke="#164B9B" strokeWidth="0.75" strokeOpacity="0.06" fill="none" />
-          <circle r="2" fill="#164B9B" fillOpacity="0.08" />
+          <circle r="5" stroke="#0E4BA4" strokeWidth="0.75" strokeOpacity="0.06" fill="none" />
+          <circle r="2" fill="#0E4BA4" fillOpacity="0.08" />
         </g>
         <g transform="translate(680, 290)">
-          <circle r="6" stroke="#164B9B" strokeWidth="0.75" strokeOpacity="0.07" fill="none" />
-          <circle r="2.5" fill="#164B9B" fillOpacity="0.09" />
+          <circle r="6" stroke="#0E4BA4" strokeWidth="0.75" strokeOpacity="0.07" fill="none" />
+          <circle r="2.5" fill="#0E4BA4" fillOpacity="0.09" />
         </g>
         <g transform="translate(980, 360)">
-          <circle r="5" stroke="#164B9B" strokeWidth="0.75" strokeOpacity="0.06" fill="none" />
-          <circle r="2" fill="#164B9B" fillOpacity="0.08" />
+          <circle r="5" stroke="#0E4BA4" strokeWidth="0.75" strokeOpacity="0.06" fill="none" />
+          <circle r="2" fill="#0E4BA4" fillOpacity="0.08" />
         </g>
         <g transform="translate(1260, 240)">
-          <circle r="6" stroke="#164B9B" strokeWidth="0.75" strokeOpacity="0.07" fill="none" />
-          <circle r="2.5" fill="#164B9B" fillOpacity="0.09" />
+          <circle r="6" stroke="#0E4BA4" strokeWidth="0.75" strokeOpacity="0.07" fill="none" />
+          <circle r="2.5" fill="#0E4BA4" fillOpacity="0.09" />
         </g>
       </svg>
     </div>
@@ -205,7 +205,7 @@ export function CourseProgressBackground({ className = "" }) {
         {/* Ascending progress trajectory */}
         <path
           d="M 80 360 C 280 360, 420 270, 600 220 S 920 120, 1140 85"
-          stroke="#164B9B"
+          stroke="#0E4BA4"
           strokeWidth="1.1"
           strokeDasharray="4 6"
           strokeOpacity="0.06"
@@ -213,23 +213,23 @@ export function CourseProgressBackground({ className = "" }) {
 
         {/* Milestone 1: Preparation */}
         <g transform="translate(360, 305)">
-          <line x1="0" y1="0" x2="0" y2="45" stroke="#164B9B" strokeWidth="0.75" strokeDasharray="2 3" strokeOpacity="0.035" />
-          <circle r="6" stroke="#164B9B" strokeWidth="0.8" strokeOpacity="0.08" fill="none" />
-          <circle r="2.5" fill="#164B9B" fillOpacity="0.10" />
+          <line x1="0" y1="0" x2="0" y2="45" stroke="#0E4BA4" strokeWidth="0.75" strokeDasharray="2 3" strokeOpacity="0.035" />
+          <circle r="6" stroke="#0E4BA4" strokeWidth="0.8" strokeOpacity="0.08" fill="none" />
+          <circle r="2.5" fill="#0E4BA4" fillOpacity="0.10" />
         </g>
 
         {/* Milestone 2: Practice */}
         <g transform="translate(600, 220)">
-          <line x1="0" y1="0" x2="0" y2="45" stroke="#164B9B" strokeWidth="0.75" strokeDasharray="2 3" strokeOpacity="0.035" />
-          <circle r="6" stroke="#164B9B" strokeWidth="0.8" strokeOpacity="0.08" fill="none" />
-          <circle r="2.5" fill="#164B9B" fillOpacity="0.10" />
+          <line x1="0" y1="0" x2="0" y2="45" stroke="#0E4BA4" strokeWidth="0.75" strokeDasharray="2 3" strokeOpacity="0.035" />
+          <circle r="6" stroke="#0E4BA4" strokeWidth="0.8" strokeOpacity="0.08" fill="none" />
+          <circle r="2.5" fill="#0E4BA4" fillOpacity="0.10" />
         </g>
 
         {/* Milestone 3: Progress */}
         <g transform="translate(890, 135)">
-          <line x1="0" y1="0" x2="0" y2="45" stroke="#164B9B" strokeWidth="0.75" strokeDasharray="2 3" strokeOpacity="0.035" />
-          <circle r="6" stroke="#164B9B" strokeWidth="0.8" strokeOpacity="0.08" fill="none" />
-          <circle r="2.5" fill="#164B9B" fillOpacity="0.10" />
+          <line x1="0" y1="0" x2="0" y2="45" stroke="#0E4BA4" strokeWidth="0.75" strokeDasharray="2 3" strokeOpacity="0.035" />
+          <circle r="6" stroke="#0E4BA4" strokeWidth="0.8" strokeOpacity="0.08" fill="none" />
+          <circle r="2.5" fill="#0E4BA4" fillOpacity="0.10" />
         </g>
       </svg>
     </div>
@@ -238,7 +238,7 @@ export function CourseProgressBackground({ className = "" }) {
 
 /**
  * 5. FINAL CTA ORBITAL BACKGROUND
- * Used on the dark navy (#0B2F6B) CTA section.
+ * Used on the dark navy (#102A43) CTA section.
  * Thin orbital curves, subtle route lines, and soft circular forms in rgba(255,255,255,0.05-0.08).
  * Naturally blends into the dark navy canvas.
  */
@@ -310,14 +310,14 @@ export function CardProgressMotif({ className = "" }) {
     >
       <path 
         d="M 4 12 C 14 12, 20 8, 28 8 S 38 4, 44 4" 
-        stroke="#164B9B" 
+        stroke="#0E4BA4" 
         strokeWidth="1" 
         strokeDasharray="2 3" 
         strokeOpacity="0.25" 
       />
-      <circle cx="4" cy="12" r="2" fill="#164B9B" fillOpacity="0.35" />
-      <circle cx="26" cy="8" r="2" fill="#164B9B" fillOpacity="0.45" />
-      <circle cx="44" cy="4" r="2" fill="#E21F26" fillOpacity="0.65" />
+      <circle cx="4" cy="12" r="2" fill="#0E4BA4" fillOpacity="0.35" />
+      <circle cx="26" cy="8" r="2" fill="#0E4BA4" fillOpacity="0.45" />
+      <circle cx="44" cy="4" r="2" fill="#FF914D" fillOpacity="0.65" />
     </svg>
   );
 }
@@ -342,7 +342,7 @@ export function CardRouteArc({ className = "" }) {
         strokeOpacity="0.45" 
       />
       <circle cx="4" cy="13" r="1.8" fill="#FFFFFF" fillOpacity="0.8" />
-      <circle cx="36" cy="13" r="1.8" fill="#E21F26" fillOpacity="0.9" />
+      <circle cx="36" cy="13" r="1.8" fill="#FF914D" fillOpacity="0.9" />
     </svg>
   );
 }
@@ -359,10 +359,10 @@ export function CardGridDetail({ className = "" }) {
       fill="none" 
       aria-hidden="true"
     >
-      <line x1="3" y1="3" x2="17" y2="3" stroke="#164B9B" strokeWidth="0.8" strokeOpacity="0.18" />
-      <line x1="3" y1="10" x2="17" y2="10" stroke="#164B9B" strokeWidth="0.8" strokeOpacity="0.12" strokeDasharray="2 2" />
-      <line x1="3" y1="17" x2="17" y2="17" stroke="#164B9B" strokeWidth="0.8" strokeOpacity="0.18" />
-      <circle cx="10" cy="10" r="1.5" fill="#164B9B" fillOpacity="0.30" />
+      <line x1="3" y1="3" x2="17" y2="3" stroke="#0E4BA4" strokeWidth="0.8" strokeOpacity="0.18" />
+      <line x1="3" y1="10" x2="17" y2="10" stroke="#0E4BA4" strokeWidth="0.8" strokeOpacity="0.12" strokeDasharray="2 2" />
+      <line x1="3" y1="17" x2="17" y2="17" stroke="#0E4BA4" strokeWidth="0.8" strokeOpacity="0.18" />
+      <circle cx="10" cy="10" r="1.5" fill="#0E4BA4" fillOpacity="0.30" />
     </svg>
   );
 }
@@ -385,7 +385,7 @@ export function ConnectingNodeGraphic({ className = "" }) {
         strokeWidth="1" 
         strokeDasharray="3 3" 
       />
-      <circle cx="6" cy="12" r="2.5" fill="#E21F26" fillOpacity="0.8" />
+      <circle cx="6" cy="12" r="2.5" fill="#FF914D" fillOpacity="0.8" />
       <circle cx="24" cy="7" r="1.5" fill="rgba(255,255,255,0.6)" />
       <circle cx="42" cy="12" r="2" fill="rgba(255,255,255,0.8)" />
     </svg>
@@ -405,15 +405,15 @@ export function CardOrbitalMotif({ className = "" }) {
       fill="none" 
       aria-hidden="true"
     >
-      <circle cx="10" cy="8" r="6" stroke="#164B9B" strokeWidth="0.8" strokeOpacity="0.25" fill="none" />
-      <circle cx="18" cy="8" r="6" stroke="#164B9B" strokeWidth="0.8" strokeOpacity="0.20" strokeDasharray="2 2" fill="none" />
-      <circle cx="10" cy="8" r="1.5" fill="#164B9B" fillOpacity="0.30" />
+      <circle cx="10" cy="8" r="6" stroke="#0E4BA4" strokeWidth="0.8" strokeOpacity="0.25" fill="none" />
+      <circle cx="18" cy="8" r="6" stroke="#0E4BA4" strokeWidth="0.8" strokeOpacity="0.20" strokeDasharray="2 2" fill="none" />
+      <circle cx="10" cy="8" r="1.5" fill="#0E4BA4" fillOpacity="0.30" />
     </svg>
   );
 }
 
 /**
- * 11. BOX CAMPUS WAYPOINT (For Bhairahawa Box)
+ * 11. BOX CAMPUS WAYPOINT (For Putalisadak Box)
  * Abstract minimalist consultancy element with a subtle origin point, 
  * fine radial aura ring, and an outgoing dashed journey vector.
  */
@@ -428,7 +428,7 @@ export function BoxCampusWaypoint({ className = "" }) {
       <circle cx="46" cy="46" r="22" stroke="#FFFFFF" strokeWidth="0.8" strokeDasharray="3 3" strokeOpacity="0.25" />
       <circle cx="46" cy="46" r="10" stroke="#FFFFFF" strokeWidth="0.8" strokeOpacity="0.35" />
       <circle cx="46" cy="46" r="3" fill="#FFFFFF" fillOpacity="0.85" />
-      <circle cx="46" cy="46" r="1.5" fill="#E21F26" />
+      <circle cx="46" cy="46" r="1.5" fill="#FF914D" />
       <path
         d="M 12 18 C 24 18, 36 28, 46 46"
         stroke="#FFFFFF"
@@ -456,7 +456,7 @@ export function BoxIntegrityOrbits({ className = "" }) {
       <circle cx="44" cy="44" r="22" stroke="#FFFFFF" strokeWidth="0.8" strokeDasharray="3 4" strokeOpacity="0.25" />
       <circle cx="34" cy="34" r="15" stroke="#FFFFFF" strokeWidth="0.8" strokeOpacity="0.3" />
       <circle cx="44" cy="44" r="2.5" fill="#FFFFFF" fillOpacity="0.85" />
-      <circle cx="34" cy="34" r="1.8" fill="#E21F26" fillOpacity="0.8" />
+      <circle cx="34" cy="34" r="1.8" fill="#FF914D" fillOpacity="0.8" />
       <line x1="44" y1="18" x2="44" y2="24" stroke="#FFFFFF" strokeWidth="0.8" strokeOpacity="0.3" />
       <line x1="18" y1="44" x2="24" y2="44" stroke="#FFFFFF" strokeWidth="0.8" strokeOpacity="0.3" />
     </svg>
@@ -472,7 +472,7 @@ export function BoxIntegrityOrbits({ className = "" }) {
  * - Small connected nodes symbolizing consultation & guidance
  * - Subtle document / milestone planning rectangle
  * - Fine grid fragments with 85%+ negative space
- * - Color: rgba(255, 255, 255, 0.04 - 0.08) with subtle #E21F26 accent
+ * - Color: rgba(255, 255, 255, 0.04 - 0.08) with subtle #FF914D accent
  */
 export function FooterAbstractBackground({ className = "" }) {
   return (
@@ -518,7 +518,7 @@ export function FooterAbstractBackground({ className = "" }) {
           <circle cx="0" cy="-45" r="2" fill="rgba(255, 255, 255, 0.08)" />
           <circle cx="45" cy="0" r="2" fill="rgba(255, 255, 255, 0.08)" />
           {/* Single restrained red accent point */}
-          <circle cx="0" cy="45" r="2" fill="#E21F26" fillOpacity="0.45" />
+          <circle cx="0" cy="45" r="2" fill="#FF914D" fillOpacity="0.45" />
         </g>
 
         {/* Middle-Right - Minimal grid fragment */}

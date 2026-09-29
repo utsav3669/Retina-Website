@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="agriBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#062817" />
+      <stop offset="45%" stop-color="#0D4229" />
+      <stop offset="100%" stop-color="#04160D" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ADE80" />
+      <stop offset="100%" stop-color="#16A34A" />
+    </linearGradient>
+    <linearGradient id="accentGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" rx="24" fill="url(#agriBg)" />
+  <circle cx="700" cy="120" r="220" fill="#22C55E" fill-opacity="0.25" filter="blur(60px)" />
+  <circle cx="100" cy="500" r="200" fill="#0E4BA4" fill-opacity="0.30" filter="blur(70px)" />
+
+  <!-- Technical Grid Overlay -->
+  <path d="M 0 150 L 800 150 M 0 300 L 800 300 M 0 450 L 800 450" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1" />
+  <path d="M 200 0 L 200 600 M 400 0 L 400 600 M 600 0 L 600 600" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1" />
+
+  <!-- Badge -->
+  <g transform="translate(50, 45)">
+    <rect width="250" height="36" rx="18" fill="url(#accentGold)" />
+    <text x="125" y="23" fill="#04160D" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="middle" letter-spacing="1.5">AGRICULTURAL SCIENCES</text>
+  </g>
+
+  <!-- Retina Branding Header -->
+  <text x="750" y="70" fill="#FFFFFF" fill-opacity="0.80" font-family="'Outfit', system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="end" letter-spacing="1">RETINA EDUCATIONAL CONSULTANCY</text>
+
+  <!-- Central Sprout Emblem -->
+  <g transform="translate(400, 200)">
+    <circle cx="0" cy="0" r="65" fill="#FFFFFF" fill-opacity="0.06" stroke="#4ADE80" stroke-opacity="0.4" stroke-width="2" />
+    <!-- Botanical Leaf Vector -->
+    <path d="M 0 35 C -35 15 -35 -25 0 -45 C 35 -25 35 15 0 35 Z" fill="url(#leafGrad)" />
+    <path d="M 0 35 L 0 -40" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 0 -5 L 18 -20" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+    <path d="M 0 10 L -18 -5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Titles -->
+  <text x="400" y="325" fill="#FFFFFF" font-family="'Outfit', system-ui, sans-serif" font-size="44" font-weight="900" text-anchor="middle" letter-spacing="1">B.Sc. AGRICULTURE</text>
+  <text x="400" y="365" fill="#4ADE80" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="19" font-weight="700" text-anchor="middle">Agronomy • Horticulture • Soil Science • Plant Breeding</text>
+
+  <!-- Bottom Information Box -->
+  <g transform="translate(50, 410)">
+    <rect width="700" height="145" rx="18" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="1.5" />
+    
+    <g transform="translate(40, 30)">
+      <text x="0" y="20" fill="#FFFFFF" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="800">Leading Agricultural Universities</text>
+      <text x="0" y="44" fill="#EAF3FF" fill-opacity="0.8" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13">Recognized institutions with extensive experimental research farms &amp; labs</text>
+      <text x="0" y="74" fill="#FCD34D" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="700">✓ Merit &amp; Institutional Scholarships • 15+ Years Experienced Counselor Support</text>
+    </g>
+
+    <g transform="translate(530, 45)">
+      <rect width="130" height="48" rx="12" fill="#22C55E" />
+      <text x="65" y="29" fill="#FFFFFF" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="800" text-anchor="middle">APPLY NOW</text>
+    </g>
+  </g>
+</svg>

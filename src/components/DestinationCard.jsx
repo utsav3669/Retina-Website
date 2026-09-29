@@ -7,7 +7,7 @@ export default function DestinationCard({ destination }) {
   return (
     <Link
       to={`/destinations/${destination.slug}`}
-      className="group relative flex flex-col justify-end h-[380px] sm:h-[420px] rounded-3xl overflow-hidden bg-[#0B2F6B] transition-all duration-400 ease-out transform hover:-translate-y-1.5 shadow-xs hover:shadow-xl"
+      className="group relative flex flex-col justify-end h-[380px] sm:h-[420px] rounded-3xl overflow-hidden bg-[#102A43] transition-all duration-400 ease-out transform hover:-translate-y-1.5 shadow-xs hover:shadow-xl"
     >
       {/* Subtle micro route arc motif */}
       <div className="absolute top-5 right-5 z-10 opacity-60 group-hover:opacity-95 transition-opacity duration-300">
@@ -23,7 +23,7 @@ export default function DestinationCard({ destination }) {
       />
 
       {/* 2. Soft Dark Vignette Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0B2F6B]/95 via-[#0B2F6B]/40 to-transparent opacity-85 group-hover:opacity-92 transition-opacity duration-400" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#102A43]/95 via-[#102A43]/40 to-transparent opacity-85 group-hover:opacity-92 transition-opacity duration-400" />
 
       {/* 3. Minimal Content: Country Name, Description, Arrow */}
       <div className="relative z-10 p-7 sm:p-8 flex flex-col gap-2">
@@ -37,7 +37,7 @@ export default function DestinationCard({ destination }) {
             </h3>
           </div>
 
-          <div className="w-9 h-9 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-[#FFFFFF] transition-all duration-300 ease-out group-hover:bg-[#E21F26] group-hover:border-[#E21F26]">
+          <div className="w-9 h-9 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-[#FFFFFF] transition-all duration-300 ease-out group-hover:bg-[#0E4BA4] group-hover:border-[#0E4BA4]">
             <ArrowRight className="w-4 h-4 transform transition-transform duration-300 ease-out group-hover:translate-x-0.5" />
           </div>
         </div>
@@ -46,7 +46,7 @@ export default function DestinationCard({ destination }) {
           {destination.tagline}
         </p>
 
-        <div className="pt-2 flex items-center gap-1.5 text-xs font-semibold text-white/[0.80] group-hover:text-[#E21F26] transition-colors duration-300 ease-out">
+        <div className="pt-2 flex items-center gap-1.5 text-xs font-semibold text-white/[0.80] group-hover:text-[#FF914D] transition-colors duration-300 ease-out">
           <span>Explore</span>
           <ArrowRight className="w-3.5 h-3.5 transform transition-transform duration-300 ease-out group-hover:translate-x-1" />
         </div>

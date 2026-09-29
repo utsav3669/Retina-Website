@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="guardianBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2B48" />
+      <stop offset="50%" stop-color="#164B9B" />
+      <stop offset="100%" stop-color="#071730" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" rx="24" fill="url(#guardianBg)" />
+  <circle cx="200" cy="450" r="220" fill="#E21F26" fill-opacity="0.18" filter="blur(60px)" />
+  <circle cx="650" cy="150" r="180" fill="#164B9B" fill-opacity="0.3" filter="blur(50px)" />
+
+  <!-- Video Thumbnail Play Badge -->
+  <g transform="translate(400, 160)">
+    <circle cx="0" cy="0" r="45" fill="#FFFFFF" fill-opacity="0.15" stroke="#FFFFFF" stroke-width="2" />
+    <polygon points="-12,-20 22,0 -12,20" fill="#FFFFFF" />
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="270" fill="#FFFFFF" font-family="'Outfit', system-ui, sans-serif" font-size="34" font-weight="900" text-anchor="middle">Birgunj Guardian's Words of Appreciation ❤️🇳🇵</text>
+  <text x="400" y="305" fill="#EAF3FF" fill-opacity="0.8" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="600" text-anchor="middle">Student &amp; Parent Experience with Retina Educational Consultancy</text>
+
+  <!-- Quote Box from Rahul Kumar Yadav -->
+  <g transform="translate(100, 345)">
+    <rect width="600" height="150" rx="20" fill="#FFFFFF" fill-opacity="0.1" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1.5" />
+    
+    <text x="300" y="55" fill="#FFD700" font-family="'Outfit', system-ui, sans-serif" font-size="32" font-weight="800" text-anchor="middle">"Think Bangladesh, think Retina."</text>
+    
+    <text x="300" y="100" fill="#FFFFFF" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle">— Rahul Kumar Yadav</text>
+    <text x="300" y="125" fill="#4ADE80" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Trusted Guidance for Medical Admissions</text>
+  </g>
+
+  <!-- Footer Tagline -->
+  <g transform="translate(400, 535)">
+    <text x="0" y="0" fill="#FFFFFF" fill-opacity="0.7" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="600" text-anchor="middle">#Retina • 16 Years Of Trusted Expertise In Guiding Students For Medical Admissions In Bangladesh</text>
+    <text x="0" y="25" fill="#FFFFFF" fill-opacity="0.5" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" text-anchor="middle">New Plaza, Putalisadak-29, Kathmandu, Nepal</text>
+  </g>
+</svg>

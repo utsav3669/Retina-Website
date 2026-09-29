@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="nursBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#082347" />
+      <stop offset="50%" stop-color="#0B2F6B" />
+      <stop offset="100%" stop-color="#164B9B" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" rx="24" fill="url(#nursBg)" />
+  <circle cx="400" cy="240" r="140" fill="#E21F26" fill-opacity="0.2" filter="blur(50px)" />
+  
+  <g transform="translate(400, 220)">
+    <circle cx="0" cy="0" r="65" fill="#FFFFFF" fill-opacity="0.1" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="2.5" />
+    <!-- Nursing Cap / Heart Cross -->
+    <path d="M -30 10 L 30 10 L 22 -20 L -22 -20 Z" fill="#FFFFFF" fill-opacity="0.25" stroke="#FFFFFF" stroke-width="2" />
+    <path d="M -8 -5 L 8 -5 M 0 -13 L 0 3" stroke="#E21F26" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <text x="400" y="370" fill="#FFFFFF" font-family="'Outfit', system-ui, sans-serif" font-size="52" font-weight="900" text-anchor="middle" letter-spacing="2">B.Sc. NURSING</text>
+  <text x="400" y="415" fill="#FFD700" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="20" font-weight="800" text-anchor="middle">Bachelor of Science in Nursing</text>
+  <text x="400" y="460" fill="#EAF3FF" fill-opacity="0.85" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="600" text-anchor="middle">CEE Nursing Preparation, Weekly Friday Mock Tests &amp; Admissions Guidance</text>
+  <text x="400" y="495" fill="#FFFFFF" fill-opacity="0.65" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" text-anchor="middle">Comprehensive Clinical Hospital Exposure and Degree Recognition</text>
+</svg>

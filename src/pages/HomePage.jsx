@@ -39,75 +39,75 @@ export default function HomePage() {
   const featuredBlog = blogs.find(b => b.featuredOnHome) || blogs[0];
   const secondaryBlogs = blogs.filter(b => b.id !== featuredBlog.id).slice(0, 3);
 
-  // Why StudyHub 4 Editorial Points
+  // Retina 4 Core Advantages (From Banner)
   const whyPoints = [
     {
       num: '01',
-      title: 'Expert Preparation',
-      desc: 'Learn with experienced trainers focused on genuine language improvement, communicative confidence, and test-specific strategies.'
+      title: 'Top Medical Colleges',
+      desc: 'Guidance and admissions support for leading medical institutions and universities recognized by medical councils.'
     },
     {
       num: '02',
-      title: 'Structured Learning',
-      desc: 'Follow a systematic modular syllabus covering all exam sections, grammar foundations, and high-frequency question patterns.'
+      title: 'Scholarship Opportunities',
+      desc: 'Expert assistance in identifying government, merit-based, and institutional scholarship seats for deserving medical aspirants.'
     },
     {
       num: '03',
-      title: 'Regular Practice',
-      desc: 'Engage in timed section drills, authentic question banks, and free weekly full-length mock examinations under authentic test pressure.'
+      title: '15+ Years Experienced Counselor',
+      desc: 'Over 15 years of dedicated counseling experience guiding students and families through complex medical admissions.'
     },
     {
       num: '04',
-      title: 'Personalized Support',
-      desc: 'Benefit from individual speaking feedback, thorough writing evaluations, small batches, and customized study timelines.'
+      title: 'Company Owned by Doctors Studied from Bangladesh',
+      desc: 'Run by a team of doctors who graduated from Dhaka University, offering authentic firsthand medical insights.'
     }
   ];
 
-  // Student Journey: 4-stage minimal process
+  // Medical Admission Journey: 4-stage process
   const journeySteps = [
     {
       step: '01',
-      title: 'Understand',
-      desc: 'Initial evaluation of your academic background, current English baseline, target scores, and destination ambitions.'
+      title: 'Doctor Counseling',
+      desc: 'Initial one-on-one consultation with Dhaka University alumni doctors to evaluate academic eligibility and career goals.'
     },
     {
       step: '02',
-      title: 'Prepare',
-      desc: 'Structured classroom instruction, focused skill-building in all exam sections, and comprehensive study materials.'
+      title: 'College Selection',
+      desc: 'Selecting top medical institutions across Bangladesh, China, India, and the Philippines tailored to your ambitions.'
     },
     {
       step: '03',
-      title: 'Practice',
-      desc: 'Computer-lab sessions, intensive listening and reading drills, and weekly Saturday mock exams with band analysis.'
+      title: 'Form & Documentation',
+      desc: 'Free CEE form-filling support (Pay Rs. 0 only), academic verification, equivalence, and formal university applications.'
     },
     {
       step: '04',
-      title: 'Progress',
-      desc: 'Target score achievement, document review, and transparent counseling for international university admissions.'
+      title: 'Admission & Departure',
+      desc: 'Confirmed admission offer, student visa assistance, pre-departure briefing, and dedicated hostel and local support.'
     }
   ];
 
   // Frequently Asked Questions
   const homeFaqs = [
     {
-      question: 'How long does the IELTS or PTE preparation course take?',
-      answer: 'Our standard intensive preparation programs run for 6 weeks, covering all four modules (Listening, Reading, Writing, Speaking) with daily drills and weekly full-length Saturday mock exams. Tailored and fast-track durations are also available depending on your initial placement test score.'
+      question: 'Why is Bangladesh a premier destination for MBBS and BDS?',
+      answer: 'Bangladesh offers a disease pattern, patient demographic, and clinical curriculum identical to Nepal and the subcontinent. With high clinical bed occupancy in teaching hospitals, English-medium education, and strong pass rates in medical licensing exams, it is the top choice for aspiring doctors. Furthermore, Retina is owned and guided by doctors who graduated directly from Dhaka University.'
     },
     {
-      question: 'Are weekly Saturday mock exams included with the preparation?',
-      answer: 'Yes. Full-length Saturday mock exams conducted under actual exam conditions—complete with audio playback, timed computer sections, and individual trainer feedback—are included completely free of charge for all enrolled students.'
+      question: 'Does Retina charge any fee for CEE online form submission?',
+      answer: 'No. Retina Educational Consultancy invites all CEE aspirants for free online exam form submission at our Putalisadak office with ZERO charges (Pay Rs. 0 only), alongside a free counseling session with medical experts.'
     },
     {
-      question: 'Which test should I choose: IELTS Academic or PTE Academic?',
-      answer: 'Both tests are globally recognized across Canada, Australia, the UK, the USA, and Europe. If you prefer face-to-face conversational speaking with a human examiner, IELTS is recommended. If you perform better with computer-based scoring and quick score turnaround (typically 48 hours), PTE Academic is an excellent fit. We offer a free diagnostic evaluation at our Bhairahawa center to help you choose.'
+      question: 'What is the Friday CEE Nursing Mock Test session?',
+      answer: 'We organize dedicated CEE Nursing mock tests and marks-boosting sessions on Fridays starting at 3:00 PM at our Putalisadak office. It helps nursing aspirants test their readiness under exam conditions and gain proven score-boosting strategies.'
     },
     {
-      question: 'Does StudyHub charge any fees for initial counseling and university guidance?',
-      answer: 'No. Our preliminary academic assessments, university course recommendations, and destination eligibility evaluations are provided completely free of charge. We believe in open, honest guidance without upfront commitments.'
+      question: 'Who will guide me during my admission process at Retina?',
+      answer: 'You will receive direct counseling from our senior advisors with 15+ years of counselor experience alongside practicing medical doctors who graduated from Dhaka University and understand medical training firsthand.'
     },
     {
-      question: 'Can I visit the Bhairahawa campus to meet an advisor in person?',
-      answer: 'Yes! We encourage prospective students and parents to visit our physical campus at Narayan Path, Bhairahawa (opposite Mahalakshmi Bank). We are open Sunday through Friday from 7:00 AM to 6:00 PM.'
+      question: 'Where is Retina Educational Consultancy located and when can I visit?',
+      answer: 'Our office is located at New Plaza, Putalisadak-29, Kathmandu, Nepal. We are Always Open to welcome students and parents for in-person consultations. You can call us at 01-4547423 or 9804880051.'
     }
   ];
 
@@ -119,7 +119,7 @@ export default function HomePage() {
           ============================================================ */}
       <section className="relative overflow-hidden pt-12 pb-20 sm:pt-20 sm:pb-32 bg-[#FFFFFF]">
         {/* Extremely soft subtle radial light */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[450px] bg-gradient-to-tr from-[#EAF3FF]/60 via-[#F4F8FD]/40 to-transparent blur-[120px] pointer-events-none -z-10" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[450px] bg-gradient-to-tr from-[#EEF4FF]/70 via-[#EEF4FF]/40 to-transparent blur-[120px] pointer-events-none -z-10" />
 
         {/* Minimal global journey route element with tiny location points */}
         <HeroRouteBackground />
@@ -133,25 +133,25 @@ export default function HomePage() {
               {/* Refined Eyebrow */}
               <HeroFadeIn delay={0.06} y={10}>
                 <div className="inline-flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#E21F26]"></span>
-                  <span className="text-xs font-semibold tracking-widest uppercase text-[#667085]">
-                    INTERNATIONAL EDUCATION & TEST PREPARATION
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF914D]"></span>
+                  <span className="text-xs font-semibold tracking-widest uppercase text-[#5B6472]">
+                    RETINA EDUCATIONAL CONSULTANCY PVT. LTD.
                   </span>
                 </div>
               </HeroFadeIn>
 
               {/* Large Headline */}
               <HeroFadeIn delay={0.14} y={12}>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#172033] tracking-tight leading-[1.12] font-display">
-                  Prepare Today.<br />
-                  <span className="text-[#164B9B]">Study Abroad Tomorrow.</span>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#102A43] tracking-tight leading-[1.12] font-display">
+                  Doctor-Led Guidance for<br />
+                  <span className="text-[#0E4BA4]">Medical Admissions Abroad.</span>
                 </h1>
               </HeroFadeIn>
 
               {/* Supporting Paragraph */}
               <HeroFadeIn delay={0.22} y={12}>
-                <p className="text-base sm:text-lg text-[#667085] max-w-xl leading-relaxed font-normal">
-                  IELTS and PTE preparation with structured learning and personalized guidance for your international education journey.
+                <p className="text-base sm:text-lg text-[#5B6472] max-w-xl leading-relaxed font-normal">
+                  Run by a team of doctors who graduated from Dhaka University, we bring 16 years of trusted expertise in guiding students for medical admissions in Bangladesh, China, India, and the Philippines.
                 </p>
               </HeroFadeIn>
 
@@ -160,7 +160,7 @@ export default function HomePage() {
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center justify-center gap-2 h-13 px-8 rounded-xl bg-[#E21F26] hover:bg-[#B91C24] text-white text-sm font-semibold tracking-wide transition-all duration-300 ease-out transform hover:-translate-y-0.5 shadow-sm hover:shadow-md"
+                    className="inline-flex items-center justify-center gap-2 h-13 px-8 rounded-xl bg-[#0E4BA4] hover:bg-[#0A3B82] text-white text-sm font-semibold tracking-wide transition-all duration-300 ease-out transform hover:-translate-y-0.5 shadow-sm hover:shadow-md"
                   >
                     <span>Talk to a Counselor</span>
                     <ArrowRight className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1" />
@@ -168,27 +168,27 @@ export default function HomePage() {
 
                   <Link
                     to="/courses"
-                    className="inline-flex items-center justify-center gap-2 h-13 px-8 rounded-xl bg-transparent border border-[#164B9B] text-[#164B9B] hover:bg-[#EAF3FF] hover:text-[#0B2F6B] text-sm font-semibold tracking-wide transition-all duration-300 ease-out transform hover:-translate-y-0.5"
+                    className="inline-flex items-center justify-center gap-2 h-13 px-8 rounded-xl bg-transparent border border-[#0E4BA4] text-[#0E4BA4] hover:bg-[#0E4BA4] hover:text-white text-sm font-semibold tracking-wide transition-all duration-300 ease-out transform hover:-translate-y-0.5"
                   >
-                    <span>Explore Courses</span>
+                    <span>Explore Medical Programs</span>
                   </Link>
                 </div>
               </HeroFadeIn>
 
               {/* Micro-trust line */}
               <HeroFadeIn delay={0.38} y={10}>
-                <div className="pt-2 flex flex-wrap items-center gap-6 text-xs text-[#667085] font-medium">
+                <div className="pt-2 flex flex-wrap items-center gap-6 text-xs text-[#5B6472] font-medium">
                   <div className="flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#164B9B]"></span>
-                    <span>Narayan Path, Bhairahawa</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4]"></span>
+                    <span>New Plaza, Putalisadak-29</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#164B9B]"></span>
-                    <span>Weekly Saturday Mocks</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4]"></span>
+                    <span>15+ Years Experienced Counselor</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#164B9B]"></span>
-                    <span>Certified Instructors</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4]"></span>
+                    <span>Dhaka University Graduate Doctors</span>
                   </div>
                 </div>
               </HeroFadeIn>
@@ -200,13 +200,13 @@ export default function HomePage() {
                 <div className="relative mx-auto max-w-md lg:max-w-none">
                   
                   {/* Main Hero Photo with gentle floating animation */}
-                  <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#E2E6EC] aspect-[4/5] bg-[#0B2F6B] animate-float-subtle">
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#E2E8F0] aspect-[4/5] bg-[#102A43] animate-float-subtle">
                     <img
-                      src="/images/hero.jpg"
-                      alt="StudyHub Student in International Academic Environment"
+                      src="/images/retina-hero.jpg"
+                      alt="Retina Educational Consultancy Medical Guidance"
                       className="w-full h-full object-cover object-center"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B2F6B]/60 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#102A43]/60 via-transparent to-transparent pointer-events-none" />
                   </div>
 
                   {/* EXACTLY ONE subtle floating frosted glass card */}
@@ -214,17 +214,17 @@ export default function HomePage() {
                     <div className="glass-frosted p-5 rounded-2xl">
                       <div className="flex items-center justify-between">
                         <div>
-                          <div className="text-xs font-bold uppercase tracking-wider text-[#E21F26]">
-                            IELTS + PTE
+                          <div className="text-xs font-bold uppercase tracking-wider text-[#FF914D]">
+                            MBBS • MD • BDS • NURSING
                           </div>
-                          <div className="text-sm font-bold text-[#172033] mt-0.5 font-display">
-                            Structured Preparation
+                          <div className="text-sm font-bold text-[#102A43] mt-0.5 font-display">
+                            Doctor-Led Guidance
                           </div>
-                          <div className="text-xs text-[#667085] mt-0.5">
-                            Personalized Support • Bhairahawa
+                          <div className="text-xs text-[#5B6472] mt-0.5">
+                            16 Years Expertise • Putalisadak
                           </div>
                         </div>
-                        <div className="w-9 h-9 rounded-xl bg-[#164B9B] text-white flex items-center justify-center shrink-0 shadow-xs">
+                        <div className="w-9 h-9 rounded-xl bg-[#0E4BA4] text-white flex items-center justify-center shrink-0 shadow-xs">
                           <Check className="w-4 h-4 stroke-[2.5]" />
                         </div>
                       </div>
@@ -240,9 +240,9 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          2. ABOUT SECTION (Off-White Background: #FAFBFC)
+          2. ABOUT SECTION (White Background)
           ============================================================ */}
-      <section className="relative overflow-hidden py-24 sm:py-32 bg-[#FAFBFC] border-t border-b border-[#E2E6EC]">
+      <section className="relative overflow-hidden py-24 sm:py-32 bg-[#FFFFFF] border-t border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
@@ -250,10 +250,10 @@ export default function HomePage() {
             <div className="lg:col-span-6 relative">
               <ScrollReveal y={16}>
                 <AboutOrbitsBackground className="-top-12 -left-12 w-[460px] h-[400px]" />
-                <div className="relative rounded-xl overflow-hidden shadow-lg border border-[#E2E6EC] aspect-[4/3] bg-[#0B2F6B] z-10">
+                <div className="relative rounded-xl overflow-hidden shadow-lg border border-[#E2E8F0] aspect-[4/3] bg-[#102A43] z-10">
                   <img
-                    src="/images/counseling.jpg"
-                    alt="Student Academic Counseling at StudyHub Bhairahawa"
+                    src="/images/retina-about.jpg"
+                    alt="Doctor Leadership and Counseling Team at Retina Educational Consultancy Putalisadak"
                     loading="lazy"
                     className="w-full h-full object-cover"
                   />
@@ -265,22 +265,22 @@ export default function HomePage() {
             <div className="lg:col-span-6 space-y-6">
               <ScrollReveal y={14} delay={0.08}>
                 <div className="space-y-2">
-                  <span className="text-xs font-semibold tracking-widest uppercase text-[#164B9B]">
-                    ABOUT STUDYHUB
+                  <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
+                    ABOUT RETINA EDUCATIONAL CONSULTANCY
                   </span>
-                  <h2 className="text-3xl sm:text-4xl font-extrabold text-[#172033] tracking-tight leading-tight font-display">
-                    Guidance That Starts With Preparation.
+                  <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight leading-tight font-display">
+                    Guidance That Starts With Doctor-Led Expertise.
                   </h2>
                 </div>
               </ScrollReveal>
 
               <ScrollReveal y={14} delay={0.16}>
-                <div className="space-y-4 text-sm sm:text-base text-[#667085] leading-relaxed font-normal">
+                <div className="space-y-4 text-sm sm:text-base text-[#5B6472] leading-relaxed font-normal">
                   <p>
-                    At StudyHub, we believe that studying abroad begins with genuine academic readiness. We do not push unverified claims or one-size-fits-all pathways.
+                    Run by a team of doctors who graduated from Dhaka University, we bring 16 years of trusted expertise in guiding students for medical admissions in Bangladesh, China, India, and the Philippines.
                   </p>
                   <p>
-                    Based in Bhairahawa at Narayan Path, we provide structured test coaching for IELTS and PTE alongside transparent, student-first counseling for Canada, Australia, the USA, the UK, Europe, and New Zealand.
+                    Based at New Plaza, Putalisadak-29, Kathmandu, Nepal, our company is owned by doctors who studied in Bangladesh. We provide students and parents with direct counseling from experienced advisors with 15+ years of counselor experience.
                   </p>
                 </div>
               </ScrollReveal>
@@ -288,32 +288,32 @@ export default function HomePage() {
               {/* Two Highlight Blue Boxes with Exact Equal Dimensions & Symmetrical Layout */}
               <StaggerGrid className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1 w-full" stagger={0.08}>
                 <StaggerItem className="w-full h-full">
-                  <div className="relative overflow-hidden p-5 rounded-xl bg-[#164B9B] text-white shadow-xs group card-elevate w-full h-[124px] flex flex-col justify-center transition-all duration-300 hover:-translate-y-0.5">
+                  <div className="relative overflow-hidden p-5 rounded-xl bg-[#0E4BA4] text-white shadow-xs group card-elevate w-full h-[124px] flex flex-col justify-center transition-all duration-300 hover:-translate-y-0.5">
                     <div className="absolute -right-2 -bottom-2 pointer-events-none opacity-30">
                       <BoxCampusWaypoint />
                     </div>
                     <div className="relative z-10 flex flex-col justify-center">
                       <div className="text-xl sm:text-2xl font-bold font-display text-[#FFFFFF] leading-tight">
-                        Bhairahawa
+                        Putalisadak
                       </div>
                       <div className="text-xs text-white/[0.80] mt-1.5 leading-snug">
-                        Convenient physical campus on Narayan Path
+                        New Plaza, Putalisadak-29, Kathmandu
                       </div>
                     </div>
                   </div>
                 </StaggerItem>
 
                 <StaggerItem className="w-full h-full">
-                  <div className="relative overflow-hidden p-5 rounded-xl bg-[#164B9B] text-white shadow-xs group card-elevate w-full h-[124px] flex flex-col justify-center transition-all duration-300 hover:-translate-y-0.5">
+                  <div className="relative overflow-hidden p-5 rounded-xl bg-[#0E4BA4] text-white shadow-xs group card-elevate w-full h-[124px] flex flex-col justify-center transition-all duration-300 hover:-translate-y-0.5">
                     <div className="absolute -right-2 -bottom-2 pointer-events-none opacity-30">
                       <BoxIntegrityOrbits />
                     </div>
                     <div className="relative z-10 flex flex-col justify-center">
                       <div className="text-xl sm:text-2xl font-bold font-display text-[#FFFFFF] leading-tight">
-                        100% Honest
+                        Doctor-Led
                       </div>
                       <div className="text-xs text-white/[0.80] mt-1.5 leading-snug">
-                        Realistic counseling without false claims
+                        Dhaka University graduate doctors & 16 yrs expertise
                       </div>
                     </div>
                   </div>
@@ -324,9 +324,9 @@ export default function HomePage() {
                 <div className="pt-2">
                   <Link
                     to="/about"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#164B9B] hover:text-[#0B2F6B] transition-colors duration-300 group"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#0E4BA4] hover:text-[#0A3B82] transition-colors duration-300 group"
                   >
-                    <span>About StudyHub</span>
+                    <span>About Retina</span>
                     <ArrowRight className="w-4 h-4 transform transition-transform duration-300 ease-out group-hover:translate-x-1" />
                   </Link>
                 </div>
@@ -349,29 +349,29 @@ export default function HomePage() {
           <ScrollReveal y={14}>
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
               <div className="space-y-2 max-w-2xl">
-                <span className="text-xs font-semibold tracking-widest uppercase text-[#164B9B]">
+                <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                   DESTINATIONS
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#172033] tracking-tight font-display">
-                  Where Could Your Education Take You?
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
+                  Where Could Your Medical Career Take You?
                 </h2>
-                <p className="text-sm sm:text-base text-[#667085] font-normal">
-                  Explore leading international study destinations, their academic systems, and student environments.
+                <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+                  Explore leading destinations for MBBS, MD, MS, BDS, and nursing abroad, led by medical admission experts.
                 </p>
               </div>
 
               <Link
                 to="/destinations"
-                className="inline-flex items-center gap-2 text-xs font-semibold text-[#164B9B] hover:text-[#0B2F6B] transition-colors duration-300 shrink-0 group"
+                className="inline-flex items-center gap-2 text-xs font-semibold text-[#0E4BA4] hover:text-[#0A3B82] transition-colors duration-300 shrink-0 group"
               >
-                <span>View All 6 Destinations</span>
+                <span>View All 4 Destinations</span>
                 <ArrowRight className="w-4 h-4 transform transition-transform duration-300 ease-out group-hover:translate-x-1" />
               </Link>
             </div>
           </ScrollReveal>
 
-          {/* 3x2 Grid with Subtle Staggered Card Reveals */}
-          <StaggerGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" stagger={0.07}>
+          {/* Grid with Subtle Staggered Card Reveals */}
+          <StaggerGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8" stagger={0.07}>
             {destinations.map((dest) => (
               <StaggerItem key={dest.id}>
                 <DestinationCard destination={dest} />
@@ -383,9 +383,9 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          4. COURSES SECTION (Very Light Blue Background: #F4F8FD)
+          4. COURSES SECTION (Soft Blue: #EEF4FF)
           ============================================================ */}
-      <section className="relative overflow-hidden py-24 sm:py-32 bg-[#F4F8FD] border-t border-b border-[#E2E6EC]">
+      <section className="relative overflow-hidden py-24 sm:py-32 bg-[#EEF4FF] border-t border-b border-[#E2E8F0]">
         <CourseProgressBackground />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -393,14 +393,14 @@ export default function HomePage() {
           {/* Section Heading */}
           <ScrollReveal y={14}>
             <div className="text-center max-w-2xl mx-auto space-y-3 mb-14 sm:mb-20">
-              <span className="text-xs font-semibold tracking-widest uppercase text-[#164B9B]">
-                OUR COURSES
+              <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
+                OUR PROGRAMS
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#172033] tracking-tight font-display">
-                Build the Skills Behind Your Score.
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
+                Empowering Your Medical Career.
               </h2>
-              <p className="text-sm sm:text-base text-[#667085] font-normal">
-                Structured preparation designed around the language skills and test strategies required for IELTS and PTE.
+              <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+                Structured counseling and direct admissions support for MBBS, MD, MS, BDS, B.Sc. Nursing, AG, and VET.
               </p>
             </div>
           </ScrollReveal>
@@ -408,32 +408,44 @@ export default function HomePage() {
           {/* Two Large Editorial Course Cards with Staggered Entrance */}
           <StaggerGrid className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10" stagger={0.12}>
             <StaggerItem>
-              <CourseCard course={courses.ielts} />
+              <CourseCard course={courses.mbbs} />
             </StaggerItem>
             <StaggerItem>
-              <CourseCard course={courses.pte} />
+              <CourseCard course={courses.bds} />
             </StaggerItem>
           </StaggerGrid>
+
+          <ScrollReveal y={12} delay={0.15}>
+            <div className="mt-12 text-center">
+              <Link
+                to="/courses"
+                className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-xl bg-transparent border border-[#0E4BA4] text-[#0E4BA4] hover:bg-[#0E4BA4] hover:text-white text-xs font-semibold tracking-wide transition-all duration-300 ease-out"
+              >
+                <span>View All 7 Medical Programs</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </ScrollReveal>
 
         </div>
       </section>
 
       {/* ============================================================
-          5. IELTS / PTE COMPARISON (Soft Blue Tint: #EAF3FF/40)
+          5. MBBS / MD COMPARISON (White Background)
           ============================================================ */}
-      <section className="py-24 sm:py-32 bg-[#EAF3FF]/40">
+      <section className="py-24 sm:py-32 bg-[#FFFFFF]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
             <div className="text-center max-w-2xl mx-auto space-y-3 mb-14">
-              <span className="text-xs font-semibold tracking-widest uppercase text-[#164B9B]">
-                WHICH TEST IS RIGHT FOR YOU?
+              <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
+                MEDICAL EDUCATION PATHWAYS
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#172033] tracking-tight font-display">
-                Not Sure Where to Start?
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
+                Undergraduate vs Postgraduate Pathways
               </h2>
-              <p className="text-sm sm:text-base text-[#667085] font-normal">
-                Both tests evaluate academic English competency, but their test delivery, speaking format, and scoring frameworks differ.
+              <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+                Whether preparing for your first medical degree or advancing to clinical specialization, our doctor counselors provide direct admission guidance.
               </p>
             </div>
           </ScrollReveal>
@@ -441,49 +453,49 @@ export default function HomePage() {
           {/* Two Minimal Editorial Columns with Staggered Entrance */}
           <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 gap-8" stagger={0.1}>
             
-            {/* Column 1: IELTS */}
+            {/* Column 1: MBBS / BDS */}
             <StaggerItem>
-              <div className="bg-[#FFFFFF] rounded-3xl p-8 sm:p-10 border border-[#E2E6EC] shadow-xs flex flex-col justify-between space-y-8 h-full transition-all duration-400 ease-out hover:shadow-lg hover:-translate-y-1">
+              <div className="bg-[#FFFFFF] rounded-3xl p-8 sm:p-10 border border-[#E2E8F0] shadow-xs flex flex-col justify-between space-y-8 h-full transition-all duration-400 ease-out hover:shadow-lg hover:-translate-y-1">
                 <div className="space-y-6">
-                  <div className="pb-4 border-b border-[#E2E6EC] flex items-start justify-between">
+                  <div className="pb-4 border-b border-[#E2E8F0] flex items-start justify-between">
                     <div>
-                      <span className="text-xs font-semibold text-[#164B9B] uppercase tracking-wider">International Benchmark</span>
-                      <h3 className="text-2xl font-extrabold text-[#172033] mt-1 font-display">IELTS Academic</h3>
-                      <p className="text-xs text-[#98A2B3] mt-1">Paper-Based or Computer-Delivered</p>
+                      <span className="text-xs font-semibold text-[#0E4BA4] uppercase tracking-wider">Primary Medical Degree</span>
+                      <h3 className="text-2xl font-extrabold text-[#102A43] mt-1 font-display">MBBS & BDS</h3>
+                      <p className="text-xs text-[#8D98AA] mt-1">Bachelor of Medicine, Bachelor of Surgery & Dental</p>
                     </div>
                     <CardProgressMotif className="opacity-70 mt-1" />
                   </div>
 
-                  <div className="space-y-4 text-xs sm:text-sm text-[#667085]">
+                  <div className="space-y-4 text-xs sm:text-sm text-[#5B6472]">
                     <div className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#164B9B] mt-2 shrink-0"></span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4] mt-2 shrink-0"></span>
                       <div>
-                        <strong className="text-[#172033] block">Speaking Evaluation:</strong>
-                        Face-to-face conversational interview with a certified human examiner.
+                        <strong className="text-[#102A43] block">Eligibility Requirements:</strong>
+                        10+2 / High School Science with Biology, Physics, and Chemistry, plus qualifying CEE / NEET score.
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#164B9B] mt-2 shrink-0"></span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4] mt-2 shrink-0"></span>
                       <div>
-                        <strong className="text-[#172033] block">Score Range:</strong>
-                        Bands 0 – 9 (in 0.5 band increments).
+                        <strong className="text-[#102A43] block">Program Duration:</strong>
+                        5 Years Academic Coursework + 1 Year Compulsory Rotatory Clinical Internship.
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#164B9B] mt-2 shrink-0"></span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4] mt-2 shrink-0"></span>
                       <div>
-                        <strong className="text-[#172033] block">Test Duration:</strong>
-                        Approximately 2 hours and 45 minutes across 4 distinct modules.
+                        <strong className="text-[#102A43] block">Top Study Destinations:</strong>
+                        Bangladesh (highest clinical bed flow and similar syllabus), China, India, and Philippines.
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#164B9B] mt-2 shrink-0"></span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4] mt-2 shrink-0"></span>
                       <div>
-                        <strong className="text-[#172033] block">Best Suited For:</strong>
-                        Students targeting UK, Canada, Australia, Europe, or those who prefer speaking directly with people.
+                        <strong className="text-[#102A43] block">Admissions Support:</strong>
+                        Free CEE online form submission (Pay Rs. 0 only), college seat booking, documentation, and visa clearance.
                       </div>
                     </div>
                   </div>
@@ -491,59 +503,59 @@ export default function HomePage() {
 
                 <div>
                   <Link
-                    to="/courses/ielts"
-                    className="w-full inline-flex items-center justify-center gap-2 h-11 rounded-xl bg-transparent border border-[#164B9B] text-[#164B9B] hover:bg-[#EAF3FF] hover:text-[#0B2F6B] text-xs font-semibold transition-all duration-300 ease-out"
+                    to="/courses/mbbs"
+                    className="w-full inline-flex items-center justify-center gap-2 h-11 rounded-xl bg-transparent border border-[#0E4BA4] text-[#0E4BA4] hover:bg-[#0E4BA4] hover:text-white text-xs font-semibold transition-all duration-300 ease-out"
                   >
-                    <span>Explore IELTS Preparation</span>
+                    <span>Explore MBBS Guidance</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
               </div>
             </StaggerItem>
 
-            {/* Column 2: PTE */}
+            {/* Column 2: MD / MS */}
             <StaggerItem>
-              <div className="bg-[#FFFFFF] rounded-3xl p-8 sm:p-10 border border-[#E2E6EC] shadow-xs flex flex-col justify-between space-y-8 h-full transition-all duration-400 ease-out hover:shadow-lg hover:-translate-y-1">
+              <div className="bg-[#FFFFFF] rounded-3xl p-8 sm:p-10 border border-[#E2E8F0] shadow-xs flex flex-col justify-between space-y-8 h-full transition-all duration-400 ease-out hover:shadow-lg hover:-translate-y-1">
                 <div className="space-y-6">
-                  <div className="pb-4 border-b border-[#E2E6EC] flex items-start justify-between">
+                  <div className="pb-4 border-b border-[#E2E8F0] flex items-start justify-between">
                     <div>
-                      <span className="text-xs font-semibold text-[#164B9B] uppercase tracking-wider">Fast & Automated</span>
-                      <h3 className="text-2xl font-extrabold text-[#172033] mt-1 font-display">PTE Academic</h3>
-                      <p className="text-xs text-[#98A2B3] mt-1">100% Computer-Based in Secure Lab</p>
+                      <span className="text-xs font-semibold text-[#0E4BA4] uppercase tracking-wider">Clinical Specialization</span>
+                      <h3 className="text-2xl font-extrabold text-[#102A43] mt-1 font-display">MD & MS</h3>
+                      <p className="text-xs text-[#8D98AA] mt-1">Doctor of Medicine & Master of Surgery</p>
                     </div>
                     <CardProgressMotif className="opacity-70 mt-1" />
                   </div>
 
-                  <div className="space-y-4 text-xs sm:text-sm text-[#667085]">
+                  <div className="space-y-4 text-xs sm:text-sm text-[#5B6472]">
                     <div className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#164B9B] mt-2 shrink-0"></span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4] mt-2 shrink-0"></span>
                       <div>
-                        <strong className="text-[#172033] block">Speaking Evaluation:</strong>
-                        Microphone headset recording assessed entirely by Pearson AI algorithms.
+                        <strong className="text-[#102A43] block">Eligibility Requirements:</strong>
+                        Recognized MBBS degree, permanent medical council registration, and completed internship.
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#164B9B] mt-2 shrink-0"></span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4] mt-2 shrink-0"></span>
                       <div>
-                        <strong className="text-[#172033] block">Score Range:</strong>
-                        Scale from 10 – 90 points with integrated skill metrics.
+                        <strong className="text-[#102A43] block">Program Duration:</strong>
+                        3-Year intensive clinical residency training under senior university professors.
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#164B9B] mt-2 shrink-0"></span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4] mt-2 shrink-0"></span>
                       <div>
-                        <strong className="text-[#172033] block">Test Duration:</strong>
-                        Single 2-hour uninterrupted session with rapid results in 48 hours.
+                        <strong className="text-[#102A43] block">Clinical Specializations:</strong>
+                        Internal Medicine, General Surgery, Pediatrics, OB-GYN, Orthopedics, Anesthesiology, and Radiology.
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#164B9B] mt-2 shrink-0"></span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4] mt-2 shrink-0"></span>
                       <div>
-                        <strong className="text-[#172033] block">Best Suited For:</strong>
-                        Fast application deadlines, confident typists, or students who prefer automated impartial scoring.
+                        <strong className="text-[#102A43] block">Retina Doctor Mentorship:</strong>
+                        Guidance from Dhaka University alumni doctors with extensive experience in postgraduate medical matching.
                       </div>
                     </div>
                   </div>
@@ -551,10 +563,10 @@ export default function HomePage() {
 
                 <div>
                   <Link
-                    to="/courses/pte"
-                    className="w-full inline-flex items-center justify-center gap-2 h-11 rounded-xl bg-transparent border border-[#164B9B] text-[#164B9B] hover:bg-[#EAF3FF] hover:text-[#0B2F6B] text-xs font-semibold transition-all duration-300 ease-out"
+                    to="/courses/md"
+                    className="w-full inline-flex items-center justify-center gap-2 h-11 rounded-xl bg-transparent border border-[#0E4BA4] text-[#0E4BA4] hover:bg-[#0E4BA4] hover:text-white text-xs font-semibold transition-all duration-300 ease-out"
                   >
-                    <span>Explore PTE Preparation</span>
+                    <span>Explore MD / MS Guidance</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
@@ -568,9 +580,9 @@ export default function HomePage() {
             <div className="mt-12 text-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-xl bg-[#E21F26] hover:bg-[#B91C24] text-white text-xs font-semibold tracking-wide transition-all duration-300 ease-out transform hover:-translate-y-0.5 shadow-xs hover:shadow-md"
+                className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-xl bg-[#0E4BA4] hover:bg-[#0A3B82] text-white text-xs font-semibold tracking-wide transition-all duration-300 ease-out transform hover:-translate-y-0.5 shadow-xs hover:shadow-md"
               >
-                <span>Talk to a Counselor for Test Selection</span>
+                <span>Talk to a Doctor Counselor for Program Selection</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -580,21 +592,21 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          6. WHY STUDYHUB (Pure White Background: #FFFFFF)
+          6. THE RETINA ADVANTAGE (Pure White Background: #FFFFFF)
           ============================================================ */}
       <section className="py-24 sm:py-32 bg-[#FFFFFF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
             <div className="max-w-2xl space-y-3 mb-16 sm:mb-20">
-              <span className="text-xs font-semibold tracking-widest uppercase text-[#164B9B]">
-                THE STUDYHUB METHOD
+              <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
+                THE RETINA ADVANTAGE
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#172033] tracking-tight font-display">
-                A Structured Approach to Language Competency.
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
+                Four Pillars of Medical Counseling.
               </h2>
-              <p className="text-sm sm:text-base text-[#667085] font-normal">
-                We focus on measurable progress, authentic exam practice, and personalized instruction.
+              <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+                Direct expertise, verified top medical colleges, and genuine doctor-led mentorship for your medical career.
               </p>
             </div>
           </ScrollReveal>
@@ -604,13 +616,13 @@ export default function HomePage() {
             {whyPoints.map((point) => (
               <StaggerItem key={point.num}>
                 <div className="space-y-4">
-                  <div className="text-4xl sm:text-5xl font-extrabold text-[#E2E6EC] font-display">
+                  <div className="text-4xl sm:text-5xl font-extrabold text-[#E2E8F0] font-display">
                     {point.num}
                   </div>
-                  <h3 className="text-lg font-bold text-[#172033] font-display">
+                  <h3 className="text-lg font-bold text-[#102A43] font-display">
                     {point.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#667085] leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-[#5B6472] leading-relaxed font-normal">
                     {point.desc}
                   </p>
                 </div>
@@ -622,40 +634,40 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          7. STUDENT JOURNEY (Very Light Blue: #F4F8FD)
+          7. STUDENT JOURNEY (Soft Blue: #EEF4FF)
           ============================================================ */}
-      <section className="py-24 sm:py-32 bg-[#F4F8FD] border-t border-b border-[#E2E6EC]">
+      <section className="py-24 sm:py-32 bg-[#EEF4FF] border-t border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
             <div className="text-center max-w-2xl mx-auto space-y-3 mb-16 sm:mb-20">
-              <span className="text-xs font-semibold tracking-widest uppercase text-[#164B9B]">
-                STUDENT JOURNEY
+              <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
+                ADMISSION JOURNEY
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#172033] tracking-tight font-display">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
                 A Clear, Step-by-Step Pathway.
               </h2>
-              <p className="text-sm sm:text-base text-[#667085] font-normal">
-                From early language assessment to verified university application readiness.
+              <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+                From initial doctor consultation and zero-charge CEE form assistance to verified admission in top medical colleges.
               </p>
             </div>
           </ScrollReveal>
 
           {/* Horizontal Process Grid on Desktop with thin connecting lines */}
           <div className="relative">
-            <div className="hidden lg:block absolute top-6 left-[10%] right-[10%] h-[1px] bg-[#E2E6EC] -z-0" />
+            <div className="hidden lg:block absolute top-6 left-[10%] right-[10%] h-[1px] bg-[#E2E8F0] -z-0" />
 
             <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10" stagger={0.08}>
               {journeySteps.map((step) => (
                 <StaggerItem key={step.step}>
-                  <div className="bg-[#FFFFFF] lg:bg-transparent p-6 lg:p-0 rounded-2xl lg:rounded-none border border-[#E2E6EC] lg:border-none space-y-3 shadow-2xs lg:shadow-none">
-                    <div className="w-12 h-12 rounded-full bg-[#FFFFFF] border border-[#E2E6EC] flex items-center justify-center font-bold text-xs text-[#164B9B] shadow-xs">
+                  <div className="bg-[#FFFFFF] lg:bg-transparent p-6 lg:p-0 rounded-2xl lg:rounded-none border border-[#E2E8F0] lg:border-none space-y-3 shadow-2xs lg:shadow-none">
+                    <div className="w-12 h-12 rounded-full bg-[#FFFFFF] border border-[#E2E8F0] flex items-center justify-center font-bold text-xs text-[#0E4BA4] shadow-xs">
                       {step.step}
                     </div>
-                    <h3 className="text-base font-bold text-[#172033] pt-1 font-display">
+                    <h3 className="text-base font-bold text-[#102A43] pt-1 font-display">
                       {step.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#667085] leading-relaxed font-normal">
+                    <p className="text-xs sm:text-sm text-[#5B6472] leading-relaxed font-normal">
                       {step.desc}
                     </p>
                   </div>
@@ -668,38 +680,39 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          8. PHYSICAL CENTER BANNER (Dark Navy: #0B2F6B)
+          8. PHYSICAL CENTER BANNER (Dark Navy: #102A43)
           ============================================================ */}
       <section className="py-20 sm:py-24 bg-[#FFFFFF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal y={16}>
-            <div className="bg-[#0B2F6B] text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden border border-white/10 shadow-xl">
-              <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-[#164B9B]/25 blur-3xl pointer-events-none" />
+            <div className="bg-[#102A43] text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden border border-white/10 shadow-xl">
+              <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-[#0E4BA4]/25 blur-3xl pointer-events-none" />
 
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                 
                 <div className="lg:col-span-8 space-y-4">
                   <div className="flex items-center justify-between">
                     <div className="inline-flex items-center gap-2 text-xs font-semibold text-white/[0.70]">
-                      <MapPin className="w-3.5 h-3.5 text-[#E21F26]" />
-                      <span>Narayan Path, Bhairahawa, Nepal (Opposite Mahalakshmi Bank)</span>
+                      <MapPin className="w-3.5 h-3.5 text-[#FF914D]" />
+                      <span>New Plaza, Putalisadak-29, Kathmandu, Nepal</span>
                     </div>
                     <ConnectingNodeGraphic className="opacity-60 hidden sm:block" />
                   </div>
+
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-[#FFFFFF] tracking-tight font-display">
-                    Visit Our Physical Preparation Center
+                    Visit Our Putalisadak Office
                   </h3>
                   <p className="text-xs sm:text-sm text-white/[0.78] leading-relaxed max-w-2xl font-normal">
-                    Take a free diagnostic test, explore our test-prep computer workstations, and discuss your study goals face-to-face with an experienced advisor.
+                    Meet our doctor counselors face-to-face, discuss your medical career ambitions, and get free CEE exam form fill-up assistance with expert advice.
                   </p>
                   <div className="flex flex-wrap items-center gap-6 pt-2 text-xs text-white/[0.60]">
                     <div className="flex items-center gap-1.5">
                       <Clock className="w-4 h-4 text-white/[0.60]" />
-                      <span>Sunday – Friday: 7:00 AM – 6:00 PM</span>
+                      <span>Always Open • 100% Recommend (13 Reviews)</span>
                     </div>
                     <div className="flex items-center gap-1.5">
                       <Phone className="w-4 h-4 text-white/[0.60]" />
-                      <span>{companyData.phone}</span>
+                      <span>01-4547423 • 9804880051</span>
                     </div>
                   </div>
                 </div>
@@ -707,7 +720,7 @@ export default function HomePage() {
                 <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-xl bg-[#FFFFFF] hover:bg-[#EAF3FF] text-[#0B2F6B] font-semibold text-xs transition-all duration-300 ease-out shadow-xs transform hover:-translate-y-0.5"
+                    className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-xl bg-[#FFFFFF] hover:bg-[#EEF4FF] text-[#0E4BA4] font-semibold text-xs transition-all duration-300 ease-out shadow-xs transform hover:-translate-y-0.5"
                   >
                     <span>Get Directions & Details</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -732,19 +745,19 @@ export default function HomePage() {
       {/* ============================================================
           9. FREQUENTLY ASKED QUESTIONS (Animated Accordion Expansion)
           ============================================================ */}
-      <section className="py-24 sm:py-32 bg-[#FAFBFC] border-t border-b border-[#E2E6EC]">
+      <section className="py-24 sm:py-32 bg-[#FFFFFF] border-t border-b border-[#E2E8F0]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
             <div className="text-center max-w-2xl mx-auto space-y-3 mb-14 sm:mb-16">
-              <span className="text-xs font-semibold tracking-widest uppercase text-[#164B9B]">
+              <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                 QUESTIONS & ANSWERS
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#172033] tracking-tight font-display">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
                 Frequently Asked Questions
               </h2>
-              <p className="text-sm sm:text-base text-[#667085] font-normal">
-                Clear answers regarding test coaching, course structure, and international study guidance.
+              <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+                Clear answers regarding medical admissions, CEE form fill-up, Bangladesh colleges, and doctor counseling.
               </p>
             </div>
           </ScrollReveal>
@@ -754,10 +767,10 @@ export default function HomePage() {
           </ScrollReveal>
 
           <ScrollReveal y={10} delay={0.16}>
-            <div className="mt-10 text-center text-xs text-[#667085]">
+            <div className="mt-10 text-center text-xs text-[#5B6472]">
               <span>Have a specific inquiry? </span>
-              <Link to="/contact" className="font-semibold text-[#164B9B] hover:underline">
-                Contact our counselors directly →
+              <Link to="/contact" className="font-semibold text-[#0E4BA4] hover:underline">
+                Contact our doctor counselors directly →
               </Link>
             </div>
           </ScrollReveal>
@@ -774,20 +787,20 @@ export default function HomePage() {
           <ScrollReveal y={14}>
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
               <div className="space-y-2 max-w-2xl">
-                <span className="text-xs font-semibold tracking-widest uppercase text-[#164B9B]">
-                  INSIGHTS & ADVICE
+                <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
+                  UPDATES & ANNOUNCEMENTS
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#172033] tracking-tight font-display">
-                  From the StudyHub Journal
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
+                  Featured Notices & Medical Insights
                 </h2>
-                <p className="text-sm sm:text-base text-[#667085] font-normal">
-                  Practical guidance for students preparing for English proficiency tests and international education.
+                <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+                  Stay updated on CEE nursing mock tests, MECEE alerts, Bangladesh admissions, and student guidance.
                 </p>
               </div>
 
               <Link
                 to="/blogs"
-                className="inline-flex items-center gap-2 text-xs font-semibold text-[#164B9B] hover:text-[#0B2F6B] transition-colors duration-300 shrink-0 group"
+                className="inline-flex items-center gap-2 text-xs font-semibold text-[#0E4BA4] hover:text-[#0A3B82] transition-colors duration-300 shrink-0 group"
               >
                 <span>View All Articles</span>
                 <ArrowRight className="w-4 h-4 transform transition-transform duration-300 ease-out group-hover:translate-x-1" />
@@ -813,7 +826,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          11. FINAL CTA (Dark Navy: #0B2F6B with Static Map & Airplane Journey)
+          11. FINAL CTA (Dark Navy: #102A43 with Static Map & Airplane Journey)
           ============================================================ */}
       <ScrollReveal y={14}>
         <CTASection />

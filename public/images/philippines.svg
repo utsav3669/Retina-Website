@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="phGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A244E" />
+      <stop offset="50%" stop-color="#164B9B" />
+      <stop offset="100%" stop-color="#051937" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#phGrad)" />
+  <circle cx="400" cy="300" r="170" fill="#E21F26" fill-opacity="0.2" filter="blur(60px)" />
+  <circle cx="200" cy="200" r="140" fill="#FACC15" fill-opacity="0.15" filter="blur(50px)" />
+  
+  <g transform="translate(100, 130)" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="2" fill="none">
+    <!-- US-Pattern Clinical Hospital Motif -->
+    <rect x="180" y="100" width="240" height="180" rx="10" />
+    <path d="M 180 150 L 420 150" />
+    <path d="M 180 200 L 420 200" />
+    <line x1="260" y1="100" x2="260" y2="280" />
+    <line x1="340" y1="100" x2="340" y2="280" />
+  </g>
+
+  <g transform="translate(400, 180)">
+    <circle cx="0" cy="0" r="50" fill="#164B9B" fill-opacity="0.6" stroke="#FFFFFF" stroke-width="2" />
+    <path d="M -18 0 L 18 0 M 0 -18 L 0 18" stroke="#FACC15" stroke-width="4.5" stroke-linecap="round" />
+  </g>
+
+  <text x="400" y="440" fill="#FFFFFF" font-family="'Outfit', system-ui, sans-serif" font-size="46" font-weight="900" text-anchor="middle" letter-spacing="2">PHILIPPINES</text>
+  <text x="400" y="480" fill="#38BDF8" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">US-Pattern Medical Curriculum (MD/MBBS) &amp; 100% English Instruction</text>
+  <text x="400" y="515" fill="#FFFFFF" fill-opacity="0.75" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="500" text-anchor="middle">Practical Clinical Rotations, High Global Acceptance, Hands-on Training</text>
+</svg>

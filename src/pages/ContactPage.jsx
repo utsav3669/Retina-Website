@@ -27,14 +27,14 @@ export default function ContactPage() {
             
             <HeroFadeIn delay={0.06} y={10}>
               <div className="space-y-4">
-                <span className="text-xs font-semibold tracking-widest uppercase text-[#164B9B]">
+                <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                   GET IN TOUCH
                 </span>
-                <h1 className="text-4xl sm:text-5xl font-extrabold text-[#172033] tracking-tight leading-tight font-display">
-                  Let's Talk About Your Next Step.
+                <h1 className="text-4xl sm:text-5xl font-extrabold text-[#102A43] tracking-tight leading-tight font-display">
+                  Let's Talk About Your Medical Future.
                 </h1>
-                <p className="text-base text-[#667085] leading-relaxed font-normal">
-                  Have questions about IELTS, PTE preparation, or exploring international universities? Connect directly with our certified counselors and language instructors in Bhairahawa.
+                <p className="text-base text-[#5B6472] leading-relaxed font-normal">
+                  Have questions about MBBS, BDS, B.Sc. Nursing, MD/MS admissions abroad, or free CEE form fill-up? Connect directly with our doctor counselors and experienced advisors at our Putalisadak office.
                 </p>
               </div>
             </HeroFadeIn>
@@ -56,70 +56,89 @@ export default function ContactPage() {
 
             {/* Clean Contact Information */}
             <HeroFadeIn delay={0.24} y={10}>
-              <div className="space-y-6 pt-6 border-t border-[#E2E6EC]">
+              <div className="space-y-6 pt-6 border-t border-[#E2E8F0]">
                 
                 {/* Location */}
                 <div className="space-y-1">
-                  <div className="text-xs font-semibold text-[#98A2B3] uppercase tracking-wider">
-                    Campus Location
+                  <div className="text-xs font-semibold text-[#5B6472] uppercase tracking-wider">
+                    Office Location
                   </div>
-                  <div className="text-sm font-bold text-[#172033]">
+                  <div className="text-sm font-bold text-[#102A43]">
                     {companyData.location.fullAddress}
                   </div>
-                  <div className="text-xs text-[#667085]">
-                    Directly opposite to Mahalakshmi Bank on Narayan Path.
+                  <div className="text-xs text-[#0E4BA4] mt-1">
+                    <a 
+                      href={companyData.location.googleMapUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:underline font-medium inline-flex items-center gap-1"
+                    >
+                      <span>Our Accurate Google Map Location →</span>
+                    </a>
                   </div>
                 </div>
 
-                {/* Phone */}
+                {/* Phones */}
                 <div className="space-y-1">
-                  <div className="text-xs font-semibold text-[#98A2B3] uppercase tracking-wider">
-                    Direct Phone
+                  <div className="text-xs font-semibold text-[#5B6472] uppercase tracking-wider">
+                    Direct Phone Numbers
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <a
+                      href="tel:01-4547423"
+                      className="text-base font-bold text-[#102A43] hover:text-[#0E4BA4] transition-colors duration-300 font-mono"
+                    >
+                      01-4547423
+                    </a>
+                    <a
+                      href="tel:9804880051"
+                      className="text-base font-bold text-[#102A43] hover:text-[#0E4BA4] transition-colors duration-300 font-mono"
+                    >
+                      9804880051
+                    </a>
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div className="space-y-1">
+                  <div className="text-xs font-semibold text-[#5B6472] uppercase tracking-wider">
+                    Email Address
                   </div>
                   <a
-                    href={`tel:${companyData.phone}`}
-                    className="text-base font-bold text-[#172033] hover:text-[#164B9B] transition-colors duration-300 font-mono"
+                    href={`mailto:${companyData.email}`}
+                    className="text-sm font-bold text-[#102A43] hover:text-[#0E4BA4] transition-colors duration-300"
                   >
-                    {companyData.phone}
+                    {companyData.email}
                   </a>
                 </div>
 
-                {/* Hours */}
+                {/* Hours & Rating */}
                 <div className="space-y-1">
-                  <div className="text-xs font-semibold text-[#98A2B3] uppercase tracking-wider">
-                    Office Hours
+                  <div className="text-xs font-semibold text-[#5B6472] uppercase tracking-wider">
+                    Status & Reviews
                   </div>
-                  <div className="text-sm text-[#172033]">
-                    Sunday – Friday: 7:00 AM – 6:00 PM
+                  <div className="text-sm font-medium text-emerald-600">
+                    Always Open
                   </div>
-                  <div className="text-xs text-[#667085]">
-                    Saturday: Free Diagnostic Tests & Mock Exams (8:00 AM – 2:00 PM)
+                  <div className="text-xs text-[#5B6472]">
+                    100% recommend (13 reviews) • 39K followers
                   </div>
                 </div>
 
                 {/* Social Channels */}
                 <div className="space-y-2 pt-2">
-                  <div className="text-xs font-semibold text-[#98A2B3] uppercase tracking-wider">
-                    Social Channels
+                  <div className="text-xs font-semibold text-[#5B6472] uppercase tracking-wider">
+                    Official Social Profile
                   </div>
                   <div className="flex items-center gap-4">
                     <a
                       href={companyData.socials.instagram.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-xs font-semibold text-[#667085] hover:text-[#164B9B] transition-colors duration-300"
+                      className="inline-flex items-center gap-2 text-xs font-semibold text-[#5B6472] hover:text-[#0E4BA4] transition-colors duration-300"
                     >
                       <InstagramIcon className="w-4 h-4 text-pink-600" />
-                      <span>Instagram</span>
-                    </a>
-                    <a
-                      href={companyData.socials.tiktok.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-xs font-semibold text-[#667085] hover:text-[#164B9B] transition-colors duration-300"
-                    >
-                      <span className="font-bold text-[#172033]">♪</span>
-                      <span>TikTok</span>
+                      <span>{companyData.socials.instagram.handle}</span>
                     </a>
                   </div>
                 </div>

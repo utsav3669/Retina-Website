@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bdGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#052E20" />
+      <stop offset="50%" stop-color="#0B2F6B" />
+      <stop offset="100%" stop-color="#021B13" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bdGrad)" />
+  <circle cx="400" cy="300" r="160" fill="#E21F26" fill-opacity="0.3" filter="blur(60px)" />
+  
+  <!-- Architectural & Medical Campus Motif -->
+  <g transform="translate(100, 120)" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="2" fill="none">
+    <!-- Academic Dome / University Columns -->
+    <path d="M 150 280 L 150 160 L 450 160 L 450 280" />
+    <path d="M 120 280 L 480 280" stroke-width="4" />
+    <path d="M 300 160 Q 300 80 230 110 Q 300 70 370 110 Z" fill="#FFFFFF" fill-opacity="0.15" />
+    <!-- Columns -->
+    <line x1="200" y1="160" x2="200" y2="280" />
+    <line x1="250" y1="160" x2="250" y2="280" />
+    <line x1="300" y1="160" x2="300" y2="280" />
+    <line x1="350" y1="160" x2="350" y2="280" />
+    <line x1="400" y1="160" x2="400" y2="280" />
+  </g>
+
+  <!-- Medical Cross Caduceus overlay -->
+  <g transform="translate(400, 220)">
+    <circle cx="0" cy="0" r="55" fill="#164B9B" fill-opacity="0.6" stroke="#FFFFFF" stroke-width="2" />
+    <path d="M -20 0 L 20 0 M 0 -20 L 0 20" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" />
+  </g>
+
+  <text x="400" y="440" fill="#FFFFFF" font-family="'Outfit', system-ui, sans-serif" font-size="46" font-weight="900" text-anchor="middle" letter-spacing="2">BANGLADESH</text>
+  <text x="400" y="480" fill="#4ADE80" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Top Medical Colleges • Dhaka University Doctor Alumni Leadership</text>
+  <text x="400" y="515" fill="#FFFFFF" fill-opacity="0.75" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="500" text-anchor="middle">16 Years of Trusted Expertise in Guiding Students for Medical Admissions</text>
+</svg>

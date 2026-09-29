@@ -22,8 +22,8 @@ export default function CourseAccordion({ items, defaultOpenIndex = 0 }) {
             key={idx}
             className={`border rounded-2xl transition-all duration-350 ease-out overflow-hidden ${
               isOpen 
-                ? 'border-[#164B9B]/30 bg-[#EAF3FF]/30 shadow-xs' 
-                : 'border-[#E2E6EC] bg-white hover:border-[#164B9B]/20'
+                ? 'border-[#0E4BA4]/30 bg-[#EEF4FF]/50 shadow-xs' 
+                : 'border-[#E2E8F0] bg-white hover:border-[#0E4BA4]/20'
             }`}
           >
             <button
@@ -34,18 +34,18 @@ export default function CourseAccordion({ items, defaultOpenIndex = 0 }) {
               <div className="flex items-center gap-3">
                 <div
                   className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold transition-colors duration-300 ${
-                    isOpen ? 'bg-[#164B9B] text-white' : 'bg-[#F3F5F8] text-[#667085]'
+                    isOpen ? 'bg-[#0E4BA4] text-white' : 'bg-[#EEF4FF] text-[#5B6472]'
                   }`}
                 >
                   {String(idx + 1).padStart(2, '0')}
                 </div>
-                <h4 className="text-base sm:text-lg font-bold text-[#172033] font-display">
+                <h4 className="text-base sm:text-lg font-bold text-[#102A43] font-display">
                   {item.title}
                 </h4>
               </div>
               <ChevronDown
                 className={`w-5 h-5 transition-transform duration-350 ease-out shrink-0 ${
-                  isOpen ? 'rotate-180 text-[#164B9B]' : 'text-[#98A2B3]'
+                  isOpen ? 'rotate-180 text-[#0E4BA4]' : 'text-[#5B6472]'
                 }`}
               />
             </button>
@@ -73,16 +73,16 @@ export default function CourseAccordion({ items, defaultOpenIndex = 0 }) {
                   }}
                   className="overflow-hidden"
                 >
-                  <div className="px-4 sm:px-6 pb-5 pt-1 text-[#667085] text-sm">
+                  <div className="px-4 sm:px-6 pb-5 pt-1 text-[#5B6472] text-sm">
                     {item.content && (
-                      <p className="mb-3 leading-relaxed text-[#172033] font-normal">{item.content}</p>
+                      <p className="mb-3 leading-relaxed text-[#102A43] font-normal">{item.content}</p>
                     )}
 
                     {item.skills && (
                       <ul className="grid grid-cols-1 md:grid-cols-2 gap-2.5 mt-2">
                         {item.skills.map((skill, sIdx) => (
-                          <li key={sIdx} className="flex items-start gap-2 text-xs sm:text-sm text-[#172033]">
-                            <CheckCircle className="w-4 h-4 text-[#164B9B] shrink-0 mt-0.5" />
+                          <li key={sIdx} className="flex items-start gap-2 text-xs sm:text-sm text-[#102A43]">
+                            <CheckCircle className="w-4 h-4 text-[#0E4BA4] shrink-0 mt-0.5" />
                             <span>{skill}</span>
                           </li>
                         ))}
@@ -92,14 +92,14 @@ export default function CourseAccordion({ items, defaultOpenIndex = 0 }) {
                     {item.subModules && (
                       <div className="space-y-4 mt-2">
                         {item.subModules.map((sub, subIdx) => (
-                          <div key={subIdx} className="bg-white p-4 rounded-xl border border-[#E2E6EC] shadow-2xs">
-                            <h5 className="font-bold text-[#164B9B] text-sm mb-2 font-display">
+                          <div key={subIdx} className="bg-white p-4 rounded-xl border border-[#E2E8F0] shadow-2xs">
+                            <h5 className="font-bold text-[#0E4BA4] text-sm mb-2 font-display">
                               {sub.name}
                             </h5>
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                               {sub.items.map((subItem, siIdx) => (
-                                <li key={siIdx} className="flex items-start gap-2 text-xs sm:text-sm text-[#667085]">
-                                  <span className="w-1.5 h-1.5 rounded-full bg-[#164B9B] mt-2 shrink-0"></span>
+                                <li key={siIdx} className="flex items-start gap-2 text-xs sm:text-sm text-[#5B6472]">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF914D] mt-2 shrink-0"></span>
                                   <span>{subItem}</span>
                                 </li>
                               ))}

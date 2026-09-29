@@ -10,8 +10,7 @@ import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import CoursesOverviewPage from './pages/CoursesOverviewPage';
-import IELTSPage from './pages/IELTSPage';
-import PTEPage from './pages/PTEPage';
+import CourseDetailPage from './pages/CourseDetailPage';
 import DestinationsOverviewPage from './pages/DestinationsOverviewPage';
 import DestinationDetailPage from './pages/DestinationDetailPage';
 import BlogsPage from './pages/BlogsPage';
@@ -24,7 +23,7 @@ export default function App() {
     <MotionConfig reducedMotion="user">
       <Router>
         <ScrollToTop />
-        <div className="flex flex-col min-h-screen bg-[#FAFBFC] text-[#172033] font-sans">
+        <div className="flex flex-col min-h-screen bg-[#FFFFFF] text-[#102A43] font-sans">
           {/* Global Sticky Navigation */}
           <Navbar />
 
@@ -37,10 +36,9 @@ export default function App() {
             {/* About */}
             <Route path="/about" element={<AboutPage />} />
 
-            {/* Courses */}
+            {/* Medical Programs */}
             <Route path="/courses" element={<CoursesOverviewPage />} />
-            <Route path="/courses/ielts" element={<IELTSPage />} />
-            <Route path="/courses/pte" element={<PTEPage />} />
+            <Route path="/courses/:slug" element={<CourseDetailPage />} />
 
             {/* Study Destinations */}
             <Route path="/destinations" element={<DestinationsOverviewPage />} />

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="inGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3D2005" />
+      <stop offset="50%" stop-color="#0B2F6B" />
+      <stop offset="100%" stop-color="#071936" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#inGrad)" />
+  <circle cx="400" cy="300" r="170" fill="#FF9933" fill-opacity="0.2" filter="blur(60px)" />
+  
+  <g transform="translate(100, 130)" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="2" fill="none">
+    <!-- Classic Medical Academy & Pillars -->
+    <path d="M 160 280 L 160 170 L 440 170 L 440 280" />
+    <path d="M 140 280 L 460 280" stroke-width="4" />
+    <polygon points="300,100 150,170 450,170" fill="#FFFFFF" fill-opacity="0.1" />
+    <line x1="220" y1="170" x2="220" y2="280" />
+    <line x1="270" y1="170" x2="270" y2="280" />
+    <line x1="330" y1="170" x2="330" y2="280" />
+    <line x1="380" y1="170" x2="380" y2="280" />
+  </g>
+
+  <g transform="translate(400, 200)">
+    <circle cx="0" cy="0" r="48" fill="#164B9B" fill-opacity="0.6" stroke="#FFFFFF" stroke-width="2" />
+    <path d="M -16 0 L 16 0 M 0 -16 L 0 16" stroke="#FF9933" stroke-width="4.5" stroke-linecap="round" />
+  </g>
+
+  <text x="400" y="440" fill="#FFFFFF" font-family="'Outfit', system-ui, sans-serif" font-size="46" font-weight="900" text-anchor="middle" letter-spacing="2">INDIA</text>
+  <text x="400" y="480" fill="#FF9933" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Renowned Medical Colleges &amp; Direct Clinical Exposure</text>
+  <text x="400" y="515" fill="#FFFFFF" fill-opacity="0.75" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="500" text-anchor="middle">Seamless Cultural Proximity, High Clinical Standards, MBBS &amp; BDS</text>
+</svg>

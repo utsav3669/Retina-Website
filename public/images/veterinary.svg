@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="vetBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1E3D" />
+      <stop offset="45%" stop-color="#14376F" />
+      <stop offset="100%" stop-color="#051021" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="accentOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB300" />
+      <stop offset="100%" stop-color="#FF914D" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" rx="24" fill="url(#vetBg)" />
+  <circle cx="700" cy="120" r="220" fill="#0284C7" fill-opacity="0.3" filter="blur(60px)" />
+  <circle cx="100" cy="500" r="200" fill="#FF914D" fill-opacity="0.2" filter="blur(70px)" />
+
+  <!-- Technical Grid Overlay -->
+  <path d="M 0 150 L 800 150 M 0 300 L 800 300 M 0 450 L 800 450" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1" />
+  <path d="M 200 0 L 200 600 M 400 0 L 400 600 M 600 0 L 600 600" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1" />
+
+  <!-- Badge -->
+  <g transform="translate(50, 45)">
+    <rect width="260" height="36" rx="18" fill="url(#accentOrange)" />
+    <text x="130" y="23" fill="#051021" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="middle" letter-spacing="1.5">ANIMAL HEALTH SCIENCES</text>
+  </g>
+
+  <!-- Retina Branding Header -->
+  <text x="750" y="70" fill="#FFFFFF" fill-opacity="0.80" font-family="'Outfit', system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="end" letter-spacing="1">RETINA EDUCATIONAL CONSULTANCY</text>
+
+  <!-- Central Veterinary Medical Emblem -->
+  <g transform="translate(400, 200)">
+    <circle cx="0" cy="0" r="65" fill="#FFFFFF" fill-opacity="0.06" stroke="#38BDF8" stroke-opacity="0.4" stroke-width="2" />
+    <!-- Medical Cross with V Symbol -->
+    <path d="M -18 -18 L 0 24 L 18 -18" stroke="url(#cyanGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <circle cx="0" cy="-30" r="8" fill="#FF914D" />
+  </g>
+
+  <!-- Titles -->
+  <text x="400" y="325" fill="#FFFFFF" font-family="'Outfit', system-ui, sans-serif" font-size="44" font-weight="900" text-anchor="middle" letter-spacing="1">VETERINARY SCIENCE</text>
+  <text x="400" y="365" fill="#38BDF8" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="19" font-weight="700" text-anchor="middle">B.V.Sc &amp; A.H. • Clinical Medicine • Surgery • Animal Husbandry</text>
+
+  <!-- Bottom Information Box -->
+  <g transform="translate(50, 410)">
+    <rect width="700" height="145" rx="18" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="1.5" />
+    
+    <g transform="translate(40, 30)">
+      <text x="0" y="20" fill="#FFFFFF" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="800">Top Accredited Veterinary Colleges</text>
+      <text x="0" y="44" fill="#EAF3FF" fill-opacity="0.8" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13">University teaching veterinary hospitals with active inpatient clinics &amp; surgery</text>
+      <text x="0" y="74" fill="#38BDF8" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="700">✓ 5-Year Degree with Clinical Rotations • Doctor-Led Admissions Processing</text>
+    </g>
+
+    <g transform="translate(530, 45)">
+      <rect width="130" height="48" rx="12" fill="#0284C7" />
+      <text x="65" y="29" fill="#FFFFFF" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="800" text-anchor="middle">APPLY NOW</text>
+    </g>
+  </g>
+</svg>

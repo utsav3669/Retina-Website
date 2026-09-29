@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+  <defs>
+    <linearGradient id="heroMedBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071E42" />
+      <stop offset="40%" stop-color="#0B2F6B" />
+      <stop offset="100%" stop-color="#164B9B" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="1000" rx="32" fill="url(#heroMedBg)" />
+  <circle cx="400" cy="400" r="300" fill="#164B9B" fill-opacity="0.3" filter="blur(80px)" />
+  <circle cx="200" cy="700" r="220" fill="#E21F26" fill-opacity="0.18" filter="blur(70px)" />
+
+  <!-- Medical Doctor Silhouette / Consultation Graphic -->
+  <g transform="translate(400, 380)">
+    <!-- Stethoscope Graphic -->
+    <path d="M -120 -180 C -120 -40, -40 80, 0 100 C 40 80, 120 -40, 120 -180" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="12" stroke-linecap="round" fill="none" />
+    <path d="M 0 100 L 0 180" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="12" stroke-linecap="round" />
+    <circle cx="0" cy="210" r="30" fill="#164B9B" stroke="#FFFFFF" stroke-width="4" />
+    <circle cx="0" cy="210" r="14" fill="#E21F26" />
+
+    <!-- Doctor Stature / Crest -->
+    <circle cx="0" cy="-140" r="75" fill="#FFFFFF" fill-opacity="0.12" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="3" />
+    <path d="M -160 30 C -160 -40, -90 -80, 0 -80 C 90 -80, 160 -40, 160 30 L 160 120 L -160 120 Z" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="2" />
+
+    <!-- Caduceus Centerpiece -->
+    <circle cx="0" cy="-140" r="40" fill="#0B2F6B" stroke="#E21F26" stroke-width="3" />
+    <path d="M -16 -140 L 16 -140 M 0 -156 L 0 -124" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" />
+  </g>
+
+  <!-- Retina Identity Overlay -->
+  <g transform="translate(400, 720)">
+    <rect x="-260" y="-30" width="520" height="60" rx="30" fill="#FFFFFF" fill-opacity="0.1" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.5" />
+    <text x="0" y="8" fill="#FFFFFF" font-family="'Outfit', system-ui, sans-serif" font-size="22" font-weight="900" text-anchor="middle" letter-spacing="2">RETINA EDUCATIONAL CONSULTANCY</text>
+  </g>
+
+  <text x="400" y="820" fill="#FFD700" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="800" text-anchor="middle">Run By A Team Of Doctors Who Graduated From Dhaka University</text>
+  <text x="400" y="860" fill="#FFFFFF" fill-opacity="0.85" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="600" text-anchor="middle">16 Years Of Trusted Expertise In Medical Admissions Abroad</text>
+  <text x="400" y="895" fill="#EAF3FF" fill-opacity="0.65" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="500" text-anchor="middle">MBBS • MD • MS • BDS • B.Sc. Nursing • AG • VET</text>
+</svg>

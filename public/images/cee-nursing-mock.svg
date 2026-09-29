@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="nursingBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2B48" />
+      <stop offset="60%" stop-color="#164B9B" />
+      <stop offset="100%" stop-color="#0B1E38" />
+    </linearGradient>
+    <linearGradient id="coralAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E21F26" />
+      <stop offset="100%" stop-color="#FF5252" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" rx="24" fill="url(#nursingBg)" />
+  <circle cx="150" cy="120" r="180" fill="#E21F26" fill-opacity="0.15" filter="blur(60px)" />
+  <circle cx="700" cy="450" r="220" fill="#164B9B" fill-opacity="0.3" filter="blur(50px)" />
+
+  <!-- Top Badge -->
+  <g transform="translate(50, 40)">
+    <rect width="360" height="38" rx="19" fill="url(#coralAccent)" />
+    <text x="180" y="24" fill="#FFFFFF" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="800" text-anchor="middle" letter-spacing="1">🚀 HELLO CEE NURSING ASPIRANTS</text>
+  </g>
+
+  <!-- Tagline in Nepali & English -->
+  <text x="50" y="140" fill="#FFEB3B" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="30" font-weight="800">Marks बढाउने अबको Step यही हो!</text>
+  <text x="50" y="180" fill="#FFFFFF" fill-opacity="0.9" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="600">Mock Test दिँदा दिँदै जानुहुन्छ? 😄</text>
+
+  <!-- Session Highlight Card -->
+  <g transform="translate(50, 215)">
+    <rect width="700" height="230" rx="20" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1.5" />
+    
+    <g transform="translate(40, 30)">
+      <rect width="180" height="170" rx="16" fill="#E21F26" fill-opacity="0.2" stroke="#E21F26" stroke-width="1.5" />
+      <text x="90" y="55" fill="#FFD700" font-family="'Outfit', system-ui, sans-serif" font-size="34" font-weight="900" text-anchor="middle">FRIDAY</text>
+      <text x="90" y="105" fill="#FFFFFF" font-family="'Outfit', system-ui, sans-serif" font-size="44" font-weight="900" text-anchor="middle">3 PM</text>
+      <text x="90" y="145" fill="#EAF3FF" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">३ बजे देखि</text>
+    </g>
+
+    <g transform="translate(250, 45)">
+      <text x="0" y="30" fill="#FFFFFF" font-family="'Outfit', system-ui, sans-serif" font-size="28" font-weight="800">CEE-Focused Guidance Session</text>
+      <text x="0" y="65" fill="#4ADE80" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="18" font-weight="700">✓ Full Mock Test Simulation</text>
+      <text x="0" y="95" fill="#4ADE80" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="18" font-weight="700">✓ Real-time Marks Boosting Tips</text>
+      <text x="0" y="125" fill="#4ADE80" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="18" font-weight="700">✓ Personalized Feedback by Doctors</text>
+    </g>
+  </g>
+
+  <!-- Location Footer -->
+  <g transform="translate(50, 475)">
+    <rect width="700" height="85" rx="16" fill="#0B2F6B" stroke="#164B9B" stroke-width="1.5" />
+    <text x="35" y="38" fill="#FFFFFF" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="18" font-weight="700">Retina Educational Consultancy, Putalisadak</text>
+    <text x="35" y="64" fill="#FFFFFF" fill-opacity="0.7" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13">New Plaza, Putalisadak-29, Kathmandu, Nepal • Phone: 01-4547423 / 9804880051</text>
+    <text x="665" y="50" fill="#FFD700" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="800" text-anchor="end">#RetinaCares</text>
+  </g>
+</svg>

@@ -7,7 +7,7 @@ export default function ContactForm({ prefilledInterest = '' }) {
     name: '',
     phone: '',
     email: '',
-    interest: prefilledInterest || 'IELTS Preparation',
+    interest: prefilledInterest || 'MBBS Abroad',
     message: ''
   });
 
@@ -16,16 +16,18 @@ export default function ContactForm({ prefilledInterest = '' }) {
   const [loading, setLoading] = useState(false);
 
   const interestOptions = [
-    'IELTS Preparation',
-    'PTE Academic Preparation',
-    'Study Abroad Guidance',
-    'Canada Study Options',
-    'Australia Study Options',
-    'USA Study Options',
-    'UK Study Options',
-    'Europe Study Options',
-    'New Zealand Study Options',
-    'General Inquiry'
+    'MBBS Abroad',
+    'BDS (Dental Surgery)',
+    'B.Sc. Nursing Preparation',
+    'MD / MS Specialization',
+    'AG & VET Programs',
+    'Bangladesh Medical Admissions',
+    'China Medical Admissions',
+    'India Medical Admissions',
+    'Philippines Medical Admissions',
+    'CEE Online Form Submission (Zero Charges)',
+    'CEE Nursing Mock Tests (Friday 3 PM)',
+    'General Medical Guidance'
   ];
 
   const validate = () => {
@@ -62,15 +64,15 @@ export default function ContactForm({ prefilledInterest = '' }) {
 
   if (submitted) {
     return (
-      <div className="bg-[#FFFFFF] border border-[#E2E6EC] rounded-3xl p-8 sm:p-12 text-center space-y-4 animate-in fade-in duration-300 shadow-xs">
-        <div className="w-14 h-14 rounded-full bg-[#EAF3FF] text-[#164B9B] flex items-center justify-center mx-auto">
+      <div className="bg-[#FFFFFF] border border-[#E2E8F0] rounded-3xl p-8 sm:p-12 text-center space-y-4 animate-in fade-in duration-300 shadow-xs">
+        <div className="w-14 h-14 rounded-full bg-[#EEF4FF] text-[#0E4BA4] flex items-center justify-center mx-auto">
           <CheckCircle2 className="w-7 h-7" />
         </div>
-        <h3 className="text-2xl font-bold text-[#172033] tracking-tight font-display">
+        <h3 className="text-2xl font-bold text-[#102A43] tracking-tight font-display">
           Inquiry Received
         </h3>
-        <p className="text-sm text-[#667085] max-w-md mx-auto leading-relaxed">
-          Thank you, <span className="font-semibold text-[#172033]">{formData.name}</span>. An advisor from StudyHub will review your inquiry and connect with you shortly.
+        <p className="text-sm text-[#5B6472] max-w-md mx-auto leading-relaxed">
+          Thank you, <span className="font-semibold text-[#102A43]">{formData.name}</span>. An advisor from Retina Educational Consultancy will review your inquiry and connect with you shortly.
         </p>
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
@@ -88,11 +90,11 @@ export default function ContactForm({ prefilledInterest = '' }) {
                 name: '',
                 phone: '',
                 email: '',
-                interest: 'IELTS Preparation',
+                interest: 'MBBS Abroad',
                 message: ''
               });
             }}
-            className="w-full sm:w-auto inline-flex items-center justify-center h-11 px-5 rounded-xl border border-[#E2E6EC] bg-white text-[#172033] hover:bg-[#F3F5F8] font-semibold text-xs transition-colors cursor-pointer"
+            className="w-full sm:w-auto inline-flex items-center justify-center h-11 px-5 rounded-xl border border-[#E2E8F0] bg-white text-[#102A43] hover:bg-[#F8FAFC] font-semibold text-xs transition-colors cursor-pointer"
           >
             Send Another Inquiry
           </button>
@@ -102,56 +104,56 @@ export default function ContactForm({ prefilledInterest = '' }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-[#FFFFFF] rounded-3xl p-8 sm:p-10 border border-[#E2E6EC] shadow-2xs space-y-6">
+    <form onSubmit={handleSubmit} className="bg-[#FFFFFF] rounded-3xl p-8 sm:p-10 border border-[#E2E8F0] shadow-2xs space-y-6">
       <div className="space-y-1">
-        <h3 className="text-xl sm:text-2xl font-bold text-[#172033] tracking-tight font-display">
+        <h3 className="text-xl sm:text-2xl font-bold text-[#102A43] tracking-tight font-display">
           Send an Inquiry
         </h3>
-        <p className="text-xs sm:text-sm text-[#667085] font-normal">
-          We will contact you with course schedules and personalized advice.
+        <p className="text-xs sm:text-sm text-[#5B6472] font-normal">
+          Connect directly with experienced counselors and Dhaka University graduate doctors.
         </p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className="space-y-2">
-          <label className="text-xs font-semibold text-[#172033] block">
-            Full Name <span className="text-[#E21F26]">*</span>
+          <label className="text-xs font-semibold text-[#102A43] block">
+            Full Name <span className="text-[#FF914D]">*</span>
           </label>
           <input
             type="text"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            placeholder="e.g. Ramesh Thapa"
-            className={`w-full px-4 h-12 rounded-xl border bg-[#FFFFFF] text-sm text-[#172033] placeholder:text-[#98A2B3] focus:outline-none transition-all duration-200 ${
+            placeholder="e.g. Dr. / Aspirant Name"
+            className={`w-full px-4 h-12 rounded-xl border bg-[#FFFFFF] text-sm text-[#102A43] placeholder:text-[#8D98AA] focus:outline-none transition-all duration-200 ${
               errors.name
-                ? 'border-[#B91C24] bg-red-50/20'
-                : 'border-[#E2E6EC] focus:border-[#164B9B] focus:ring-3 focus:ring-[#164B9B]/10'
+                ? 'border-red-500 bg-red-50/20'
+                : 'border-[#E2E8F0] focus:border-[#0E4BA4] focus:ring-3 focus:ring-[#0E4BA4]/10'
             }`}
           />
           {errors.name && (
-            <p className="text-[11px] text-[#B91C24] flex items-center gap-1 font-medium">
+            <p className="text-[11px] text-red-500 flex items-center gap-1 font-medium">
               <AlertCircle className="w-3 h-3" /> {errors.name}
             </p>
           )}
         </div>
 
         <div className="space-y-2">
-          <label className="text-xs font-semibold text-[#172033] block">
-            Phone / WhatsApp Number <span className="text-[#E21F26]">*</span>
+          <label className="text-xs font-semibold text-[#102A43] block">
+            Phone / WhatsApp Number <span className="text-[#FF914D]">*</span>
           </label>
           <input
             type="tel"
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            placeholder="e.g. 9801000602"
-            className={`w-full px-4 h-12 rounded-xl border bg-[#FFFFFF] text-sm text-[#172033] placeholder:text-[#98A2B3] focus:outline-none transition-all duration-200 ${
+            placeholder="e.g. 9804880051"
+            className={`w-full px-4 h-12 rounded-xl border bg-[#FFFFFF] text-sm text-[#102A43] placeholder:text-[#8D98AA] focus:outline-none transition-all duration-200 ${
               errors.phone
-                ? 'border-[#B91C24] bg-red-50/20'
-                : 'border-[#E2E6EC] focus:border-[#164B9B] focus:ring-3 focus:ring-[#164B9B]/10'
+                ? 'border-red-500 bg-red-50/20'
+                : 'border-[#E2E8F0] focus:border-[#0E4BA4] focus:ring-3 focus:ring-[#0E4BA4]/10'
             }`}
           />
           {errors.phone && (
-            <p className="text-[11px] text-[#B91C24] flex items-center gap-1 font-medium">
+            <p className="text-[11px] text-red-500 flex items-center gap-1 font-medium">
               <AlertCircle className="w-3 h-3" /> {errors.phone}
             </p>
           )}
@@ -160,35 +162,35 @@ export default function ContactForm({ prefilledInterest = '' }) {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className="space-y-2">
-          <label className="text-xs font-semibold text-[#172033] block">
-            Email Address <span className="text-[#E21F26]">*</span>
+          <label className="text-xs font-semibold text-[#102A43] block">
+            Email Address <span className="text-[#FF914D]">*</span>
           </label>
           <input
             type="email"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             placeholder="e.g. name@example.com"
-            className={`w-full px-4 h-12 rounded-xl border bg-[#FFFFFF] text-sm text-[#172033] placeholder:text-[#98A2B3] focus:outline-none transition-all duration-200 ${
+            className={`w-full px-4 h-12 rounded-xl border bg-[#FFFFFF] text-sm text-[#102A43] placeholder:text-[#8D98AA] focus:outline-none transition-all duration-200 ${
               errors.email
-                ? 'border-[#B91C24] bg-red-50/20'
-                : 'border-[#E2E6EC] focus:border-[#164B9B] focus:ring-3 focus:ring-[#164B9B]/10'
+                ? 'border-red-500 bg-red-50/20'
+                : 'border-[#E2E8F0] focus:border-[#0E4BA4] focus:ring-3 focus:ring-[#0E4BA4]/10'
             }`}
           />
           {errors.email && (
-            <p className="text-[11px] text-[#B91C24] flex items-center gap-1 font-medium">
+            <p className="text-[11px] text-red-500 flex items-center gap-1 font-medium">
               <AlertCircle className="w-3 h-3" /> {errors.email}
             </p>
           )}
         </div>
 
         <div className="space-y-2">
-          <label className="text-xs font-semibold text-[#172033] block">
-            Area of Interest <span className="text-[#E21F26]">*</span>
+          <label className="text-xs font-semibold text-[#102A43] block">
+            Area of Interest <span className="text-[#FF914D]">*</span>
           </label>
           <select
             value={formData.interest}
             onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
-            className="w-full px-4 h-12 rounded-xl border border-[#E2E6EC] bg-[#FFFFFF] text-sm text-[#172033] focus:outline-none focus:border-[#164B9B] focus:ring-3 focus:ring-[#164B9B]/10 cursor-pointer"
+            className="w-full px-4 h-12 rounded-xl border border-[#E2E8F0] bg-[#FFFFFF] text-sm text-[#102A43] focus:outline-none focus:border-[#0E4BA4] focus:ring-3 focus:ring-[#0E4BA4]/10 cursor-pointer"
           >
             {interestOptions.map((opt, idx) => (
               <option key={idx} value={opt}>
@@ -200,22 +202,22 @@ export default function ContactForm({ prefilledInterest = '' }) {
       </div>
 
       <div className="space-y-2">
-        <label className="text-xs font-semibold text-[#172033] block">
-          Your Questions or Academic Background <span className="text-[#E21F26]">*</span>
+        <label className="text-xs font-semibold text-[#102A43] block">
+          Your Questions or Academic Background <span className="text-[#FF914D]">*</span>
         </label>
         <textarea
           rows={4}
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          placeholder="Tell us about your educational background, current score or destination goals..."
-          className={`w-full p-4 rounded-xl border bg-[#FFFFFF] text-sm text-[#172033] placeholder:text-[#98A2B3] focus:outline-none transition-all duration-200 ${
+          placeholder="Tell us about your 10+2 / CEE score, destination preference, or programs of interest..."
+          className={`w-full p-4 rounded-xl border bg-[#FFFFFF] text-sm text-[#102A43] placeholder:text-[#8D98AA] focus:outline-none transition-all duration-200 ${
             errors.message
-              ? 'border-[#B91C24] bg-red-50/20'
-              : 'border-[#E2E6EC] focus:border-[#164B9B] focus:ring-3 focus:ring-[#164B9B]/10'
+              ? 'border-red-500 bg-red-50/20'
+              : 'border-[#E2E8F0] focus:border-[#0E4BA4] focus:ring-3 focus:ring-[#0E4BA4]/10'
           }`}
         />
         {errors.message && (
-          <p className="text-[11px] text-[#B91C24] flex items-center gap-1 font-medium">
+          <p className="text-[11px] text-red-500 flex items-center gap-1 font-medium">
             <AlertCircle className="w-3 h-3" /> {errors.message}
           </p>
         )}
@@ -225,7 +227,7 @@ export default function ContactForm({ prefilledInterest = '' }) {
         <button
           type="submit"
           disabled={loading}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 h-12 px-8 rounded-xl bg-[#E21F26] hover:bg-[#B91C24] text-white text-xs font-semibold tracking-wide shadow-sm hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 disabled:opacity-70 cursor-pointer"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 h-12 px-8 rounded-xl bg-[#0E4BA4] hover:bg-[#0A3B82] text-white text-xs font-semibold tracking-wide shadow-sm hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 disabled:opacity-70 cursor-pointer"
         >
           {loading ? (
             <span className="inline-flex items-center gap-2">

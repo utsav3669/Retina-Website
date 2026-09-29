@@ -42,17 +42,17 @@ export default function BlogPostPage() {
       >
         <div className="flex flex-wrap items-center gap-4 text-xs text-white/75 font-medium pt-2">
           <div className="flex items-center gap-1.5">
-            <User className="w-3.5 h-3.5 text-[#EAF3FF]" />
+            <User className="w-3.5 h-3.5 text-[#EEF4FF]" />
             <span>{blog.author}</span>
           </div>
           <span>•</span>
           <div className="flex items-center gap-1.5">
-            <Clock className="w-3.5 h-3.5 text-[#EAF3FF]" />
+            <Clock className="w-3.5 h-3.5 text-[#EEF4FF]" />
             <span>{blog.readTime}</span>
           </div>
           <span>•</span>
           <div className="flex items-center gap-1.5">
-            <Calendar className="w-3.5 h-3.5 text-[#EAF3FF]" />
+            <Calendar className="w-3.5 h-3.5 text-[#EEF4FF]" />
             <span>{blog.publishDate}</span>
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function BlogPostPage() {
         
         {/* Featured Image */}
         <ScrollReveal y={16}>
-          <div className="relative rounded-3xl overflow-hidden shadow-xl mb-12 border border-[#E2E6EC] aspect-[16/9] bg-[#0B2F6B]">
+          <div className="relative rounded-3xl overflow-hidden shadow-xl mb-12 border border-[#E2E8F0] aspect-[16/9] bg-[#102A43]">
             <img
               src={blog.image}
               alt={blog.title}
@@ -74,15 +74,15 @@ export default function BlogPostPage() {
 
         {/* Formatted Article Body */}
         <ScrollReveal y={14} delay={0.08}>
-          <div className="bg-[#FFFFFF] rounded-3xl p-6 sm:p-12 shadow-sm border border-[#E2E6EC] prose max-w-none">
-            <div className="text-[#172033] leading-relaxed space-y-6 text-base sm:text-lg">
+          <div className="bg-[#FFFFFF] rounded-3xl p-6 sm:p-12 shadow-sm border border-[#E2E8F0] prose max-w-none">
+            <div className="text-[#102A43] leading-relaxed space-y-6 text-base sm:text-lg">
               {blog.content.split('\n\n').map((paragraph, idx) => {
                 const trimmed = paragraph.trim();
                 if (!trimmed) return null;
 
                 if (trimmed.startsWith('### ')) {
                   return (
-                    <h3 key={idx} className="text-xl sm:text-2xl font-bold text-[#172033] pt-4 pb-1 border-b border-[#E2E6EC] font-display">
+                    <h3 key={idx} className="text-xl sm:text-2xl font-bold text-[#102A43] pt-4 pb-1 border-b border-[#E2E8F0] font-display">
                       {trimmed.replace('### ', '')}
                     </h3>
                   );
@@ -91,7 +91,7 @@ export default function BlogPostPage() {
                 if (trimmed.startsWith('* ')) {
                   const listItems = trimmed.split('\n* ');
                   return (
-                    <ul key={idx} className="space-y-2 pl-4 list-disc text-sm sm:text-base text-[#172033]">
+                    <ul key={idx} className="space-y-2 pl-4 list-disc text-sm sm:text-base text-[#102A43]">
                       {listItems.map((item, i) => (
                         <li key={i} className="leading-relaxed">
                           {item.replace(/^\* /, '')}
@@ -104,7 +104,7 @@ export default function BlogPostPage() {
                 if (trimmed.startsWith('1. ')) {
                   const listItems = trimmed.split('\n');
                   return (
-                    <ol key={idx} className="space-y-2 pl-4 list-decimal text-sm sm:text-base text-[#172033]">
+                    <ol key={idx} className="space-y-2 pl-4 list-decimal text-sm sm:text-base text-[#102A43]">
                       {listItems.map((item, i) => (
                         <li key={i} className="leading-relaxed">
                           {item.replace(/^\d+\.\s*/, '')}
@@ -115,7 +115,7 @@ export default function BlogPostPage() {
                 }
 
                 return (
-                  <p key={idx} className="text-[#667085] leading-relaxed">
+                  <p key={idx} className="text-[#5B6472] leading-relaxed">
                     {trimmed}
                   </p>
                 );
@@ -123,13 +123,13 @@ export default function BlogPostPage() {
             </div>
 
             {/* Author Credit Box */}
-            <div className="mt-12 pt-8 border-t border-[#E2E6EC] flex items-center justify-between">
+            <div className="mt-12 pt-8 border-t border-[#E2E8F0] flex items-center justify-between">
               <div className="space-y-1">
-                <span className="text-xs font-semibold text-[#164B9B] uppercase tracking-wider">
-                  Author & Academic Advisory
+                <span className="text-xs font-semibold text-[#0E4BA4] uppercase tracking-wider">
+                  Author & Medical Advisory
                 </span>
-                <div className="font-bold text-[#172033] font-display">{blog.author}</div>
-                <div className="text-xs text-[#667085]">StudyHub Int'l Education • Narayan Path, Bhairahawa</div>
+                <div className="font-bold text-[#102A43] font-display">{blog.author}</div>
+                <div className="text-xs text-[#5B6472]">Retina Educational Consultancy • New Plaza, Putalisadak-29, Kathmandu</div>
               </div>
             </div>
           </div>
@@ -139,7 +139,7 @@ export default function BlogPostPage() {
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <Link
             to="/blogs"
-            className="inline-flex items-center gap-2 text-xs font-semibold text-[#164B9B] hover:text-[#0B2F6B] transition-colors duration-300"
+            className="inline-flex items-center gap-2 text-xs font-semibold text-[#0E4BA4] hover:text-[#0A3B82] transition-colors duration-300"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Back to All Articles</span>
@@ -160,8 +160,8 @@ export default function BlogPostPage() {
       {/* Related Articles Strip */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
         <ScrollReveal y={14}>
-          <h3 className="text-2xl font-bold text-[#172033] mb-6 font-display">
-            More from the StudyHub Journal
+          <h3 className="text-2xl font-bold text-[#102A43] mb-6 font-display">
+            More from Retina Updates & Insights
           </h3>
         </ScrollReveal>
         
@@ -169,27 +169,27 @@ export default function BlogPostPage() {
           {relatedBlogs.map((b) => (
             <StaggerItem key={b.id}>
               <div
-                className="p-6 bg-[#FFFFFF] rounded-3xl border border-[#E2E6EC] shadow-xs hover:border-[#164B9B] hover:shadow-lg transition-all duration-400 ease-out flex flex-col justify-between h-full transform hover:-translate-y-1"
+                className="p-6 bg-[#FFFFFF] rounded-3xl border border-[#E2E8F0] shadow-xs hover:border-[#0E4BA4] hover:shadow-lg transition-all duration-400 ease-out flex flex-col justify-between h-full transform hover:-translate-y-1"
               >
                 <div className="space-y-2">
-                  <span className="text-xs font-semibold text-[#164B9B] uppercase tracking-wider">
+                  <span className="text-xs font-semibold text-[#0E4BA4] uppercase tracking-wider">
                     {b.category}
                   </span>
-                  <h4 className="text-lg font-bold text-[#172033] font-display">
-                    <Link to={`/blogs/${b.slug}`} className="hover:text-[#164B9B] transition-colors duration-300">
+                  <h4 className="text-lg font-bold text-[#102A43] font-display">
+                    <Link to={`/blogs/${b.slug}`} className="hover:text-[#0E4BA4] transition-colors duration-300">
                       {b.title}
                     </Link>
                   </h4>
-                  <p className="text-xs text-[#667085] line-clamp-2">
+                  <p className="text-xs text-[#5B6472] line-clamp-2">
                     {b.excerpt}
                   </p>
                 </div>
 
-                <div className="mt-4 pt-4 border-t border-[#E2E6EC] flex items-center justify-between">
-                  <span className="text-[11px] text-[#98A2B3] font-medium">{b.readTime}</span>
+                <div className="mt-4 pt-4 border-t border-[#E2E8F0] flex items-center justify-between">
+                  <span className="text-[11px] text-[#5B6472] font-medium">{b.readTime}</span>
                   <Link
                     to={`/blogs/${b.slug}`}
-                    className="text-xs font-semibold text-[#E21F26] hover:text-[#B91C24] inline-flex items-center gap-1 transition-colors duration-300"
+                    className="text-xs font-semibold text-[#FF914D] hover:text-[#E67E38] inline-flex items-center gap-1 transition-colors duration-300"
                   >
                     <span>Read Article</span>
                     <ArrowRight className="w-3.5 h-3.5 transform transition-transform duration-300 group-hover:translate-x-1" />

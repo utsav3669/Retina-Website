@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="guideBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07203A" />
+      <stop offset="45%" stop-color="#0B2F6B" />
+      <stop offset="100%" stop-color="#041426" />
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB300" />
+      <stop offset="100%" stop-color="#FF914D" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.04" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" rx="24" fill="url(#guideBg)" />
+  <circle cx="700" cy="120" r="220" fill="#0E4BA4" fill-opacity="0.35" filter="blur(50px)" />
+  <circle cx="120" cy="500" r="180" fill="#FF914D" fill-opacity="0.18" filter="blur(60px)" />
+
+  <!-- Technical Grid Overlay -->
+  <path d="M 0 120 L 800 120 M 0 240 L 800 240 M 0 360 L 800 360 M 0 480 L 800 480" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1" />
+  <path d="M 160 0 L 160 600 M 320 0 L 320 600 M 480 0 L 480 600 M 640 0 L 640 600" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1" />
+
+  <!-- Top Category Tag -->
+  <g transform="translate(50, 45)">
+    <rect width="260" height="36" rx="18" fill="url(#goldAccent)" />
+    <text x="130" y="23" fill="#102A43" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="800" text-anchor="middle" letter-spacing="1.5">OFFICIAL ADMISSION GUIDE</text>
+  </g>
+
+  <!-- Retina Branding Header -->
+  <text x="750" y="70" fill="#FFFFFF" fill-opacity="0.85" font-family="'Outfit', system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="end" letter-spacing="1.2">RETINA EDUCATIONAL CONSULTANCY</text>
+
+  <!-- Main Headline -->
+  <text x="50" y="150" fill="#FFFFFF" font-family="'Outfit', system-ui, sans-serif" font-size="42" font-weight="900" letter-spacing="-0.5">MBBS &amp; BDS ADMISSIONS</text>
+  <text x="50" y="205" fill="#FF914D" font-family="'Outfit', system-ui, sans-serif" font-size="38" font-weight="800">IN BANGLADESH</text>
+
+  <!-- Four Pillars Card -->
+  <g transform="translate(50, 240)">
+    <rect width="700" height="180" rx="20" fill="url(#cardGrad)" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="1.5" />
+    
+    <!-- Pillar 1 -->
+    <g transform="translate(30, 25)">
+      <circle cx="16" cy="16" r="16" fill="#0E4BA4" />
+      <path d="M 11 16 L 15 20 L 22 12" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="45" y="16" fill="#FFFFFF" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="700">Top Medical Colleges</text>
+      <text x="45" y="34" fill="#FFFFFF" fill-opacity="0.70" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12">Direct placement in recognized universities</text>
+    </g>
+
+    <!-- Pillar 2 -->
+    <g transform="translate(370, 25)">
+      <circle cx="16" cy="16" r="16" fill="#0E4BA4" />
+      <path d="M 11 16 L 15 20 L 22 12" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="45" y="16" fill="#FFFFFF" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="700">Scholarship Opportunities</text>
+      <text x="45" y="34" fill="#FFFFFF" fill-opacity="0.70" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12">SAARC quota &amp; merit scholarship support</text>
+    </g>
+
+    <!-- Pillar 3 -->
+    <g transform="translate(30, 95)">
+      <circle cx="16" cy="16" r="16" fill="#0E4BA4" />
+      <path d="M 11 16 L 15 20 L 22 12" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="45" y="16" fill="#FFFFFF" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="700">15+ Years Experienced Counselor</text>
+      <text x="45" y="34" fill="#FFFFFF" fill-opacity="0.70" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12">Decades of verified admissions guidance</text>
+    </g>
+
+    <!-- Pillar 4 -->
+    <g transform="translate(370, 95)">
+      <circle cx="16" cy="16" r="16" fill="#FF914D" />
+      <path d="M 11 16 L 15 20 L 22 12" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="45" y="16" fill="#FFFFFF" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="700">Dhaka University Doctors</text>
+      <text x="45" y="34" fill="#FFFFFF" fill-opacity="0.70" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12">Owned &amp; guided by graduate doctors</text>
+    </g>
+  </g>
+
+  <!-- Bottom Details Bar -->
+  <g transform="translate(50, 450)">
+    <rect width="700" height="105" rx="16" fill="#07203A" stroke="#0E4BA4" stroke-width="1.5" />
+    <text x="35" y="40" fill="#FFFFFF" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="19" font-weight="800">Doctor-Led Mentorship For Aspiring Doctors</text>
+    <text x="35" y="74" fill="#FFFFFF" fill-opacity="0.75" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="500">Putalisadak-29, Kathmandu (Beside Kumari Bank) • Tel: 01-4547423 / 9804880051</text>
+    <g transform="translate(555, 30)">
+      <rect width="115" height="42" rx="8" fill="#FF914D" />
+      <text x="57" y="26" fill="#FFFFFF" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="800" text-anchor="middle">APPLY NOW</text>
+    </g>
+  </g>
+</svg>

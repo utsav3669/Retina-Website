@@ -13,9 +13,9 @@ export default function DestinationsOverviewPage() {
     <div className="space-y-20 sm:space-y-28 bg-[#FFFFFF]">
       {/* Page Header with soft entrance */}
       <PageHeader
-        badge="Global Opportunities"
-        title="Explore Your Study Destinations"
-        subtitle="Explore six premier international study destinations. Discover information regarding academic systems, university structures, and study environments to make an informed choice."
+        badge="Medical Destinations"
+        title="Explore Premier Medical Study Destinations"
+        subtitle="Explore leading destinations for MBBS, MD, MS, BDS, and nursing abroad: Bangladesh, China, India, and the Philippines. Guided by doctors who studied in Bangladesh."
         breadcrumbs={breadcrumbs}
       />
 
@@ -23,19 +23,19 @@ export default function DestinationsOverviewPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal y={14}>
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span className="text-xs font-semibold tracking-widest uppercase text-[#164B9B]">
+            <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
               TARGET COUNTRIES
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#172033] tracking-tight font-display">
-              Where Could Your Education Take You?
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
+              Where Could Your Medical Career Take You?
             </h2>
-            <p className="text-sm sm:text-base text-[#667085] font-normal">
-              Select any destination to explore entry frameworks, popular fields of study, and student environments.
+            <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+              Select any country to explore medical college entry requirements, clinical hospital exposure, and doctor-led guidance.
             </p>
           </div>
         </ScrollReveal>
 
-        <StaggerGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" stagger={0.07}>
+        <StaggerGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" stagger={0.07}>
           {destinations.map((dest) => (
             <StaggerItem key={dest.id}>
               <DestinationCard destination={dest} />
@@ -44,20 +44,20 @@ export default function DestinationsOverviewPage() {
         </StaggerGrid>
       </section>
 
-      {/* Honest Advisory Notice (Off-White: #FAFBFC) */}
+      {/* Honest Advisory Notice (Soft Blue: #EEF4FF) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal y={14}>
-          <div className="bg-[#FAFBFC] border border-[#E2E6EC] rounded-3xl p-8 sm:p-12">
+          <div className="bg-[#EEF4FF] border border-[#E2E8F0] rounded-3xl p-8 sm:p-12">
             <div className="flex flex-col sm:flex-row items-start gap-5">
-              <div className="w-11 h-11 rounded-2xl bg-white border border-[#E2E6EC] text-[#164B9B] flex items-center justify-center shrink-0 shadow-xs">
+              <div className="w-11 h-11 rounded-2xl bg-white border border-[#E2E8F0] text-[#0E4BA4] flex items-center justify-center shrink-0 shadow-xs">
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <div className="space-y-2">
-                <h3 className="text-lg font-bold text-[#172033] font-display">
-                  Ethical Advisory Standards
+                <h3 className="text-lg font-bold text-[#102A43] font-display">
+                  Ethical Medical Advisory Standards
                 </h3>
-                <p className="text-xs sm:text-sm text-[#667085] leading-relaxed max-w-3xl font-normal">
-                  StudyHub Int'l Education operates with strict advisory ethics. All visa decisions, post-study work permits, and institutional admissions remain solely within the jurisdiction of respective government immigration departments and universities. We do not make false guarantees regarding visas or permanent residency. Our role is to provide transparent, accurate preparation and thorough documentation guidance.
+                <p className="text-xs sm:text-sm text-[#5B6472] leading-relaxed max-w-3xl font-normal">
+                  Retina Educational Consultancy operates with strict medical and educational ethics. Owned by doctors who graduated from Dhaka University with 15+ years of counselor experience, we offer verified guidance for medical admissions in Bangladesh, China, India, and the Philippines. We do not make false claims or guarantee outcomes that are solely determined by official regulatory and university authorities.
                 </p>
               </div>
             </div>

@@ -9,8 +9,8 @@ export default function WhatsAppFloat() {
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3">
       {/* Tooltip on desktop */}
       {showTooltip && (
-        <div className="hidden md:flex items-center gap-2 bg-[#0B2F6B] text-[#FFFFFF] text-xs font-medium py-2 px-3.5 rounded-full shadow-lg border border-white/20 animate-fade-in">
-          <span>Need quick counseling advice?</span>
+        <div className="hidden md:flex items-center gap-2 bg-[#102A43] text-[#FFFFFF] text-xs font-medium py-2 px-3.5 rounded-full shadow-lg border border-white/20 animate-fade-in">
+          <span>Need medical admission guidance?</span>
           <button
             onClick={(e) => {
               e.preventDefault();
@@ -30,7 +30,7 @@ export default function WhatsAppFloat() {
         href={companyData.whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat with Studyhub on WhatsApp"
+        aria-label="Chat with Retina Educational Consultancy on WhatsApp"
         className="group relative flex items-center gap-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-3 px-3 md:px-5 rounded-full shadow-xl shadow-emerald-500/30 hover:shadow-emerald-600/40 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
       >
         <span className="relative flex h-5 w-5 items-center justify-center">

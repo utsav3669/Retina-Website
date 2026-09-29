@@ -18,8 +18,8 @@ export default function FAQAccordion({ items, defaultOpenIndex = 0 }) {
             key={idx}
             className={`border rounded-2xl transition-all duration-350 ease-out overflow-hidden ${
               isOpen 
-                ? 'border-[#164B9B]/35 bg-[#EAF3FF]/30 shadow-xs' 
-                : 'border-[#E2E6EC] bg-white hover:border-[#164B9B]/25'
+                ? 'border-[#0E4BA4]/35 bg-[#EEF4FF]/50 shadow-xs' 
+                : 'border-[#E2E8F0] bg-white hover:border-[#0E4BA4]/30'
             }`}
           >
             <button
@@ -27,12 +27,12 @@ export default function FAQAccordion({ items, defaultOpenIndex = 0 }) {
               className="flex items-center justify-between w-full p-5 sm:p-6 text-left focus:outline-none cursor-pointer"
               aria-expanded={isOpen}
             >
-              <h3 className="text-base sm:text-lg font-bold text-[#172033] pr-4 font-display">
+              <h3 className="text-base sm:text-lg font-bold text-[#102A43] pr-4 font-display">
                 {item.question}
               </h3>
               <div 
                 className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-colors duration-300 ${
-                  isOpen ? 'bg-[#164B9B] text-white' : 'bg-[#F3F5F8] text-[#667085]'
+                  isOpen ? 'bg-[#0E4BA4] text-white' : 'bg-[#F8FAFC] text-[#5B6472]'
                 }`}
               >
                 <ChevronDown
@@ -66,7 +66,7 @@ export default function FAQAccordion({ items, defaultOpenIndex = 0 }) {
                   }}
                   className="overflow-hidden"
                 >
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-[#667085] leading-relaxed font-normal">
+                  <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-[#5B6472] leading-relaxed font-normal">
                     {item.answer}
                   </div>
                 </motion.div>
