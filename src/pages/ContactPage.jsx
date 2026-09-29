@@ -83,18 +83,21 @@ export default function ContactPage() {
                   <div className="text-xs font-semibold text-[#5B6472] uppercase tracking-wider">
                     Direct Phone Numbers
                   </div>
-                  <div className="flex flex-col gap-1">
+                  <div className="flex flex-col gap-1.5">
                     <a
-                      href="tel:01-4547423"
+                      href="tel:014547423"
                       className="text-base font-bold text-[#102A43] hover:text-[#0E4BA4] transition-colors duration-300 font-mono"
                     >
                       01-4547423
                     </a>
                     <a
-                      href="tel:9804880051"
-                      className="text-base font-bold text-[#102A43] hover:text-[#0E4BA4] transition-colors duration-300 font-mono"
+                      href={companyData.whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-base font-bold text-[#102A43] hover:text-[#0E4BA4] transition-colors duration-300 font-mono flex items-center gap-2"
                     >
-                      9804880051
+                      <span>+977 9804880051</span>
+                      <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200">WhatsApp</span>
                     </a>
                   </div>
                 </div>

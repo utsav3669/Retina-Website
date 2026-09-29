@@ -53,12 +53,12 @@ export default function Footer() {
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#FF914D] shrink-0" />
                 <div className="flex items-center gap-2">
-                  <a href={`tel:${companyData.phone}`} className="text-white/[0.85] hover:text-[#FFFFFF] transition-colors font-medium">
+                  <a href="tel:014547423" className="text-white/[0.85] hover:text-[#FFFFFF] transition-colors font-medium">
                     {companyData.phone}
                   </a>
                   <span>•</span>
-                  <a href={`tel:${companyData.mobile}`} className="text-white/[0.85] hover:text-[#FFFFFF] transition-colors font-medium">
-                    {companyData.mobile}
+                  <a href={companyData.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-white/[0.85] hover:text-[#FFFFFF] transition-colors font-medium">
+                    {companyData.whatsappNumber}
                   </a>
                 </div>
               </div>
