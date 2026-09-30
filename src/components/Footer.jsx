@@ -195,7 +195,14 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-white/[0.55] gap-4">
           <p>© 2026 Retina Educational Consultancy Pvt. Ltd. All rights reserved.</p>
           <div className="flex items-center gap-4 text-white/[0.55]">
-            <span>New Plaza, Putalisadak-29, Kathmandu, Nepal</span>
+            <a 
+              href={companyData.mapUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-white transition-colors"
+            >
+              New Plaza, Putalisadak-29, Kathmandu, Nepal
+            </a>
             <span>•</span>
             <a 
               href={companyData.whatsappUrl} 

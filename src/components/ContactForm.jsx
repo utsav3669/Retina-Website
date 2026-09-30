@@ -12,6 +12,7 @@ export default function ContactForm({ prefilledInterest = '' }) {
   });
 
   const [errors, setErrors] = useState({});
+  const [serverError, setServerError] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -32,21 +33,39 @@ export default function ContactForm({ prefilledInterest = '' }) {
 
   const validate = () => {
     const errs = {};
-    if (!formData.name.trim()) errs.name = 'Please provide your full name.';
-    if (!formData.phone.trim() || formData.phone.trim().length < 7) {
-      errs.phone = 'Please provide a valid contact phone number.';
+    const trimmedName = formData.name.trim();
+    const trimmedPhone = formData.phone.trim();
+    const trimmedEmail = formData.email.trim();
+    const trimmedMsg = formData.message.trim();
+
+    if (!trimmedName || trimmedName.length < 2) {
+      errs.name = 'Please provide your full name (at least 2 characters).';
     }
-    if (!formData.email.trim() || !/\S+@\S+\.\S+/.test(formData.email)) {
+
+    const digitsOnly = trimmedPhone.replace(/\D/g, '');
+    if (!trimmedPhone || digitsOnly.length < 7) {
+      errs.phone = 'Please provide a valid contact phone or WhatsApp number (minimum 7 digits).';
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!trimmedEmail || !emailRegex.test(trimmedEmail)) {
       errs.email = 'Please provide a valid email address.';
     }
-    if (!formData.message.trim()) {
-      errs.message = 'Please provide a brief message.';
+
+    if (!formData.interest) {
+      errs.interest = 'Please select your area of interest.';
     }
+
+    if (!trimmedMsg || trimmedMsg.length < 5) {
+      errs.message = 'Please provide your questions or academic background (at least 5 characters).';
+    }
+
     return errs;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setServerError('');
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
@@ -56,10 +75,37 @@ export default function ContactForm({ prefilledInterest = '' }) {
     setErrors({});
     setLoading(true);
 
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/send-inquiry', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (response.ok && result.success !== false) {
+        setSubmitted(true);
+      } else {
+        if (result.fieldErrors) {
+          setErrors(result.fieldErrors);
+        }
+        setServerError(
+          result.error ||
+          'We were unable to submit your inquiry at this moment. Please try again or connect directly via WhatsApp.'
+        );
+      }
+    } catch (err) {
+      console.error('Inquiry submission error:', err);
+      setServerError(
+        'A network connection error occurred while submitting your inquiry. Please verify your connection or chat directly on WhatsApp.'
+      );
+    } finally {
       setLoading(false);
-      setSubmitted(true);
-    }, 600);
+    }
   };
 
   if (submitted) {
@@ -86,11 +132,12 @@ export default function ContactForm({ prefilledInterest = '' }) {
           <button
             onClick={() => {
               setSubmitted(false);
+              setServerError('');
               setFormData({
                 name: '',
                 phone: '',
                 email: '',
-                interest: 'MBBS Abroad',
+                interest: prefilledInterest || 'MBBS Abroad',
                 message: ''
               });
             }}
@@ -114,6 +161,30 @@ export default function ContactForm({ prefilledInterest = '' }) {
         </p>
       </div>
 
+      {serverError && (
+        <div
+          role="alert"
+          aria-live="polite"
+          className="p-4 rounded-2xl bg-red-50 border border-red-200 text-red-800 text-xs sm:text-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 animate-in fade-in duration-200"
+        >
+          <div className="flex items-start gap-2.5">
+            <AlertCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
+            <div>
+              <p className="font-semibold text-red-900">Submission Notice</p>
+              <p className="text-red-700 text-xs mt-0.5 leading-relaxed">{serverError}</p>
+            </div>
+          </div>
+          <a
+            href={companyData.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs transition-colors flex items-center gap-1.5"
+          >
+            Chat on WhatsApp
+          </a>
+        </div>
+      )}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className="space-y-2">
           <label className="text-xs font-semibold text-[#102A43] block">
@@ -121,10 +192,14 @@ export default function ContactForm({ prefilledInterest = '' }) {
           </label>
           <input
             type="text"
+            disabled={loading}
             value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            onChange={(e) => {
+              setFormData({ ...formData, name: e.target.value });
+              if (errors.name) setErrors({ ...errors, name: '' });
+            }}
             placeholder="e.g. Dr. / Aspirant Name"
-            className={`w-full px-4 h-12 rounded-xl border bg-[#FFFFFF] text-sm text-[#102A43] placeholder:text-[#8D98AA] focus:outline-none transition-all duration-200 ${
+            className={`w-full px-4 h-12 rounded-xl border bg-[#FFFFFF] text-sm text-[#102A43] placeholder:text-[#8D98AA] focus:outline-none transition-all duration-200 disabled:bg-[#F8FAFC] disabled:cursor-not-allowed ${
               errors.name
                 ? 'border-red-500 bg-red-50/20'
                 : 'border-[#E2E8F0] focus:border-[#0E4BA4] focus:ring-3 focus:ring-[#0E4BA4]/10'
@@ -143,10 +218,14 @@ export default function ContactForm({ prefilledInterest = '' }) {
           </label>
           <input
             type="tel"
+            disabled={loading}
             value={formData.phone}
-            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+            onChange={(e) => {
+              setFormData({ ...formData, phone: e.target.value });
+              if (errors.phone) setErrors({ ...errors, phone: '' });
+            }}
             placeholder="e.g. +880 1701-882586 or 01-4547423"
-            className={`w-full px-4 h-12 rounded-xl border bg-[#FFFFFF] text-sm text-[#102A43] placeholder:text-[#8D98AA] focus:outline-none transition-all duration-200 ${
+            className={`w-full px-4 h-12 rounded-xl border bg-[#FFFFFF] text-sm text-[#102A43] placeholder:text-[#8D98AA] focus:outline-none transition-all duration-200 disabled:bg-[#F8FAFC] disabled:cursor-not-allowed ${
               errors.phone
                 ? 'border-red-500 bg-red-50/20'
                 : 'border-[#E2E8F0] focus:border-[#0E4BA4] focus:ring-3 focus:ring-[#0E4BA4]/10'
@@ -167,10 +246,14 @@ export default function ContactForm({ prefilledInterest = '' }) {
           </label>
           <input
             type="email"
+            disabled={loading}
             value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            onChange={(e) => {
+              setFormData({ ...formData, email: e.target.value });
+              if (errors.email) setErrors({ ...errors, email: '' });
+            }}
             placeholder="e.g. name@example.com"
-            className={`w-full px-4 h-12 rounded-xl border bg-[#FFFFFF] text-sm text-[#102A43] placeholder:text-[#8D98AA] focus:outline-none transition-all duration-200 ${
+            className={`w-full px-4 h-12 rounded-xl border bg-[#FFFFFF] text-sm text-[#102A43] placeholder:text-[#8D98AA] focus:outline-none transition-all duration-200 disabled:bg-[#F8FAFC] disabled:cursor-not-allowed ${
               errors.email
                 ? 'border-red-500 bg-red-50/20'
                 : 'border-[#E2E8F0] focus:border-[#0E4BA4] focus:ring-3 focus:ring-[#0E4BA4]/10'
@@ -188,9 +271,13 @@ export default function ContactForm({ prefilledInterest = '' }) {
             Area of Interest <span className="text-[#FF914D]">*</span>
           </label>
           <select
+            disabled={loading}
             value={formData.interest}
-            onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
-            className="w-full px-4 h-12 rounded-xl border border-[#E2E8F0] bg-[#FFFFFF] text-sm text-[#102A43] focus:outline-none focus:border-[#0E4BA4] focus:ring-3 focus:ring-[#0E4BA4]/10 cursor-pointer"
+            onChange={(e) => {
+              setFormData({ ...formData, interest: e.target.value });
+              if (errors.interest) setErrors({ ...errors, interest: '' });
+            }}
+            className="w-full px-4 h-12 rounded-xl border border-[#E2E8F0] bg-[#FFFFFF] text-sm text-[#102A43] focus:outline-none focus:border-[#0E4BA4] focus:ring-3 focus:ring-[#0E4BA4]/10 cursor-pointer disabled:bg-[#F8FAFC] disabled:cursor-not-allowed"
           >
             {interestOptions.map((opt, idx) => (
               <option key={idx} value={opt}>
@@ -198,6 +285,11 @@ export default function ContactForm({ prefilledInterest = '' }) {
               </option>
             ))}
           </select>
+          {errors.interest && (
+            <p className="text-[11px] text-red-500 flex items-center gap-1 font-medium">
+              <AlertCircle className="w-3 h-3" /> {errors.interest}
+            </p>
+          )}
         </div>
       </div>
 
@@ -207,10 +299,14 @@ export default function ContactForm({ prefilledInterest = '' }) {
         </label>
         <textarea
           rows={4}
+          disabled={loading}
           value={formData.message}
-          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+          onChange={(e) => {
+            setFormData({ ...formData, message: e.target.value });
+            if (errors.message) setErrors({ ...errors, message: '' });
+          }}
           placeholder="Tell us about your 10+2 / CEE score, destination preference, or programs of interest..."
-          className={`w-full p-4 rounded-xl border bg-[#FFFFFF] text-sm text-[#102A43] placeholder:text-[#8D98AA] focus:outline-none transition-all duration-200 ${
+          className={`w-full p-4 rounded-xl border bg-[#FFFFFF] text-sm text-[#102A43] placeholder:text-[#8D98AA] focus:outline-none transition-all duration-200 disabled:bg-[#F8FAFC] disabled:cursor-not-allowed ${
             errors.message
               ? 'border-red-500 bg-red-50/20'
               : 'border-[#E2E8F0] focus:border-[#0E4BA4] focus:ring-3 focus:ring-[#0E4BA4]/10'
@@ -227,16 +323,17 @@ export default function ContactForm({ prefilledInterest = '' }) {
         <button
           type="submit"
           disabled={loading}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 h-12 px-8 rounded-xl bg-[#0E4BA4] hover:bg-[#0A3B82] text-white text-xs font-semibold tracking-wide shadow-sm hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 disabled:opacity-70 cursor-pointer"
+          aria-busy={loading}
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 h-12 px-8 rounded-xl bg-[#0E4BA4] hover:bg-[#0A3B82] text-white text-xs font-semibold tracking-wide shadow-sm hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
         >
           {loading ? (
             <span className="inline-flex items-center gap-2">
-              <span className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
-              <span>Sending...</span>
+              <span className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" aria-hidden="true" />
+              <span>Sending Inquiry...</span>
             </span>
           ) : (
             <>
-              <Send className="w-3.5 h-3.5" />
+              <Send className="w-3.5 h-3.5" aria-hidden="true" />
               <span>Send Inquiry</span>
             </>
           )}

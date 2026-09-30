@@ -24,7 +24,14 @@ export default function CTASection({
         {/* Editorial Eyebrow with #FF914D Accent */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md text-white/[0.70] text-xs font-medium border border-white/15">
           <span className="w-1.5 h-1.5 rounded-full bg-[#FF914D]"></span>
-          <span>New Plaza, Putalisadak-29, Kathmandu • Always Open</span>
+          <a 
+            href={companyData.mapUrl} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:text-white transition-colors"
+          >
+            New Plaza, Putalisadak-29, Kathmandu • Always Open
+          </a>
         </div>
 
         {/* Large Heading: #FFFFFF */}

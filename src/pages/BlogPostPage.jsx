@@ -129,7 +129,9 @@ export default function BlogPostPage() {
                   Author & Medical Advisory
                 </span>
                 <div className="font-bold text-[#102A43] font-display">{blog.author}</div>
-                <div className="text-xs text-[#5B6472]">Retina Educational Consultancy • New Plaza, Putalisadak-29, Kathmandu</div>
+                <div className="text-xs text-[#5B6472]">
+                  Retina Educational Consultancy • <a href={companyData.mapUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#0E4BA4] transition-colors">New Plaza, Putalisadak-29, Kathmandu</a>
+                </div>
               </div>
             </div>
           </div>

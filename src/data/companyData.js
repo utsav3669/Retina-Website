@@ -12,7 +12,8 @@ export const companyData = {
     city: "Putalisadak-29",
     district: "Kathmandu",
     country: "Nepal",
-    fullAddress: "New Plaza, Putalisadak-29, Kathmandu, Nepal"
+    fullAddress: "New Plaza, Putalisadak-29, Kathmandu, Nepal",
+    googleMapUrl: "https://maps.app.goo.gl/qVYc2r5DNZWhnfmT9"
   },
   phone: "01-4547423",
   phoneTel: "014547423",
@@ -20,7 +21,8 @@ export const companyData = {
   whatsappNumber: "+880 1701-882586",
   whatsappUrl: "https://wa.me/8801701882586",
   email: "consultretina8@gmail.com",
-  mapUrl: "https://maps.app.goo.gl/61PJwwhfyTY97eN7",
+  mapUrl: "https://maps.app.goo.gl/qVYc2r5DNZWhnfmT9",
+  googleMapUrl: "https://maps.app.goo.gl/qVYc2r5DNZWhnfmT9",
   status: "Always open",
   ratings: "100% recommend (13 reviews)",
   followers: "39K followers",

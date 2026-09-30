@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import CTASection from '../components/CTASection';
+import { companyData } from '../data/companyData';
 import { ScrollReveal, StaggerGrid, StaggerItem } from '../components/MotionReveal';
 import { 
   AboutOrbitsBackground, 
@@ -103,9 +104,14 @@ export default function AboutPage() {
                     <div className="text-xl sm:text-2xl font-bold font-display text-[#FFFFFF] leading-tight">
                       Putalisadak
                     </div>
-                    <div className="text-xs text-white/[0.80] mt-1.5 leading-snug">
+                    <a 
+                      href={companyData.mapUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-xs text-white/[0.80] hover:text-white mt-1.5 leading-snug transition-colors"
+                    >
                       New Plaza, Putalisadak-29, Kathmandu
-                    </div>
+                    </a>
                   </div>
                 </div>
               </StaggerItem>

@@ -124,7 +124,14 @@ export default function CourseDetailPage() {
                 <div className="p-5 bg-[#FFFFFF] border-t border-[#E2E8F0] flex items-center justify-between">
                   <div>
                     <div className="text-xs font-bold text-[#102A43]">Putalisadak Office Counseling</div>
-                    <div className="text-[11px] text-[#5B6472]">New Plaza, Putalisadak-29, Kathmandu • Always Open</div>
+                    <a 
+                      href={companyData.mapUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-[11px] text-[#5B6472] hover:text-[#0E4BA4] transition-colors block"
+                    >
+                      New Plaza, Putalisadak-29, Kathmandu • Always Open
+                    </a>
                   </div>
                   <a
                     href={companyData.whatsappUrl}

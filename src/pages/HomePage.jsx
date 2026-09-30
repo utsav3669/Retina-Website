@@ -180,7 +180,14 @@ export default function HomePage() {
                 <div className="pt-2 flex flex-wrap items-center gap-6 text-xs text-[#5B6472] font-medium">
                   <div className="flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4]"></span>
-                    <span>New Plaza, Putalisadak-29</span>
+                    <a 
+                      href={companyData.mapUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-[#0E4BA4] transition-colors"
+                    >
+                      New Plaza, Putalisadak-29
+                    </a>
                   </div>
                   <div className="flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4]"></span>
@@ -296,9 +303,14 @@ export default function HomePage() {
                       <div className="text-xl sm:text-2xl font-bold font-display text-[#FFFFFF] leading-tight">
                         Putalisadak
                       </div>
-                      <div className="text-xs text-white/[0.80] mt-1.5 leading-snug">
+                      <a 
+                        href={companyData.mapUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-xs text-white/[0.80] hover:text-white mt-1.5 leading-snug transition-colors"
+                      >
                         New Plaza, Putalisadak-29, Kathmandu
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </StaggerItem>
@@ -694,7 +706,14 @@ export default function HomePage() {
                   <div className="flex items-center justify-between">
                     <div className="inline-flex items-center gap-2 text-xs font-semibold text-white/[0.70]">
                       <MapPin className="w-3.5 h-3.5 text-[#FF914D]" />
-                      <span>New Plaza, Putalisadak-29, Kathmandu, Nepal</span>
+                      <a 
+                        href={companyData.mapUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hover:text-white transition-colors"
+                      >
+                        New Plaza, Putalisadak-29, Kathmandu, Nepal
+                      </a>
                     </div>
                     <ConnectingNodeGraphic className="opacity-60 hidden sm:block" />
                   </div>

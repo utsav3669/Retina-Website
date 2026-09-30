@@ -64,11 +64,18 @@ export default function ContactPage() {
                     Office Location
                   </div>
                   <div className="text-sm font-bold text-[#102A43]">
-                    {companyData.location.fullAddress}
+                    <a
+                      href={companyData.mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-[#0E4BA4] transition-colors inline-block"
+                    >
+                      {companyData.location.fullAddress}
+                    </a>
                   </div>
                   <div className="text-xs text-[#0E4BA4] mt-1">
                     <a 
-                      href={companyData.location.googleMapUrl} 
+                      href={companyData.mapUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="hover:underline font-medium inline-flex items-center gap-1"
