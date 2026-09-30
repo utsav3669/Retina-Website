@@ -96,7 +96,7 @@ export default function ContactPage() {
                       rel="noopener noreferrer"
                       className="text-base font-bold text-[#102A43] hover:text-[#0E4BA4] transition-colors duration-300 font-mono flex items-center gap-2"
                     >
-                      <span>+977 9804880051</span>
+                      <span>{companyData.whatsappNumber}</span>
                       <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200">WhatsApp</span>
                     </a>
                   </div>

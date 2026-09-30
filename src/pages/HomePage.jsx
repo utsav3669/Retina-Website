@@ -107,7 +107,7 @@ export default function HomePage() {
     },
     {
       question: 'Where is Retina Educational Consultancy located and when can I visit?',
-      answer: 'Our office is located at New Plaza, Putalisadak-29, Kathmandu, Nepal. We are Always Open to welcome students and parents for in-person consultations. You can call us at 01-4547423 or WhatsApp us at +977 9804880051.'
+      answer: 'Our office is located at New Plaza, Putalisadak-29, Kathmandu, Nepal. We are Always Open to welcome students and parents for in-person consultations. You can call us at 01-4547423 or WhatsApp us at +880 1701-882586.'
     }
   ];
 
@@ -714,7 +714,7 @@ export default function HomePage() {
                       <Phone className="w-4 h-4 text-white/[0.60]" />
                       <a href="tel:014547423" className="hover:text-white transition-colors">01-4547423</a>
                       <span>•</span>
-                      <a href={companyData.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">+977 9804880051</a>
+                      <a href={companyData.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">{companyData.whatsappNumber}</a>
                     </div>
                   </div>
                 </div>

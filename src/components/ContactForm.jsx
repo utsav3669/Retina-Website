@@ -145,7 +145,7 @@ export default function ContactForm({ prefilledInterest = '' }) {
             type="tel"
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            placeholder="e.g. +977 9804880051"
+            placeholder="e.g. +880 1701-882586 or 01-4547423"
             className={`w-full px-4 h-12 rounded-xl border bg-[#FFFFFF] text-sm text-[#102A43] placeholder:text-[#8D98AA] focus:outline-none transition-all duration-200 ${
               errors.phone
                 ? 'border-red-500 bg-red-50/20'
