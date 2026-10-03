@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { handleSendInquiryRequest } from './server/sendInquiryHandler.js';
+import { handleGoogleReviewsRequest } from './server/googleReviewsHandler.js';
 
 function inquiryApiPlugin() {
   return {
@@ -12,6 +13,9 @@ function inquiryApiPlugin() {
         if (url === '/api/send-inquiry') {
           return handleSendInquiryRequest(req, res);
         }
+        if (url === '/api/google-reviews') {
+          return handleGoogleReviewsRequest(req, res);
+        }
         next();
       });
     },
@@ -20,6 +24,9 @@ function inquiryApiPlugin() {
         const url = req.url?.split('?')[0];
         if (url === '/api/send-inquiry') {
           return handleSendInquiryRequest(req, res);
+        }
+        if (url === '/api/google-reviews') {
+          return handleGoogleReviewsRequest(req, res);
         }
         next();
       });

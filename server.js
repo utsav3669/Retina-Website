@@ -4,6 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import { handleSendInquiryRequest } from './server/sendInquiryHandler.js';
+import { handleGoogleReviewsRequest } from './server/googleReviewsHandler.js';
 
 dotenv.config();
 
@@ -35,6 +36,10 @@ const server = http.createServer(async (req, res) => {
   // Handle Backend API
   if (pathname === '/api/send-inquiry') {
     return handleSendInquiryRequest(req, res);
+  }
+
+  if (pathname === '/api/google-reviews') {
+    return handleGoogleReviewsRequest(req, res);
   }
 
   // Health check endpoint

@@ -17,6 +17,7 @@ import CourseCard from '../components/CourseCard';
 import BlogCard from '../components/BlogCard';
 import CTASection from '../components/CTASection';
 import FAQAccordion from '../components/FAQAccordion';
+import GoogleReviewsSection from '../components/GoogleReviewsSection';
 import { 
   ScrollReveal, 
   StaggerGrid, 
@@ -852,6 +853,11 @@ export default function HomePage() {
       <ScrollReveal y={14}>
         <CTASection />
       </ScrollReveal>
+
+      {/* ============================================================
+          12. LIVE GOOGLE REVIEWS (Positioned Directly Above Footer)
+          ============================================================ */}
+      <GoogleReviewsSection />
 
     </div>
   );
