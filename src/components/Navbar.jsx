@@ -77,10 +77,10 @@ export default function Navbar() {
               )}
             </NavLink>
 
-            <NavLink to="/message-from-ceo" className={navLinkClass}>
+            <NavLink to="/message-from-md" className={navLinkClass}>
               {({ isActive }) => (
                 <>
-                  <span>CEO's Message</span>
+                  <span>MD's Message</span>
                   {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[#FF914D]" />}
                 </>
               )}
@@ -327,10 +327,10 @@ export default function Navbar() {
             About Us
           </Link>
           <Link
-            to="/message-from-ceo"
+            to="/message-from-md"
             className="block py-2 text-base font-semibold text-[#102A43] border-b border-[#E2E8F0]"
           >
-            Message from CEO
+            Message from MD
           </Link>
 
           <div className="border-b border-[#E2E8F0] pb-2">

@@ -137,7 +137,7 @@ export default function HomePage() {
                 <div className="inline-flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#FF914D]"></span>
                   <span className="text-[11px] sm:text-xs font-semibold tracking-wider sm:tracking-widest uppercase text-[#5B6472]">
-                    NEPAL'S NO. 1 CONSULTANCY FOR MEDICAL ADMISSIONS ABROAD
+                    NEPAL'S NO. 1 CONSULTANCY FOR MEDICAL ADMISSIONS IN BANGLADESH &amp; ABROAD
                   </span>
                 </div>
               </HeroFadeIn>
@@ -249,13 +249,13 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          2. MESSAGE FROM OUR CEO SECTION (White Background)
+          2. MESSAGE FROM OUR MD SECTION (White Background)
           ============================================================ */}
       <section className="relative overflow-hidden py-10 sm:py-14 lg:py-16 bg-[#FFFFFF] border-t border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
-            {/* Left: CEO Portrait with Credentials & Doctor-Led Badge */}
+            {/* Left: MD Portrait with Credentials & Doctor-Led Badge */}
             <div className="lg:col-span-5 relative">
               <ScrollReveal y={16}>
                 <AboutOrbitsBackground className="-top-10 -left-10 w-[420px] h-[380px]" />
@@ -263,7 +263,7 @@ export default function HomePage() {
                   <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-[#E2E8F0] shadow-xl bg-[#EEF4FF] aspect-[4/5] z-10 group">
                     <img
                       src="/images/ceo-dr-saroj-sah.jpg"
-                      alt="Dr. Saroj Sah - Managing Director & CEO, Retina Educational Consultancy"
+                      alt="Dr. Saroj Sah - Managing Director, Retina Educational Consultancy"
                       loading="lazy"
                       className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-102"
                     />
@@ -281,19 +281,19 @@ export default function HomePage() {
                         <span className="text-lg font-bold font-display text-white">Dr. Saroj Sah</span>
                         <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
                       </div>
-                      <p className="text-xs text-white/80">MBBS (Dhaka, Bangladesh) • Managing Director &amp; CEO</p>
+                      <p className="text-xs text-white/80">MBBS (Dhaka, Bangladesh) • Managing Director (MD)</p>
                     </div>
                   </div>
                 </div>
               </ScrollReveal>
             </div>
 
-            {/* Right: Editorial CEO Message Content */}
+            {/* Right: Editorial MD Message Content */}
             <div className="lg:col-span-7 space-y-6">
               <ScrollReveal y={14} delay={0.08}>
                 <div className="space-y-2">
                   <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
-                    MESSAGE FROM OUR CEO
+                    MESSAGE FROM OUR MD
                   </span>
                   <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight leading-tight font-display">
                     Guiding Future Medical Scholars With Firsthand Clinical Insight.
@@ -347,14 +347,14 @@ export default function HomePage() {
                 </StaggerItem>
               </StaggerGrid>
 
-              {/* Action Buttons: Read Full Message from CEO + About Retina */}
+              {/* Action Buttons: Read Full Message from MD + About Retina */}
               <ScrollReveal y={10} delay={0.24}>
                 <div className="pt-2 flex flex-wrap items-center gap-4">
                   <Link
-                    to="/message-from-ceo"
+                    to="/message-from-md"
                     className="inline-flex items-center gap-2 h-12 px-6 rounded-xl bg-[#0E4BA4] hover:bg-[#0A3B82] text-white text-xs font-semibold tracking-wide transition-all duration-300 ease-out shadow-xs hover:shadow-md transform hover:-translate-y-0.5"
                   >
-                    <span>Read Full Message from CEO</span>
+                    <span>Read Full Message from MD</span>
                     <ArrowRight className="w-4 h-4 transform transition-transform duration-300 ease-out group-hover:translate-x-1" />
                   </Link>
 

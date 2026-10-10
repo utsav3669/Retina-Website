@@ -37,7 +37,9 @@ export default function App() {
             {/* About */}
             <Route path="/about" element={<AboutPage />} />
 
-            {/* Message from Our CEO */}
+            {/* Message from Our MD */}
+            <Route path="/message-from-md" element={<CeoMessagePage />} />
+            <Route path="/md-message" element={<CeoMessagePage />} />
             <Route path="/message-from-ceo" element={<CeoMessagePage />} />
             <Route path="/ceo-message" element={<CeoMessagePage />} />
 

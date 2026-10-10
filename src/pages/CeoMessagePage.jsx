@@ -18,11 +18,11 @@ export default function CeoMessagePage() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
-    document.title = "Message from Our CEO | Retina Educational Consultancy";
+    document.title = "Message from Our MD | Retina Educational Consultancy";
   }, []);
 
   const breadcrumbs = [
-    { label: 'Message from Our CEO' }
+    { label: 'Message from Our MD' }
   ];
 
   return (
@@ -30,8 +30,8 @@ export default function CeoMessagePage() {
       {/* Editorial Page Header */}
       <PageHeader
         badge="Leadership & Vision"
-        title="Message from Our CEO"
-        subtitle="A personal message to aspiring doctors and scholars embarking on international medical education journeys."
+        title="Message from Our MD"
+        subtitle="A personal message to aspiring doctors and scholars embarking on international medical education journeys from our Managing Director."
         breadcrumbs={breadcrumbs}
       />
 
