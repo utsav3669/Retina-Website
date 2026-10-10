@@ -32,7 +32,7 @@ export default function BlogPostPage() {
   const relatedBlogs = blogs.filter((b) => b.id !== blog.id).slice(0, 2);
 
   return (
-    <div className="space-y-16 sm:space-y-24 bg-[#FFFFFF]">
+    <div className="space-y-0 bg-[#FFFFFF]">
       {/* Blog Header with soft entrance */}
       <PageHeader
         badge={blog.category}
@@ -59,11 +59,11 @@ export default function BlogPostPage() {
       </PageHeader>
 
       {/* Main Blog Article Content */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <article className="py-10 sm:py-14 lg:py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Featured Image */}
         <ScrollReveal y={16}>
-          <div className="relative rounded-3xl overflow-hidden shadow-xl mb-12 border border-[#E2E8F0] aspect-[16/9] bg-[#102A43]">
+          <div className="relative rounded-3xl overflow-hidden shadow-xl mb-8 sm:mb-10 border border-[#E2E8F0] aspect-[16/9] bg-[#102A43]">
             <img
               src={blog.image}
               alt={blog.title}
@@ -160,9 +160,9 @@ export default function BlogPostPage() {
       </article>
 
       {/* Related Articles Strip */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      <section className="py-10 sm:py-14 lg:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[#E2E8F0]">
         <ScrollReveal y={14}>
-          <h3 className="text-2xl font-bold text-[#102A43] mb-6 font-display">
+          <h3 className="text-2xl font-bold text-[#102A43] mb-6 sm:mb-8 font-display">
             More from Retina Updates & Insights
           </h3>
         </ScrollReveal>

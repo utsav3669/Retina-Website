@@ -112,6 +112,9 @@ export default function Footer() {
                 <Link to="/about" className="hover:text-[#FFFFFF] transition-colors">About Retina</Link>
               </li>
               <li>
+                <Link to="/message-from-ceo" className="hover:text-[#FFFFFF] transition-colors">Message from CEO</Link>
+              </li>
+              <li>
                 <Link to="/courses" className="hover:text-[#FFFFFF] transition-colors">All Programs</Link>
               </li>
               <li>

@@ -16,7 +16,7 @@ export default function CoursesOverviewPage() {
   const breadcrumbs = [{ label: 'Programs' }];
 
   return (
-    <div className="space-y-20 sm:space-y-28">
+    <div className="space-y-0 bg-[#FFFFFF]">
       {/* Header with soft entrance */}
       <PageHeader
         badge="Medical Education Programs"
@@ -26,7 +26,7 @@ export default function CoursesOverviewPage() {
       />
 
       {/* Grid of All Retina Medical Programs */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-10 sm:py-14 lg:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" stagger={0.08}>
           {Object.values(courses).map((course) => (
             <StaggerItem key={course.id}>
@@ -37,11 +37,11 @@ export default function CoursesOverviewPage() {
       </section>
 
       {/* Minimal 2-Column Comparison Interface */}
-      <section className="py-20 sm:py-28 bg-[#EEF4FF] border-t border-b border-[#E2E8F0]">
+      <section className="py-10 sm:py-14 lg:py-16 bg-[#EEF4FF] border-t border-b border-[#E2E8F0]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
-            <div className="text-center max-w-2xl mx-auto space-y-3 mb-14">
+            <div className="text-center max-w-2xl mx-auto space-y-3 mb-8 sm:mb-10">
               <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                 CHOOSING YOUR PATHWAY
               </span>
@@ -174,7 +174,7 @@ export default function CoursesOverviewPage() {
           </StaggerGrid>
 
           <ScrollReveal y={10} delay={0.15}>
-            <div className="mt-12 text-center">
+            <div className="mt-10 sm:mt-12 text-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-xl bg-[#0E4BA4] hover:bg-[#0A3B82] text-white text-xs font-semibold tracking-wide transition-all duration-300 ease-out shadow-xs hover:shadow-md transform hover:-translate-y-0.5"
@@ -189,7 +189,7 @@ export default function CoursesOverviewPage() {
       </section>
 
       {/* Friday CEE Nursing Mock & Free Form Fill-Up Banner (#102A43) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 sm:py-12 lg:py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal y={14}>
           <div className="bg-[#102A43] text-white rounded-3xl p-8 sm:p-12 border border-white/10 relative overflow-hidden shadow-xl">
             <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-[#0E4BA4]/25 blur-3xl pointer-events-none" />

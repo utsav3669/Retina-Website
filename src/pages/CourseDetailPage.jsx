@@ -41,7 +41,7 @@ export default function CourseDetailPage() {
   })) || [];
 
   return (
-    <div className="space-y-20 sm:space-y-28 bg-[#FFFFFF]">
+    <div className="space-y-0 bg-[#FFFFFF]">
       {/* 1. HERO with soft entrance */}
       <PageHeader
         badge={course.badge || 'Medical Program Guidance'}
@@ -66,7 +66,7 @@ export default function CourseDetailPage() {
       </PageHeader>
 
       {/* 2. OVERVIEW & VISUAL STRIP */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-10 sm:py-14 lg:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7 space-y-6">
             <ScrollReveal y={12}>
@@ -151,9 +151,9 @@ export default function CourseDetailPage() {
 
       {/* 3. WHAT YOU WILL STUDY (ACCORDION) */}
       {accordionItems.length > 0 && (
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-10 sm:py-14 lg:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[#E2E8F0]">
           <ScrollReveal y={14}>
-            <div className="text-center max-w-2xl mx-auto space-y-3 mb-12">
+            <div className="text-center max-w-2xl mx-auto space-y-3 mb-8 sm:mb-10">
               <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                 Comprehensive Curriculum
               </span>
@@ -174,12 +174,12 @@ export default function CourseDetailPage() {
 
       {/* 4. PREPARATION & ADMISSION METHOD (Dark Navy: #102A43) */}
       {course.preparationMethod && (
-        <section className="bg-[#102A43] text-white py-16 sm:py-24 rounded-3xl mx-4 sm:mx-6 lg:mx-8 shadow-xl border border-white/10 relative overflow-hidden">
+        <section className="bg-[#102A43] text-white py-10 sm:py-14 lg:py-16 my-8 sm:my-12 lg:my-14 rounded-3xl mx-4 sm:mx-6 lg:mx-8 shadow-xl border border-white/10 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-[#0E4BA4]/25 blur-3xl pointer-events-none" />
 
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 relative z-10">
             <ScrollReveal y={14}>
-              <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+              <div className="text-center max-w-3xl mx-auto space-y-4 mb-8 sm:mb-10">
                 <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-white/[0.70] border border-white/15 uppercase tracking-wider">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#FF914D]" />
                   <span>5-Stage Progression</span>
@@ -232,7 +232,7 @@ export default function CourseDetailPage() {
 
       {/* 5. MOCK TEST & SPECIAL FEATURE SECTION */}
       {course.mockTestHighlight && (
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-8 sm:py-12 lg:py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal y={14}>
             <div className="bg-[#FFFFFF] rounded-3xl p-8 sm:p-12 shadow-sm border border-[#E2E8F0]">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -298,7 +298,7 @@ export default function CourseDetailPage() {
       )}
 
       {/* 6. REGISTRATION / INQUIRY FORM */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-10 sm:py-14 lg:py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal y={14}>
           <ContactForm prefilledInterest={`${course.shortName} Guidance`} />
         </ScrollReveal>

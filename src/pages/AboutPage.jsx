@@ -49,7 +49,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="space-y-20 sm:space-y-28">
+    <div className="space-y-0">
       {/* Page Header with soft entrance */}
       <PageHeader
         badge="About Retina"
@@ -59,7 +59,7 @@ export default function AboutPage() {
       />
 
       {/* 1. Who We Are Section */}
-      <section className="relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <section className="relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           <div className="lg:col-span-6 space-y-6">
@@ -151,11 +151,11 @@ export default function AboutPage() {
       </section>
 
       {/* 2. What We Help With (Soft Blue: #EEF4FF) */}
-      <section className="py-20 sm:py-28 bg-[#EEF4FF] border-t border-b border-[#E2E8F0]">
+      <section className="py-10 sm:py-14 lg:py-16 bg-[#EEF4FF] border-t border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
-            <div className="max-w-2xl space-y-3 mb-14">
+            <div className="max-w-2xl space-y-3 mb-8 sm:mb-10">
               <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                 OUR SERVICES
               </span>
@@ -195,9 +195,9 @@ export default function AboutPage() {
       </section>
 
       {/* 3. Our Approach: 4 Editorial Steps (Pure White) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
         <ScrollReveal y={14}>
-          <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
+          <div className="text-center max-w-2xl mx-auto space-y-3 mb-8 sm:mb-10">
             <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
               STRUCTURED METHODOLOGY
             </span>
@@ -230,9 +230,9 @@ export default function AboutPage() {
       </section>
 
       {/* 4. Ethics & Professional Commitment (Dark Navy: #102A43) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-14">
         <ScrollReveal y={14}>
-          <div className="bg-[#102A43] text-white rounded-3xl p-8 sm:p-12 border border-white/10 relative overflow-hidden shadow-xl">
+          <div className="bg-[#102A43] text-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/10 relative overflow-hidden shadow-xl">
             <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-[#0E4BA4]/25 blur-3xl pointer-events-none" />
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">

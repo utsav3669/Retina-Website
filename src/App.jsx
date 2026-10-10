@@ -9,6 +9,7 @@ import ScrollToTop from './components/ScrollToTop';
 // Pages
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
+import CeoMessagePage from './pages/CeoMessagePage';
 import CoursesOverviewPage from './pages/CoursesOverviewPage';
 import CourseDetailPage from './pages/CourseDetailPage';
 import DestinationsOverviewPage from './pages/DestinationsOverviewPage';
@@ -35,6 +36,10 @@ export default function App() {
 
             {/* About */}
             <Route path="/about" element={<AboutPage />} />
+
+            {/* Message from Our CEO */}
+            <Route path="/message-from-ceo" element={<CeoMessagePage />} />
+            <Route path="/ceo-message" element={<CeoMessagePage />} />
 
             {/* Medical Programs */}
             <Route path="/courses" element={<CoursesOverviewPage />} />

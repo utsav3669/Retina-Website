@@ -10,7 +10,7 @@ export default function DestinationsOverviewPage() {
   const breadcrumbs = [{ label: 'Study Destinations' }];
 
   return (
-    <div className="space-y-20 sm:space-y-28 bg-[#FFFFFF]">
+    <div className="space-y-0 bg-[#FFFFFF]">
       {/* Page Header with soft entrance */}
       <PageHeader
         badge="Medical Destinations"
@@ -20,9 +20,9 @@ export default function DestinationsOverviewPage() {
       />
 
       {/* Destinations Grid with Staggered Entrance */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-10 sm:py-14 lg:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal y={14}>
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 space-y-3">
             <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
               TARGET COUNTRIES
             </span>
@@ -45,7 +45,7 @@ export default function DestinationsOverviewPage() {
       </section>
 
       {/* Honest Advisory Notice (Soft Blue: #EEF4FF) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 sm:py-12 lg:py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal y={14}>
           <div className="bg-[#EEF4FF] border border-[#E2E8F0] rounded-3xl p-8 sm:p-12">
             <div className="flex flex-col sm:flex-row items-start gap-5">

@@ -77,6 +77,15 @@ export default function Navbar() {
               )}
             </NavLink>
 
+            <NavLink to="/message-from-ceo" className={navLinkClass}>
+              {({ isActive }) => (
+                <>
+                  <span>CEO's Message</span>
+                  {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[#FF914D]" />}
+                </>
+              )}
+            </NavLink>
+
             {/* Courses Dropdown */}
             <div
               className="relative"
@@ -316,6 +325,12 @@ export default function Navbar() {
             className="block py-2 text-base font-semibold text-[#102A43] border-b border-[#E2E8F0]"
           >
             About Us
+          </Link>
+          <Link
+            to="/message-from-ceo"
+            className="block py-2 text-base font-semibold text-[#102A43] border-b border-[#E2E8F0]"
+          >
+            Message from CEO
           </Link>
 
           <div className="border-b border-[#E2E8F0] pb-2">

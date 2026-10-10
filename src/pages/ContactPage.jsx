@@ -16,7 +16,7 @@ function InstagramIcon({ className = "w-4 h-4" }) {
 
 export default function ContactPage() {
   return (
-    <div className="py-12 sm:py-20 bg-[#FFFFFF]">
+    <div className="py-10 sm:py-14 lg:py-16 bg-[#FFFFFF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Modern Split Layout */}

@@ -6,7 +6,8 @@ import {
   Clock, 
   Check, 
   Phone,
-  MessageSquare
+  MessageSquare,
+  CheckCircle2
 } from 'lucide-react';
 import { companyData } from '../data/companyData';
 import { destinations } from '../data/destinationsData';
@@ -118,7 +119,7 @@ export default function HomePage() {
       {/* ============================================================
           1. HERO SECTION (White Background with Soft Entrance)
           ============================================================ */}
-      <section className="relative overflow-hidden pt-12 pb-20 sm:pt-20 sm:pb-32 bg-[#FFFFFF]">
+      <section className="relative overflow-hidden pt-10 pb-10 sm:pt-14 sm:pb-14 lg:pt-16 lg:pb-16 bg-[#FFFFFF]">
         {/* Extremely soft subtle radial light */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[450px] bg-gradient-to-tr from-[#EEF4FF]/70 via-[#EEF4FF]/40 to-transparent blur-[120px] pointer-events-none -z-10" />
 
@@ -135,8 +136,8 @@ export default function HomePage() {
               <HeroFadeIn delay={0.06} y={10}>
                 <div className="inline-flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#FF914D]"></span>
-                  <span className="text-xs font-semibold tracking-widest uppercase text-[#5B6472]">
-                    RETINA EDUCATIONAL CONSULTANCY PVT. LTD.
+                  <span className="text-[11px] sm:text-xs font-semibold tracking-wider sm:tracking-widest uppercase text-[#5B6472]">
+                    NEPAL'S NO. 1 CONSULTANCY FOR MEDICAL ADMISSIONS ABROAD
                   </span>
                 </div>
               </HeroFadeIn>
@@ -248,47 +249,65 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          2. ABOUT SECTION (White Background)
+          2. MESSAGE FROM OUR CEO SECTION (White Background)
           ============================================================ */}
-      <section className="relative overflow-hidden py-24 sm:py-32 bg-[#FFFFFF] border-t border-b border-[#E2E8F0]">
+      <section className="relative overflow-hidden py-10 sm:py-14 lg:py-16 bg-[#FFFFFF] border-t border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
-            {/* Left: Large Image with subtle overlapping circular forms behind */}
-            <div className="lg:col-span-6 relative">
+            {/* Left: CEO Portrait with Credentials & Doctor-Led Badge */}
+            <div className="lg:col-span-5 relative">
               <ScrollReveal y={16}>
-                <AboutOrbitsBackground className="-top-12 -left-12 w-[460px] h-[400px]" />
-                <div className="relative rounded-xl overflow-hidden shadow-lg border border-[#E2E8F0] aspect-[4/3] bg-[#102A43] z-10">
-                  <img
-                    src="/images/retina-about.jpg"
-                    alt="Doctor Leadership and Counseling Team at Retina Educational Consultancy Putalisadak"
-                    loading="lazy"
-                    className="w-full h-full object-cover"
-                  />
+                <AboutOrbitsBackground className="-top-10 -left-10 w-[420px] h-[380px]" />
+                <div className="relative mx-auto max-w-md lg:max-w-none">
+                  <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-[#E2E8F0] shadow-xl bg-[#EEF4FF] aspect-[4/5] z-10 group">
+                    <img
+                      src="/images/ceo-dr-saroj-sah.jpg"
+                      alt="Dr. Saroj Sah - Managing Director & CEO, Retina Educational Consultancy"
+                      loading="lazy"
+                      className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-102"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#102A43]/75 via-transparent to-transparent pointer-events-none" />
+                    
+                    {/* Floating Doctor-Led Badge */}
+                    <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-[#0E4BA4] text-xs font-semibold shadow-xs border border-white/60">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#FF914D]" />
+                      <span>Doctor-Led Leadership</span>
+                    </div>
+
+                    {/* Overlay Name on Image (Bottom) */}
+                    <div className="absolute bottom-4 left-4 right-4 text-white z-10">
+                      <div className="flex items-center gap-1.5">
+                        <span className="text-lg font-bold font-display text-white">Dr. Saroj Sah</span>
+                        <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                      </div>
+                      <p className="text-xs text-white/80">MBBS (Dhaka, Bangladesh) • Managing Director &amp; CEO</p>
+                    </div>
+                  </div>
                 </div>
               </ScrollReveal>
             </div>
 
-            {/* Right: Editorial Content */}
-            <div className="lg:col-span-6 space-y-6">
+            {/* Right: Editorial CEO Message Content */}
+            <div className="lg:col-span-7 space-y-6">
               <ScrollReveal y={14} delay={0.08}>
                 <div className="space-y-2">
                   <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
-                    ABOUT RETINA EDUCATIONAL CONSULTANCY
+                    MESSAGE FROM OUR CEO
                   </span>
                   <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight leading-tight font-display">
-                    Guidance That Starts With Doctor-Led Expertise.
+                    Guiding Future Medical Scholars With Firsthand Clinical Insight.
                   </h2>
                 </div>
               </ScrollReveal>
 
               <ScrollReveal y={14} delay={0.16}>
                 <div className="space-y-4 text-sm sm:text-base text-[#5B6472] leading-relaxed font-normal">
-                  <p>
-                    Run by a team of doctors who graduated from Dhaka University, we bring 16 years of trusted expertise in guiding students for medical admissions in Bangladesh, China, India, and the Philippines.
+                  <p className="text-base sm:text-lg text-[#334E68] italic border-l-3 border-[#0E4BA4] pl-4">
+                    “Embarking on an international medical education journey is a transformative milestone. At Retina, we ensure your path to becoming a doctor is guided by genuine medical ethics, transparent counseling, and mentorship from Dhaka University graduate doctors.”
                   </p>
                   <p>
-                    Based at New Plaza, Putalisadak-29, Kathmandu, Nepal, our company is owned by doctors who studied in Bangladesh. We provide students and parents with direct counseling from experienced advisors with 15+ years of counselor experience.
+                    With 16 years of trusted expertise and over 15 years of counselor experience, Retina Educational Consultancy was founded on authentic medical leadership. Having completed my MBBS at Dhaka University in Bangladesh, our team understands the medical curriculum, hospital bed flow, licensing requirements, and practical challenges students navigate.
                   </p>
                 </div>
               </ScrollReveal>
@@ -302,16 +321,11 @@ export default function HomePage() {
                     </div>
                     <div className="relative z-10 flex flex-col justify-center">
                       <div className="text-xl sm:text-2xl font-bold font-display text-[#FFFFFF] leading-tight">
-                        Putalisadak
+                        16 Years
                       </div>
-                      <a 
-                        href={companyData.mapUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="text-xs text-white/[0.80] hover:text-white mt-1.5 leading-snug transition-colors"
-                      >
-                        New Plaza, Putalisadak-29, Kathmandu
-                      </a>
+                      <div className="text-xs text-white/[0.80] mt-1.5 leading-snug">
+                        Doctor-led medical counseling heritage in Nepal
+                      </div>
                     </div>
                   </div>
                 </StaggerItem>
@@ -326,21 +340,29 @@ export default function HomePage() {
                         Doctor-Led
                       </div>
                       <div className="text-xs text-white/[0.80] mt-1.5 leading-snug">
-                        Dhaka University graduate doctors & 16 yrs expertise
+                        Dhaka University graduate doctors &amp; 15+ yrs counselors
                       </div>
                     </div>
                   </div>
                 </StaggerItem>
               </StaggerGrid>
 
+              {/* Action Buttons: Read Full Message from CEO + About Retina */}
               <ScrollReveal y={10} delay={0.24}>
-                <div className="pt-2">
+                <div className="pt-2 flex flex-wrap items-center gap-4">
+                  <Link
+                    to="/message-from-ceo"
+                    className="inline-flex items-center gap-2 h-12 px-6 rounded-xl bg-[#0E4BA4] hover:bg-[#0A3B82] text-white text-xs font-semibold tracking-wide transition-all duration-300 ease-out shadow-xs hover:shadow-md transform hover:-translate-y-0.5"
+                  >
+                    <span>Read Full Message from CEO</span>
+                    <ArrowRight className="w-4 h-4 transform transition-transform duration-300 ease-out group-hover:translate-x-1" />
+                  </Link>
+
                   <Link
                     to="/about"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#0E4BA4] hover:text-[#0A3B82] transition-colors duration-300 group"
+                    className="inline-flex items-center gap-2 h-12 px-6 rounded-xl bg-transparent border border-[#0E4BA4] text-[#0E4BA4] hover:bg-[#EEF4FF] text-xs font-semibold tracking-wide transition-all duration-300 ease-out"
                   >
                     <span>About Retina</span>
-                    <ArrowRight className="w-4 h-4 transform transition-transform duration-300 ease-out group-hover:translate-x-1" />
                   </Link>
                 </div>
               </ScrollReveal>
@@ -353,14 +375,14 @@ export default function HomePage() {
       {/* ============================================================
           3. DESTINATIONS SECTION (Subtle Staggered Card Reveals)
           ============================================================ */}
-      <section className="relative overflow-hidden py-24 sm:py-32 bg-[#FFFFFF]">
+      <section className="relative overflow-hidden py-10 sm:py-14 lg:py-16 bg-[#FFFFFF]">
         <DestinationsPathBackground />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Section Heading */}
           <ScrollReveal y={14}>
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 gap-6">
               <div className="space-y-2 max-w-2xl">
                 <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                   DESTINATIONS
@@ -398,14 +420,14 @@ export default function HomePage() {
       {/* ============================================================
           4. COURSES SECTION (Soft Blue: #EEF4FF)
           ============================================================ */}
-      <section className="relative overflow-hidden py-24 sm:py-32 bg-[#EEF4FF] border-t border-b border-[#E2E8F0]">
+      <section className="relative overflow-hidden py-10 sm:py-14 lg:py-16 bg-[#EEF4FF] border-t border-b border-[#E2E8F0]">
         <CourseProgressBackground />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Section Heading */}
           <ScrollReveal y={14}>
-            <div className="text-center max-w-2xl mx-auto space-y-3 mb-14 sm:mb-20">
+            <div className="text-center max-w-2xl mx-auto space-y-3 mb-8 sm:mb-10">
               <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                 OUR PROGRAMS
               </span>
@@ -446,11 +468,11 @@ export default function HomePage() {
       {/* ============================================================
           5. MBBS / MD COMPARISON (White Background)
           ============================================================ */}
-      <section className="py-24 sm:py-32 bg-[#FFFFFF]">
+      <section className="pt-10 pb-6 sm:pt-14 sm:pb-8 lg:pt-16 lg:pb-8 bg-[#FFFFFF]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
-            <div className="text-center max-w-2xl mx-auto space-y-3 mb-14">
+            <div className="text-center max-w-2xl mx-auto space-y-3 mb-8 sm:mb-10">
               <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                 MEDICAL EDUCATION PATHWAYS
               </span>
@@ -607,11 +629,11 @@ export default function HomePage() {
       {/* ============================================================
           6. THE RETINA ADVANTAGE (Pure White Background: #FFFFFF)
           ============================================================ */}
-      <section className="py-24 sm:py-32 bg-[#FFFFFF]">
+      <section className="pt-6 pb-10 sm:pt-8 sm:pb-14 lg:pt-8 lg:pb-16 bg-[#FFFFFF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
-            <div className="max-w-2xl space-y-3 mb-16 sm:mb-20">
+            <div className="max-w-2xl space-y-3 mb-8 sm:mb-10">
               <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                 THE RETINA ADVANTAGE
               </span>
@@ -649,11 +671,11 @@ export default function HomePage() {
       {/* ============================================================
           7. STUDENT JOURNEY (Soft Blue: #EEF4FF)
           ============================================================ */}
-      <section className="py-24 sm:py-32 bg-[#EEF4FF] border-t border-b border-[#E2E8F0]">
+      <section className="py-10 sm:py-14 lg:py-16 bg-[#EEF4FF] border-t border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
-            <div className="text-center max-w-2xl mx-auto space-y-3 mb-16 sm:mb-20">
+            <div className="text-center max-w-2xl mx-auto space-y-3 mb-8 sm:mb-10">
               <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                 ADMISSION JOURNEY
               </span>
@@ -695,7 +717,7 @@ export default function HomePage() {
       {/* ============================================================
           8. PHYSICAL CENTER BANNER (Dark Navy: #102A43)
           ============================================================ */}
-      <section className="py-20 sm:py-24 bg-[#FFFFFF]">
+      <section className="py-8 sm:py-12 lg:py-14 bg-[#FFFFFF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal y={16}>
             <div className="bg-[#102A43] text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden border border-white/10 shadow-xl">
@@ -767,11 +789,11 @@ export default function HomePage() {
       {/* ============================================================
           9. FREQUENTLY ASKED QUESTIONS (Animated Accordion Expansion)
           ============================================================ */}
-      <section className="py-24 sm:py-32 bg-[#FFFFFF] border-t border-b border-[#E2E8F0]">
+      <section className="py-10 sm:py-14 lg:py-16 bg-[#FFFFFF] border-t border-b border-[#E2E8F0]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
-            <div className="text-center max-w-2xl mx-auto space-y-3 mb-14 sm:mb-16">
+            <div className="text-center max-w-2xl mx-auto space-y-3 mb-8 sm:mb-10">
               <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                 QUESTIONS & ANSWERS
               </span>
@@ -803,11 +825,11 @@ export default function HomePage() {
       {/* ============================================================
           10. EDITORIAL BLOG SECTION (Pure White Background: #FFFFFF)
           ============================================================ */}
-      <section className="py-24 sm:py-32 bg-[#FFFFFF]">
+      <section className="py-10 sm:py-14 lg:py-16 bg-[#FFFFFF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 gap-6">
               <div className="space-y-2 max-w-2xl">
                 <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                   UPDATES & ANNOUNCEMENTS

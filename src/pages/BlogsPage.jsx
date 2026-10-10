@@ -22,7 +22,7 @@ export default function BlogsPage() {
   });
 
   return (
-    <div className="space-y-20 sm:space-y-28 bg-[#FFFFFF]">
+    <div className="space-y-0 bg-[#FFFFFF]">
       {/* Header with soft entrance */}
       <PageHeader
         badge="Updates & Insights"
@@ -32,7 +32,7 @@ export default function BlogsPage() {
       />
 
       {/* Filter and Search Bar */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-10 sm:py-14 lg:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal y={12}>
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 pb-8 border-b border-[#E2E8F0]">
             
@@ -69,7 +69,7 @@ export default function BlogsPage() {
         </ScrollReveal>
 
         {/* Blogs Grid with Staggered Card Reveals */}
-        <div className="mt-12">
+        <div className="mt-8 sm:mt-10">
           {filteredBlogs.length > 0 ? (
             <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" stagger={0.07}>
               {filteredBlogs.map((blog) => (

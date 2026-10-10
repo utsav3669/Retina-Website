@@ -13,7 +13,7 @@ export default function PageHeader({
   children
 }) {
   return (
-    <div className="relative overflow-hidden bg-[#102A43] text-white pt-12 pb-16 sm:pb-20 border-b border-white/10">
+    <div className="relative overflow-hidden bg-[#102A43] text-white pt-8 pb-10 sm:pt-12 sm:pb-14 border-b border-white/10">
       {/* Subtle brand radial glow: #102A43 -> #0E4BA4 */}
       <div className="absolute top-0 right-1/4 w-[500px] h-[350px] bg-gradient-to-tr from-[#0E4BA4]/25 to-transparent blur-3xl pointer-events-none" />
 

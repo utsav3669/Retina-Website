@@ -167,12 +167,12 @@ export default function GoogleReviewsSection() {
     <section 
       id="reviews" 
       aria-label="Google Reviews"
-      className="py-14 sm:py-18 bg-[#FFFFFF] border-t border-[#E2E8F0]"
+      className="py-10 sm:py-14 lg:py-16 bg-[#FFFFFF] border-t border-[#E2E8F0]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Compact Header: Small Label + Title + Rating Summary */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-10">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6 sm:mb-8">
           <div>
             <span className="text-2xs font-bold uppercase tracking-wider text-[#0E4BA4]">
               GOOGLE REVIEWS
