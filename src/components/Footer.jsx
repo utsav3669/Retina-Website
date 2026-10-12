@@ -9,16 +9,7 @@ import {
 import Logo from './Logo';
 import { companyData } from '../data/companyData';
 import { FooterAbstractBackground } from './AbstractElements';
-
-function InstagramIcon({ className = "w-3.5 h-3.5" }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-    </svg>
-  );
-}
+import { FacebookIcon, InstagramIcon, TikTokIcon, GoogleMapsIcon } from './SocialIcons';
 
 export default function Footer() {
   return (
@@ -38,11 +29,11 @@ export default function Footer() {
               Run By A Team Of Doctors Who Graduated From Dhaka University, We Bring 16 Years Of Trusted Expertise In Guiding Students For Medical Admissions In Bangladesh.
             </p>
 
-            <div className="pt-2 space-y-2.5 text-xs text-white/[0.70]">
+            <div className="pt-2 space-y-2 text-xs text-white/[0.70]">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#FF914D] shrink-0 mt-0.5" />
                 <a 
-                  href={companyData.mapUrl}
+                  href={companyData.location.googleMapUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/[0.85] hover:text-[#FFFFFF] transition-colors"
@@ -52,35 +43,62 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#FF914D] shrink-0" />
-                <div className="flex items-center gap-2">
-                  <a href="tel:014547423" className="text-white/[0.85] hover:text-[#FFFFFF] transition-colors font-medium">
-                    {companyData.phone}
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <a href={companyData.landline.tel} className="text-white/[0.85] hover:text-[#FFFFFF] transition-colors font-medium">
+                    {companyData.landline.number} (Landline)
                   </a>
                   <span>•</span>
-                  <a href={companyData.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-white/[0.85] hover:text-[#FFFFFF] transition-colors font-medium">
-                    {companyData.whatsappNumber}
+                  <a href={companyData.phones[0].tel} className="text-white/[0.85] hover:text-[#FFFFFF] transition-colors font-medium">
+                    {companyData.phones[0].number}
+                  </a>
+                  <span>•</span>
+                  <a href={companyData.phones[1].tel} className="text-white/[0.85] hover:text-[#FFFFFF] transition-colors font-medium">
+                    {companyData.phones[1].number}
                   </a>
                 </div>
               </div>
               <div className="flex items-center gap-2.5">
                 <MessageSquare className="w-4 h-4 text-emerald-400 shrink-0" />
-                <a 
-                  href={companyData.whatsappUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="hover:text-emerald-300 transition-colors font-semibold text-emerald-400"
-                >
-                  WhatsApp: {companyData.whatsappNumber}
-                </a>
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <a 
+                    href={companyData.phones[0].whatsappUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:text-emerald-300 transition-colors font-semibold text-emerald-400"
+                  >
+                    WhatsApp: {companyData.phones[0].number}
+                  </a>
+                  <span>•</span>
+                  <a 
+                    href={companyData.whatsappOnly.whatsappUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:text-emerald-300 transition-colors font-semibold text-emerald-400"
+                  >
+                    BD WhatsApp: {companyData.whatsappOnly.number}
+                  </a>
+                </div>
               </div>
             </div>
 
-            {/* Social Channels */}
-            <div className="flex items-center gap-3 pt-3">
+            {/* Social Channels: Facebook, Instagram, TikTok, Google Maps */}
+            <div className="flex flex-wrap items-center gap-2.5 pt-3">
+              <a
+                href={companyData.socials.facebook.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={companyData.socials.facebook.ariaLabel}
+                className="flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/[0.16] text-[#FFFFFF] transition-colors border border-white/15"
+              >
+                <FacebookIcon className="w-3.5 h-3.5 text-[#1877F2]" />
+                <span>Facebook</span>
+              </a>
+
               <a
                 href={companyData.socials.instagram.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={companyData.socials.instagram.ariaLabel}
                 className="flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/[0.16] text-[#FFFFFF] transition-colors border border-white/15"
               >
                 <InstagramIcon className="w-3.5 h-3.5 text-pink-400" />
@@ -88,12 +106,24 @@ export default function Footer() {
               </a>
 
               <a
-                href={companyData.mapUrl}
+                href={companyData.socials.tiktok.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={companyData.socials.tiktok.ariaLabel}
                 className="flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/[0.16] text-[#FFFFFF] transition-colors border border-white/15"
               >
-                <MapPin className="w-3.5 h-3.5 text-[#FF914D]" />
+                <TikTokIcon className="w-3.5 h-3.5 text-white" />
+                <span>TikTok</span>
+              </a>
+
+              <a
+                href={companyData.socials.googleMaps.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={companyData.socials.googleMaps.ariaLabel}
+                className="flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/[0.16] text-[#FFFFFF] transition-colors border border-white/15"
+              >
+                <GoogleMapsIcon className="w-3.5 h-3.5 text-[#FF914D]" />
                 <span>Google Maps</span>
               </a>
             </div>
@@ -122,6 +152,9 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/blogs" className="hover:text-[#FFFFFF] transition-colors">News &amp; Alerts</Link>
+              </li>
+              <li>
+                <Link to="/gallery" className="hover:text-[#FFFFFF] transition-colors">Gallery</Link>
               </li>
               <li>
                 <Link to="/contact" className="hover:text-[#FFFFFF] transition-colors">Contact Retina</Link>

@@ -109,7 +109,7 @@ export default function HomePage() {
     },
     {
       question: 'Where is Retina Educational Consultancy located and when can I visit?',
-      answer: 'Our office is located at New Plaza, Putalisadak-29, Kathmandu, Nepal. We are Always Open to welcome students and parents for in-person consultations. You can call us at 01-4547423 or WhatsApp us at +880 1701-882586.'
+      answer: 'Our office is located at New Plaza, Putalisadak-29, Kathmandu, Nepal. We are Always Open to welcome students and parents for in-person consultations. You can call us at 01-4547423 / +977-9804880051 / +977-9851363213 or WhatsApp us at +977-9804880051 (Nepal) or +8801701882586 (Bangladesh).'
     }
   ];
 
@@ -435,7 +435,7 @@ export default function HomePage() {
                 Empowering Your Medical Career.
               </h2>
               <p className="text-sm sm:text-base text-[#5B6472] font-normal">
-                Structured counseling and direct admissions support for MBBS, MD, MS, BDS, B.Sc. Nursing, AG, and VET.
+                Structured counseling and direct admissions support for MBBS, MD, MS, BDS, B.Sc. Nursing, AG, and DVM.
               </p>
             </div>
           </ScrollReveal>
@@ -567,14 +567,6 @@ export default function HomePage() {
                       <div>
                         <strong className="text-[#102A43] block">Eligibility Requirements:</strong>
                         Recognized MBBS degree, permanent medical council registration, and completed internship.
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4] mt-2 shrink-0"></span>
-                      <div>
-                        <strong className="text-[#102A43] block">Program Duration:</strong>
-                        3-Year intensive clinical residency training under senior university professors.
                       </div>
                     </div>
 
@@ -754,9 +746,9 @@ export default function HomePage() {
                     </div>
                     <div className="flex items-center gap-1.5">
                       <Phone className="w-4 h-4 text-white/[0.60]" />
-                      <a href="tel:014547423" className="hover:text-white transition-colors">01-4547423</a>
+                      <a href={companyData.landline.tel} className="hover:text-white transition-colors">{companyData.landline.number}</a>
                       <span>•</span>
-                      <a href={companyData.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">{companyData.whatsappNumber}</a>
+                      <a href={companyData.phones[0].tel} className="hover:text-white transition-colors">{companyData.phones[0].number}</a>
                     </div>
                   </div>
                 </div>

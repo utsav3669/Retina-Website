@@ -17,6 +17,7 @@ import DestinationDetailPage from './pages/DestinationDetailPage';
 import BlogsPage from './pages/BlogsPage';
 import BlogPostPage from './pages/BlogPostPage';
 import ContactPage from './pages/ContactPage';
+import GalleryPage from './pages/GalleryPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 export default function App() {
@@ -54,6 +55,9 @@ export default function App() {
             {/* Blogs */}
             <Route path="/blogs" element={<BlogsPage />} />
             <Route path="/blogs/:slug" element={<BlogPostPage />} />
+
+            {/* Gallery */}
+            <Route path="/gallery" element={<GalleryPage />} />
 
             {/* Contact */}
             <Route path="/contact" element={<ContactPage />} />

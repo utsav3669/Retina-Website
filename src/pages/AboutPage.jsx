@@ -88,7 +88,7 @@ export default function AboutPage() {
                   <strong>Retina Educational Consultancy Pvt. Ltd.</strong> is run by a team of doctors who graduated from Dhaka University. We bring 16 years of trusted expertise in guiding students for medical admissions in Bangladesh, China, India, and the Philippines.
                 </p>
                 <p>
-                  Located at New Plaza, Putalisadak-29, Kathmandu, Nepal, our company is owned by doctors who studied in Bangladesh. With over 15 years of experienced counselor guidance, we provide students and parents with firsthand medical insights, honest college counseling, and dedicated support for MBBS, MD, MS, BDS, B.Sc. Nursing, AG, and VET aspirants.
+                  Located at New Plaza, Putalisadak-29, Kathmandu, Nepal, our company is owned by doctors who studied in Bangladesh. With over 15 years of experienced counselor guidance, we provide students and parents with firsthand medical insights, honest college counseling, and dedicated support for MBBS, MD, MS, BDS, B.Sc. Nursing, AG, and DVM aspirants.
                 </p>
               </div>
             </ScrollReveal>

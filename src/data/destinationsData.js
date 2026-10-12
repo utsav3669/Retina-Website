@@ -112,7 +112,7 @@ export const destinations = [
       { name: 'BDS', details: 'Comprehensive dental surgery, community dentistry, and oral pathology clinical training.' },
       { name: 'MD / MS Specialty Training', details: 'Postgraduate clinical disciplines in medicine, pediatrics, surgery, obstetrics, and radiology.' },
       { name: 'B.Sc. Nursing & Allied Health', details: 'Professional nursing education, critical care, and hospital operations.' },
-      { name: 'B.Sc. Agriculture (AG) & Veterinary (VET)', details: 'Leading ICAR-recognized agricultural and veterinary science degree programs.' }
+      { name: 'B.Sc. Agriculture (AG) & DVM', details: 'Leading ICAR-recognized agricultural and veterinary medicine degree programs.' }
     ],
     journeySteps: [
       { step: '01', title: 'Eligibility & NEET/CEE Review', desc: 'Assess eligibility and institutional entrance criteria with Retina counselors.' },

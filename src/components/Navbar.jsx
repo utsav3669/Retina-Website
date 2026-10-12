@@ -178,12 +178,12 @@ export default function Navbar() {
                     >
                       <div className="flex items-center justify-between">
                         <span className="text-sm font-semibold text-[#102A43] group-hover:text-[#0E4BA4]">
-                          AG &amp; VET Programs
+                          AG &amp; DVM Programs
                         </span>
                         <ArrowRight className="w-3.5 h-3.5 text-[#8D98AA] group-hover:text-[#0E4BA4] group-hover:translate-x-0.5 transition-transform" />
                       </div>
                       <p className="text-xs text-[#5B6472] mt-0.5 leading-normal font-normal">
-                        B.Sc. Agriculture &amp; Veterinary Science admissions.
+                        B.Sc. Agriculture &amp; DVM admissions.
                       </p>
                     </Link>
 
@@ -262,6 +262,15 @@ export default function Navbar() {
               {({ isActive }) => (
                 <>
                   <span>Blogs</span>
+                  {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[#FF914D]" />}
+                </>
+              )}
+            </NavLink>
+
+            <NavLink to="/gallery" className={navLinkClass}>
+              {({ isActive }) => (
+                <>
+                  <span>Gallery</span>
                   {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[#FF914D]" />}
                 </>
               )}
@@ -375,7 +384,7 @@ export default function Navbar() {
                   to="/courses/ag"
                   className="block py-1 text-sm font-medium text-[#102A43] hover:text-[#0E4BA4]"
                 >
-                  AG &amp; VET
+                  AG &amp; DVM
                 </Link>
                 <Link
                   to="/courses"
@@ -420,6 +429,12 @@ export default function Navbar() {
             className="block py-2 text-base font-semibold text-[#102A43] border-b border-[#E2E8F0]"
           >
             Blogs
+          </Link>
+          <Link
+            to="/gallery"
+            className="block py-2 text-base font-semibold text-[#102A43] border-b border-[#E2E8F0]"
+          >
+            Gallery
           </Link>
           <Link
             to="/contact"

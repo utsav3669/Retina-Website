@@ -6,20 +6,52 @@ export const companyData = {
   counselorExperience: "15 + Years of experienced counselor",
   heroSupportText: "Run by a team of doctors graduated from Dhaka University with 16 years of trusted expertise. Guiding students for medical admissions in Bangladesh, China, India, and the Philippines.",
   businessType: "Educational Consultant specializing in medical admissions abroad.",
-  primaryPurpose: "Guide students for medical admissions (MBBS, MD, MS, BDS, B.Sc. Nursing, AG, VET) with doctor-led expertise.",
+  primaryPurpose: "Guide students for medical admissions (MBBS, MD, MS, BDS, B.Sc. Nursing, AG, DVM) with doctor-led expertise.",
   location: {
     street: "New Plaza",
     city: "Putalisadak-29",
     district: "Kathmandu",
     country: "Nepal",
     fullAddress: "New Plaza, Putalisadak-29, Kathmandu, Nepal",
-    googleMapUrl: "https://maps.app.goo.gl/qVYc2r5DNZWhnfmT9"
+    googleMapUrl: "https://maps.app.goo.gl/qVYc2r5DNZWhnfmT9",
+    // Responsive embed URL using Google Maps query for the official business address
+    embedUrl: "https://maps.google.com/maps?q=Retina+Educational+Consultancy+Pvt.+Ltd.,+New+Plaza,+Putalisadak-29,+Kathmandu,+Nepal&t=&z=16&ie=UTF8&iwloc=&output=embed",
+    // Dedicated directions URL opening in Google Maps
+    directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Retina+Educational+Consultancy+Pvt.+Ltd.,+New+Plaza,+Putalisadak-29,+Kathmandu,+Nepal"
   },
+  // Landline telephone
+  landline: {
+    number: "01-4547423",
+    tel: "tel:014547423",
+    label: "Landline"
+  },
+  // Call / WhatsApp enabled phone numbers (Nepal)
+  phones: [
+    {
+      number: "+977-9804880051",
+      tel: "tel:+9779804880051",
+      whatsappUrl: "https://wa.me/9779804880051",
+      label: "Call / WhatsApp"
+    },
+    {
+      number: "+977-9851363213",
+      tel: "tel:+9779851363213",
+      whatsappUrl: "https://wa.me/9779851363213",
+      label: "Call / WhatsApp"
+    }
+  ],
+  // WhatsApp only number (Bangladesh) - not displayed as a regular calling number
+  whatsappOnly: {
+    number: "+8801701882586",
+    whatsappUrl: "https://wa.me/8801701882586",
+    label: "WhatsApp only"
+  },
+  // Shared backward compatibility fields
   phone: "01-4547423",
   phoneTel: "014547423",
-  phoneFormatted: "01-4547423 • +880 1701-882586",
-  whatsappNumber: "+880 1701-882586",
-  whatsappUrl: "https://wa.me/8801701882586",
+  phoneFormatted: "01-4547423 • +977-9804880051",
+  whatsappNumber: "+977-9804880051",
+  whatsappUrl: "https://wa.me/9779804880051",
   email: "consultretina8@gmail.com",
   mapUrl: "https://maps.app.goo.gl/qVYc2r5DNZWhnfmT9",
   googleMapUrl: "https://maps.app.goo.gl/qVYc2r5DNZWhnfmT9",
@@ -27,14 +59,36 @@ export const companyData = {
   ratings: "100% recommend (13 reviews)",
   followers: "39K followers",
   following: "110 following",
+  // Centralized Social Media Configuration
   socials: {
-    instagram: {
-      handle: "@Retina_educational_consultancy",
-      url: "https://instagram.com/Retina_educational_consultancy"
-    },
-    messenger: {
+    facebook: {
+      name: "Facebook",
       handle: "Retina Educational Consultancy",
-      url: "https://m.me/Retina_educational_consultancy"
+      url: "https://www.facebook.com/p/Retina-Educational-Consultancy-100083523694437/",
+      isConfigured: true,
+      ariaLabel: "Follow Retina Educational Consultancy on Facebook"
+    },
+    instagram: {
+      name: "Instagram",
+      handle: "@Retina_educational_consultancy",
+      url: "https://instagram.com/Retina_educational_consultancy",
+      isConfigured: true,
+      ariaLabel: "Follow Retina Educational Consultancy on Instagram"
+    },
+    tiktok: {
+      name: "TikTok",
+      handle: "@retina_educational",
+      // Official TikTok account pending configuration - clearly marked for replacement
+      url: "https://www.tiktok.com/@REPLACE_WITH_OFFICIAL_RETINA_TIKTOK",
+      isConfigured: false,
+      ariaLabel: "Follow Retina Educational Consultancy on TikTok"
+    },
+    googleMaps: {
+      name: "Google Maps",
+      handle: "Retina Educational Consultancy Pvt. Ltd.",
+      url: "https://maps.app.goo.gl/qVYc2r5DNZWhnfmT9",
+      isConfigured: true,
+      ariaLabel: "View Retina Educational Consultancy on Google Maps"
     }
   },
   keyAdvantages: [
@@ -72,6 +126,6 @@ export const companyData = {
     { name: "BDS", slug: "bds", shortName: "BDS", desc: "Bachelor of Dental Surgery dental medicine and oral healthcare programs." },
     { name: "B.Sc. Nursing", slug: "bsc-nursing", shortName: "B.Sc. Nursing", desc: "Bachelor of Science in Nursing with hospital clinical rotations." },
     { name: "AG", slug: "ag", shortName: "AG", desc: "B.Sc. Agriculture undergraduate degrees in recognized agricultural universities." },
-    { name: "VET", slug: "vet", shortName: "VET", desc: "Veterinary Science and Animal Husbandry programs." }
+    { name: "DVM", slug: "vet", shortName: "DVM", desc: "Doctor of Veterinary Medicine (DVM) programs." }
   ]
 };

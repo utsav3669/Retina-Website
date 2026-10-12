@@ -21,7 +21,7 @@ export default function ContactForm({ prefilledInterest = '' }) {
     'BDS (Dental Surgery)',
     'B.Sc. Nursing Preparation',
     'MD / MS Specialization',
-    'AG & VET Programs',
+    'AG & DVM Programs',
     'Bangladesh Medical Admissions',
     'China Medical Admissions',
     'India Medical Admissions',
@@ -224,7 +224,7 @@ export default function ContactForm({ prefilledInterest = '' }) {
               setFormData({ ...formData, phone: e.target.value });
               if (errors.phone) setErrors({ ...errors, phone: '' });
             }}
-            placeholder="e.g. +880 1701-882586 or 01-4547423"
+            placeholder="e.g. +977-9804880051 or 01-4547423"
             className={`w-full px-4 h-12 rounded-xl border bg-[#FFFFFF] text-sm text-[#102A43] placeholder:text-[#8D98AA] focus:outline-none transition-all duration-200 disabled:bg-[#F8FAFC] disabled:cursor-not-allowed ${
               errors.phone
                 ? 'border-red-500 bg-red-50/20'

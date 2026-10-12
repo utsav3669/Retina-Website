@@ -40,8 +40,9 @@ At Retina Educational Consultancy:
 ### Office Location & Contact:
 
 * **Location:** New Plaza, Putalisadak-29, Kathmandu, Nepal
-* **Direct Office Phone:** 01-4547423
-* **WhatsApp:** +880 1701-882586
+* **Landline:** 01-4547423
+* **Call / WhatsApp:** +977-9804880051 / +977-9851363213
+* **WhatsApp only (BD):** +8801701882586
 * **Hours:** Always Open
 
 Visit our Putalisadak office today to submit your CEE online form with ZERO charges and receive personalized guidance for your medical future!
@@ -88,7 +89,7 @@ Preparing for the CEE Nursing entrance examination requires not just textbook re
 
 ### How to Join:
 
-Sessions are held every Friday from 3:00 PM at Retina Educational Consultancy, Putalisadak. Walk in directly to our New Plaza office or connect on WhatsApp (+880 1701-882586) to reserve your seat!
+Sessions are held every Friday from 3:00 PM at Retina Educational Consultancy, Putalisadak. Walk in directly to our New Plaza office or connect on WhatsApp (+977-9804880051 / +8801701882586) to reserve your seat!
     `
   },
   {
@@ -129,7 +130,7 @@ This sentiment reflects our unwavering commitment to providing clear, transparen
 
 ### Visit Us:
 
-Retina Educational Consultancy, New Plaza, Putalisadak-29, Kathmandu, Nepal. Contact: 01-4547423 / WhatsApp: +880 1701-882586.
+Retina Educational Consultancy, New Plaza, Putalisadak-29, Kathmandu, Nepal. Contact: 01-4547423 / Call & WhatsApp: +977-9804880051 / +977-9851363213 / BD WhatsApp: +8801701882586.
     `
   },
   {
@@ -210,7 +211,7 @@ For Nepali students aspiring to become doctors, Bangladesh offers one of the mos
 
 ### Contact Retina for Medical Admissions:
 
-Visit our Putalisadak office at New Plaza, Putalisadak-29, Kathmandu. Direct phone: 01-4547423. WhatsApp: +880 1701-882586.
+Visit our Putalisadak office at New Plaza, Putalisadak-29, Kathmandu. Landline: 01-4547423. Call / WhatsApp: +977-9804880051 / +977-9851363213. BD WhatsApp: +8801701882586.
     `
   }
 ];

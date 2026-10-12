@@ -21,7 +21,7 @@ export default function CoursesOverviewPage() {
       <PageHeader
         badge="Medical Education Programs"
         title="Medical & Healthcare Education Programs"
-        subtitle="Comprehensive admission counseling, college placement, and academic guidance for MBBS, MD, MS, BDS, B.Sc. Nursing, AG, and VET programs."
+        subtitle="Comprehensive admission counseling, college placement, and academic guidance for MBBS, MD, MS, BDS, B.Sc. Nursing, AG, and DVM programs."
         breadcrumbs={breadcrumbs}
       />
 
@@ -130,14 +130,6 @@ export default function CoursesOverviewPage() {
                       <div>
                         <strong className="text-[#102A43] block">Eligibility Requirements:</strong>
                         Recognized MBBS degree, permanent medical council registration, and completed internship.
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4] mt-2 shrink-0"></span>
-                      <div>
-                        <strong className="text-[#102A43] block">Program Duration:</strong>
-                        3-Year intensive clinical residency training under senior university professors.
                       </div>
                     </div>
 
