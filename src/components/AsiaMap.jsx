@@ -58,13 +58,11 @@ export default function AsiaMap({
   const mapLineColor = isDark ? 'rgba(255, 255, 255, 0.12)' : 'rgba(16, 42, 67, 0.10)';
   const routeLineColor = isDark ? 'rgba(255, 255, 255, 0.13)' : 'rgba(14, 75, 164, 0.12)';
   const destPointColor = isDark ? '#FFFFFF' : '#0E4BA4';
-  const destRingColor = isDark ? 'rgba(255, 255, 255, 0.30)' : 'rgba(14, 75, 164, 0.25)';
   const originColor = '#FF914D';
 
   const pathRefs = useRef([]);
   const planeRef = useRef(null);
   const activeRouteRef = useRef(null);
-  const arrivalPulseRef = useRef(null);
 
   useEffect(() => {
     if (!showRoutes) return;
@@ -88,7 +86,6 @@ export default function AsiaMap({
       const pathEl = pathRefs.current[currentRouteIndex];
       const planeEl = planeRef.current;
       const activePathEl = activeRouteRef.current;
-      const arrivalEl = arrivalPulseRef.current;
 
       if (!pathEl || !planeEl) {
         animId = requestAnimationFrame(animate);
@@ -131,38 +128,22 @@ export default function AsiaMap({
           activePathEl.setAttribute('opacity', '0.28');
         }
 
-        if (arrivalEl) {
-          arrivalEl.setAttribute('opacity', '0');
-        }
-
         if (progress >= 1) {
           state = 'PAUSE';
           stateStartTime = now;
         }
       } else if (state === 'PAUSE') {
-        const dest = currentRoute.dest;
         const progress = Math.min(elapsed / PAUSE_DURATION, 1);
 
         // Plane stays at destination, gently fading out
         const planeOpacity = Math.max(0, 0.95 * (1 - progress * 1.2));
         planeEl.setAttribute('opacity', planeOpacity.toFixed(2));
 
-        // Subtle arrival beacon pulse at destination point
-        if (arrivalEl) {
-          const radius = 3 + progress * 8;
-          const ringOpacity = Math.max(0, (1 - progress) * 0.6);
-          arrivalEl.setAttribute('cx', dest[0]);
-          arrivalEl.setAttribute('cy', dest[1]);
-          arrivalEl.setAttribute('r', radius.toFixed(1));
-          arrivalEl.setAttribute('opacity', ringOpacity.toFixed(2));
-        }
-
         if (elapsed >= PAUSE_DURATION) {
           state = 'RESET';
           stateStartTime = now;
         }
       } else if (state === 'RESET') {
-        if (arrivalEl) arrivalEl.setAttribute('opacity', '0');
         if (activePathEl) activePathEl.setAttribute('opacity', '0');
 
         // Transition to next route
@@ -235,50 +216,33 @@ export default function AsiaMap({
             </g>
 
             {/* ============================================================
-                DESTINATION POINTS
+                DESTINATION POINTS (Clean, static points without moving border circles)
                 ============================================================ */}
             <g>
               {/* 1. Bangladesh (Dhaka) */}
               <g transform="translate(544, 528)">
-                <circle r="4" stroke={destRingColor} strokeWidth="0.8" fill="none" className="animate-points-pulse" />
                 <circle r="2" fill={destPointColor} />
               </g>
 
               {/* 2. India (Central) */}
               <g transform="translate(450, 565)">
-                <circle r="4" stroke={destRingColor} strokeWidth="0.8" fill="none" className="animate-points-pulse" />
                 <circle r="2" fill={destPointColor} />
               </g>
 
               {/* 3. China (Beijing/Eastern Hub) */}
               <g transform="translate(740, 390)">
-                <circle r="4" stroke={destRingColor} strokeWidth="0.8" fill="none" className="animate-points-pulse" />
                 <circle r="2" fill={destPointColor} />
               </g>
 
               {/* 4. Philippines (Manila) */}
               <g transform="translate(805, 620)">
-                <circle r="4" stroke={destRingColor} strokeWidth="0.8" fill="none" className="animate-points-pulse" />
                 <circle r="2" fill={destPointColor} />
               </g>
 
-              {/* 5. Retina Origin Hub (Nepal - Kathmandu) - Subtle Orange Focal Point (#FF914D) */}
+              {/* 5. Retina Origin Hub (Nepal - Kathmandu) - Subtle Static Orange Dot (#FF914D) */}
               <g transform="translate(492, 492)">
-                <circle r="6" stroke={originColor} strokeWidth="0.8" strokeOpacity="0.4" fill="none" className="animate-origin-ping" />
-                <circle r="2.2" fill={originColor} />
+                <circle r="2.5" fill={originColor} />
               </g>
-
-              {/* Destination Arrival Beacon Ring */}
-              <circle
-                ref={arrivalPulseRef}
-                cx="0"
-                cy="0"
-                r="4"
-                stroke={isDark ? '#FFFFFF' : '#0E4BA4'}
-                strokeWidth="0.8"
-                fill="none"
-                opacity="0"
-              />
             </g>
 
             {/* ============================================================
@@ -290,8 +254,6 @@ export default function AsiaMap({
               opacity="0"
               className="pointer-events-none"
             >
-              {/* Atmospheric buffer aura */}
-              <circle r="6" fill={isDark ? '#102A43' : '#FFFFFF'} fillOpacity="0.35" />
 
               {/* Minimal Passenger Aircraft Silhouette */}
               <path

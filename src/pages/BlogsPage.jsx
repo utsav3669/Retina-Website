@@ -32,7 +32,7 @@ export default function BlogsPage() {
       />
 
       {/* Filter and Search Bar */}
-      <section className="py-10 sm:py-14 lg:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-24 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal y={12}>
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 pb-8 border-b border-[#E2E8F0]">
             

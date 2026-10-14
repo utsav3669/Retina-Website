@@ -26,8 +26,8 @@ export default function CoursesOverviewPage() {
       />
 
       {/* Grid of All Retina Medical Programs */}
-      <section className="py-10 sm:py-14 lg:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" stagger={0.08}>
+      <section className="py-16 sm:py-24 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10" stagger={0.08}>
           {Object.values(courses).map((course) => (
             <StaggerItem key={course.id}>
               <CourseCard course={course} />
@@ -37,25 +37,25 @@ export default function CoursesOverviewPage() {
       </section>
 
       {/* Minimal 2-Column Comparison Interface */}
-      <section className="py-10 sm:py-14 lg:py-16 bg-[#EEF4FF] border-t border-b border-[#E2E8F0]">
+      <section className="py-16 sm:py-24 lg:py-28 bg-[#EEF4FF]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
-            <div className="text-center max-w-2xl mx-auto space-y-3 mb-8 sm:mb-10">
+            <div className="text-center max-w-2xl mx-auto space-y-3 mb-12 sm:mb-16">
               <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                 CHOOSING YOUR PATHWAY
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
                 Undergraduate vs Postgraduate Pathways
               </h2>
-              <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+              <p className="text-sm sm:text-base text-[#5B6472] font-normal leading-relaxed">
                 Whether preparing for your foundational medical degree (MBBS/BDS) or progressing to specialist clinical residency (MD/MS), our doctor counselors guide you every step.
               </p>
             </div>
           </ScrollReveal>
 
           {/* Two Minimal Columns */}
-          <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 gap-8" stagger={0.1}>
+          <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12" stagger={0.1}>
             
             {/* MBBS & BDS Column */}
             <StaggerItem>

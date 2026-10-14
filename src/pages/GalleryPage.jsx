@@ -5,7 +5,11 @@ import {
   ChevronRight, 
   Maximize2, 
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  Award,
+  Users,
+  PlaneTakeoff,
+  Layers
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
@@ -15,59 +19,220 @@ import { ScrollReveal, StaggerGrid, StaggerItem } from '../components/MotionReve
 const galleryItems = [
   {
     id: 1,
-    src: '/images/gallery/counseling-family-kathmandu.jpg',
-    title: 'Admissions Counseling Session',
-    caption: 'An educational counselor advising a prospective student and family in our modern Kathmandu consultancy office.',
-    alt: 'A counsellor advising a prospective student and family in a modern Kathmandu consultancy office'
+    src: '/images/gallery/retina-airport-khada-ceremony-dr-saroj.jpg',
+    category: 'departure',
+    categoryLabel: 'Airport Departure',
+    badge: 'Airport Send-Off',
+    title: 'Ceremonial Airport Khada Blessing by MD Dr. Saroj Sah',
+    caption: 'Managing Director Dr. Saroj Sah personally honoring a departing medical student with a traditional Nepali Dhaka khada and warm blessings at Tribhuvan International Airport.',
+    alt: 'Dr. Saroj Sah placing a traditional Nepali Dhaka khada on a departing medical student at Tribhuvan International Airport',
+    objectPosition: 'object-[center_20%]'
   },
   {
     id: 2,
-    src: '/images/gallery/medical-students-study-library.jpg',
-    title: 'Medical Students Group Study',
-    caption: 'Medical students in white coats reviewing clinical references and anatomy together in a bright university library.',
-    alt: 'Medical students studying together in a bright university environment'
+    src: '/images/gallery/retina-airport-see-off-dr-saroj-student.jpg',
+    category: 'departure',
+    categoryLabel: 'Airport Departure',
+    badge: 'Airport Send-Off',
+    title: 'Personal Airport Departure See-Off with Dr. Saroj Sah',
+    caption: 'MD Dr. Saroj Sah proudly standing with an admitted medical scholar at the international departures hall before boarding her flight for medical university.',
+    alt: 'Dr. Saroj Sah and departing medical student wearing Nepali Dhaka scarves at Tribhuvan International Airport',
+    objectPosition: 'object-[center_20%]'
   },
   {
     id: 3,
-    src: '/images/gallery/bangladesh-university-campus.jpg',
-    title: 'University Campus in Bangladesh',
-    caption: 'Students walking across the paved walkways and academic grounds of a university campus in Bangladesh.',
-    alt: 'Students walking through a contemporary university campus in Bangladesh'
+    src: '/images/gallery/retina-group-counseling-dr-saroj.jpg',
+    category: 'counseling',
+    categoryLabel: 'Office Guidance',
+    badge: 'Doctor-Led Briefing',
+    title: 'Executive Pre-Departure & Admission Counseling',
+    caption: 'Managing Director Dr. Saroj Sah conducting an in-depth counseling and pre-departure orientation session for prospective medical students in the Retina executive consultation chamber.',
+    alt: 'Dr. Saroj Sah conducting group medical admission counseling with students at the Retina Educational Consultancy office',
+    objectPosition: 'object-center'
   },
   {
     id: 4,
-    src: '/images/gallery/educational-advisor-guidance.jpg',
-    title: 'Admission Documentation Guidance',
-    caption: 'An experienced advisor explaining admission documents and institutional requirements to an attentive student.',
-    alt: 'An educational advisor explaining admission documents to a student'
+    src: '/images/gallery/retina-student-credential-handover-1.jpg',
+    category: 'felicitations',
+    categoryLabel: 'Student Felicitations',
+    badge: 'Office Felicitation',
+    title: 'Medical Admission Credentials Handover',
+    caption: 'Managing Director Dr. Saroj Sah presenting official medical admission documentation, enrollment dossier, and credentials folder to an admitted scholar at the Retina Kathmandu head office.',
+    alt: 'Dr. Saroj Sah presenting admission credentials and documentation to an admitted medical student at the Retina Educational Consultancy office in Kathmandu',
+    objectPosition: 'object-[center_20%]'
   },
   {
     id: 5,
-    src: '/images/gallery/medical-students-collaboration.jpg',
-    title: 'Clinical Academic Collaboration',
-    caption: 'South Asian medical students collaborating on academic coursework and study materials around a library table.',
-    alt: 'South Asian medical students collaborating in a university study environment'
+    src: '/images/gallery/retina-student-credential-handover-2.jpg',
+    category: 'felicitations',
+    categoryLabel: 'Student Felicitations',
+    badge: 'Office Felicitation',
+    title: 'Doctorate & Medical Placement Felicitation',
+    caption: 'Dr. Puspa M. Thapa receiving her official credential documents, university enrollment package, and documentation dossier from Dr. Saroj Sah following her successful placement.',
+    alt: 'Dr. Saroj Sah felicitating Dr. Puspa M. Thapa with official medical credential documents at the Retina Kathmandu office',
+    objectPosition: 'object-[center_20%]'
   },
   {
     id: 6,
-    src: '/images/gallery/students-academic-achievement.jpg',
-    title: 'Celebrating Academic Milestones',
-    caption: 'Students celebrating examination results and academic milestones outside their university faculty building.',
-    alt: 'Students celebrating an academic achievement in a natural documentary photography style'
+    src: '/images/gallery/retina-student-credential-handover-3.jpg',
+    category: 'felicitations',
+    categoryLabel: 'Student Felicitations',
+    badge: 'Office Felicitation',
+    title: 'University Offer & Documentation Handover',
+    caption: 'Celebrating an academic milestone as a prospective medical scholar receives her formal university acceptance documents, visa paperwork, and credential folder from Dr. Saroj Sah.',
+    alt: 'Student receiving university credentials and admission files from Dr. Saroj Sah at Retina Educational Consultancy',
+    objectPosition: 'object-[center_20%]'
   },
   {
     id: 7,
-    src: '/images/gallery/consultancy-reception-floor.jpg',
-    title: 'Consultancy Reception & Counseling Floor',
-    caption: 'A welcoming educational consultancy office floor in Kathmandu where advisors assist prospective students and families.',
-    alt: 'A welcoming educational consultancy office where staff assist prospective students'
+    src: '/images/gallery/retina-student-credential-handover-4.jpg',
+    category: 'felicitations',
+    categoryLabel: 'Student Felicitations',
+    badge: 'Office Felicitation',
+    title: 'Medical Scholar Admission Felicitation',
+    caption: 'A proud moment at the Retina Educational Consultancy reception lounge as an aspiring doctor receives her verified admission package and credentials dossier from Dr. Saroj Sah.',
+    alt: 'Dr. Saroj Sah handing over medical admission credential dossier to a smiling student at the Retina office',
+    objectPosition: 'object-[center_20%]'
+  },
+  {
+    id: 8,
+    src: '/images/gallery/retina-student-credential-handover-5.jpg',
+    category: 'felicitations',
+    categoryLabel: 'Student Felicitations',
+    badge: 'Office Felicitation',
+    title: 'Official University Credential Handover',
+    caption: 'Congratulating our scholar on securing her medical admission abroad, presented with her formal credential documents and university folder by Managing Director Dr. Saroj Sah.',
+    alt: 'Dr. Saroj Sah presenting verified university credentials and admission file to an admitted student at Retina Kathmandu office',
+    objectPosition: 'object-[center_20%]'
+  },
+  {
+    id: 9,
+    src: '/images/gallery/retina-airport-departure-student-mother.jpg',
+    category: 'departure',
+    categoryLabel: 'Airport Departure',
+    badge: 'Departure Milestone',
+    title: 'Pre-Flight Milestone with Family',
+    caption: 'A proud medical scholar adorned with the national flag scarf alongside her mother at Tribhuvan International Airport, holding her verified Retina admission & visa paperwork before boarding.',
+    alt: 'Medical student draped with Nepal flag and her mother holding Retina visa documentation file at airport departure terminal',
+    objectPosition: 'object-[center_15%]'
+  },
+  {
+    id: 10,
+    src: '/images/gallery/retina-airport-departure-scholar-tika.jpg',
+    category: 'departure',
+    categoryLabel: 'Airport Departure',
+    badge: 'Departure Milestone',
+    title: 'Auspicious Departure Blessing with Tika & Khada',
+    caption: 'A dedicated medical student receiving traditional auspicious red tika and khada at the international departure terminal, ready to begin her MBBS journey abroad.',
+    alt: 'Medical student with auspicious tika and traditional shawl at Tribhuvan International Airport',
+    objectPosition: 'object-[center_15%]'
+  },
+  {
+    id: 11,
+    src: '/images/gallery/retina-airport-departure-family-farewell.jpg',
+    category: 'departure',
+    categoryLabel: 'Airport Departure',
+    badge: 'Family Farewell',
+    title: 'Grand Family Farewell at TIA Kathmandu',
+    caption: 'Extended family and relatives gathered at Tribhuvan International Airport to bid an emotional farewell and bless aspiring doctors departing for medical college abroad.',
+    alt: 'Large family gathering at Tribhuvan International Airport bidding farewell to departing medical students',
+    objectPosition: 'object-center'
+  },
+  {
+    id: 12,
+    src: '/images/gallery/retina-airport-departure-luggage-family.jpg',
+    category: 'departure',
+    categoryLabel: 'Airport Departure',
+    badge: 'Family Farewell',
+    title: 'Family Gathering Around the Departure Trolley',
+    caption: 'Loved ones accompanying their aspiring doctor all the way to the terminal entrance with luggage packed for university residency abroad.',
+    alt: 'Family gathered with airport luggage trolley supporting departing student at Tribhuvan International Airport',
+    objectPosition: 'object-center'
+  },
+  {
+    id: 13,
+    src: '/images/gallery/retina-airport-departure-emotional-blessing.jpg',
+    category: 'departure',
+    categoryLabel: 'Airport Departure',
+    badge: 'Family Moment',
+    title: 'Heartfelt Blessings & Rose Presentation',
+    caption: 'A touching moment of love and encouragement from family members wishing safe travels and great success in medical studies abroad.',
+    alt: 'Emotional farewell with roses and blessings at Tribhuvan International Airport',
+    objectPosition: 'object-[center_15%]'
+  },
+  {
+    id: 14,
+    src: '/images/gallery/retina-students-airport-departure.jpg',
+    category: 'departure',
+    categoryLabel: 'Airport Departure',
+    badge: 'Departing Cohort',
+    title: 'Departing Scholars Ready for Medical School',
+    caption: 'Admitted students ready at the airport terminal to embark together on their undergraduate medical education journey abroad, backed by Retina pre-departure guidance.',
+    alt: 'Group of three students at airport terminal ready to depart for their medical university abroad',
+    objectPosition: 'object-[center_15%]'
+  },
+  {
+    id: 15,
+    src: '/images/gallery/retina-airport-departure-parents-briefing.jpg',
+    category: 'departure',
+    categoryLabel: 'Airport Departure',
+    badge: 'Pre-Flight Briefing',
+    title: 'Parental Blessings & Document Check at TIA',
+    caption: 'A departing medical scholar and her parents performing final travel itinerary and document checks at the international departure terminal before her flight.',
+    alt: 'Student and parents checking travel and visa documents at the international airport terminal',
+    objectPosition: 'object-[center_20%]'
+  },
+  {
+    id: 16,
+    src: '/images/gallery/retina-airport-advisor-briefing-students.jpg',
+    category: 'departure',
+    categoryLabel: 'Airport Departure',
+    badge: 'Pre-Flight Briefing',
+    title: 'Senior Counselor Final Airport Briefing',
+    caption: 'Retina senior leadership and counselors providing last-minute guidance, encouragement, and flight transition advice to departing medical students at the airport gate.',
+    alt: 'Senior counselor briefing departing medical students at Tribhuvan International Airport send-off',
+    objectPosition: 'object-[center_20%]'
+  },
+  {
+    id: 17,
+    src: '/images/gallery/retina-airport-departure-scholar-three-generations.jpg',
+    category: 'departure',
+    categoryLabel: 'Airport Departure',
+    badge: 'Family Pride',
+    title: 'Three Generations Celebrating Medical Admission',
+    caption: 'A proud medical scholar adorned with the national flag scarf and Dhaka khada standing with her parents and grandmother at Tribhuvan International Airport before departure.',
+    alt: 'Departing medical student with parents and grandmother wearing national flag scarf at Tribhuvan International Airport',
+    objectPosition: 'object-[center_20%]'
+  },
+  {
+    id: 18,
+    src: '/images/gallery/retina-airport-departure-scholar-credentials-folder.jpg',
+    category: 'departure',
+    categoryLabel: 'Airport Departure',
+    badge: 'Departure Ready',
+    title: 'Scholar with Official Retina Credentials Dossier',
+    caption: 'An aspiring doctor holding his official embossed Retina credentials folder, receiving family blessings and ceremonial scarf adjustments at the departure terminal.',
+    alt: 'Male medical student holding Retina credentials folder with family at international departure gate',
+    objectPosition: 'object-[center_20%]'
   }
 ];
 
+const categories = [
+  { id: 'all', label: 'All Photos', icon: Layers },
+  { id: 'departure', label: 'Airport Departures', icon: PlaneTakeoff },
+  { id: 'felicitations', label: 'Student Felicitations', icon: Award },
+  { id: 'counseling', label: 'Office Guidance', icon: Users }
+];
+
 export default function GalleryPage() {
+  const [activeCategory, setActiveCategory] = useState('all');
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   const breadcrumbs = [{ label: 'Gallery' }];
+
+  const filteredItems = activeCategory === 'all'
+    ? galleryItems
+    : galleryItems.filter(item => item.category === activeCategory);
 
   const openLightbox = (index) => {
     setSelectedIndex(index);
@@ -79,15 +244,15 @@ export default function GalleryPage() {
 
   const showNext = useCallback(() => {
     setSelectedIndex((prevIndex) => 
-      prevIndex === null ? null : (prevIndex + 1) % galleryItems.length
+      prevIndex === null ? null : (prevIndex + 1) % filteredItems.length
     );
-  }, []);
+  }, [filteredItems.length]);
 
   const showPrev = useCallback(() => {
     setSelectedIndex((prevIndex) => 
-      prevIndex === null ? null : (prevIndex - 1 + galleryItems.length) % galleryItems.length
+      prevIndex === null ? null : (prevIndex - 1 + filteredItems.length) % filteredItems.length
     );
-  }, []);
+  }, [filteredItems.length]);
 
   // Keyboard navigation & body scroll locking
   useEffect(() => {
@@ -113,41 +278,75 @@ export default function GalleryPage() {
     };
   }, [selectedIndex, closeLightbox, showNext, showPrev]);
 
-  const activeItem = selectedIndex !== null ? galleryItems[selectedIndex] : null;
+  const activeItem = selectedIndex !== null ? filteredItems[selectedIndex] : null;
 
   return (
     <div className="space-y-0 bg-[#FFFFFF]">
       {/* 1. Page Header */}
       <PageHeader
-        badge="Photo Gallery"
-        title="Student Life, Guidance & Campus Moments"
-        subtitle="Explore authentic glimpses of personalized student counseling at our Putalisadak office, academic study environments, and university campus life."
+        badge="Authentic Photo Archive"
+        title="Real Students, Felicitations & Departure Moments"
+        subtitle="Explore 100% authentic photographic moments from Retina Educational Consultancy — from personal credential handovers and doctor-led counseling at our Putalisadak office to heartfelt airport departures at Tribhuvan International Airport."
         breadcrumbs={breadcrumbs}
       />
 
       {/* 2. Gallery Grid Section */}
-      <section className="py-10 sm:py-14 lg:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-24 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal y={12}>
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-10 pb-4 border-b border-[#E2E8F0]">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10 pb-6 border-b border-[#E2E8F0]">
             <div>
-              <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
-                OUR PHOTOGRAPHIC ARCHIVE
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#102A43] tracking-tight font-display mt-1">
-                Academic Moments &amp; Office Guidance
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EEF4FF] text-[#0E4BA4] text-xs font-semibold mb-2">
+                <Sparkles className="w-3.5 h-3.5 text-[#0E4BA4]" />
+                <span>100% AUTHENTIC PHOTOGRAPHS</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#102A43] tracking-tight font-display">
+                Real Felicitations, Briefings &amp; Departures
               </h2>
+              <p className="text-xs sm:text-sm text-[#5B6472] mt-1 max-w-2xl leading-relaxed">
+                Featuring official credential handovers and counseling by MD Dr. Saroj Sah at our Putalisadak office alongside airport departure farewells.
+              </p>
             </div>
-            <p className="text-xs sm:text-sm text-[#5B6472] sm:text-right max-w-xs">
-              Click any photograph to view in full resolution with complete scene details.
-            </p>
+
+            {/* Category Filter Pills */}
+            <div className="flex flex-wrap items-center gap-2">
+              {categories.map((cat) => {
+                const IconComponent = cat.icon;
+                const count = cat.id === 'all' 
+                  ? galleryItems.length 
+                  : galleryItems.filter(item => item.category === cat.id).length;
+                const isActive = activeCategory === cat.id;
+
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => {
+                      setActiveCategory(cat.id);
+                      setSelectedIndex(null);
+                    }}
+                    className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold transition-all duration-200 cursor-pointer ${
+                      isActive 
+                        ? 'bg-[#0E4BA4] text-white shadow-sm shadow-[#0E4BA4]/25 ring-2 ring-[#0E4BA4]'
+                        : 'bg-[#F8FAFC] text-[#5B6472] hover:bg-[#EEF4FF] hover:text-[#0E4BA4] border border-[#E2E8F0]'
+                    }`}
+                  >
+                    <IconComponent className={`w-3.5 h-3.5 ${isActive ? 'text-white' : 'text-[#0E4BA4]'}`} />
+                    <span>{cat.label}</span>
+                    <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold ${
+                      isActive ? 'bg-white/20 text-white' : 'bg-[#E2E8F0] text-[#102A43]'
+                    }`}>
+                      {count}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </ScrollReveal>
 
-        {/* Responsive Grid with 7 Items */}
-        <StaggerGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" stagger={0.06}>
-          {galleryItems.map((item, index) => {
-            // Give item 7 a span-2 on wide screens or balanced layout
-            const isFeatured = index === 0;
+        {/* Responsive Grid with Stagger Items */}
+        <StaggerGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" stagger={0.05}>
+          {filteredItems.map((item, index) => {
+            const isFeatured = activeCategory === 'all' && index === 0;
 
             return (
               <StaggerItem 
@@ -168,29 +367,29 @@ export default function GalleryPage() {
                   aria-label={`View ${item.title}`}
                 >
                   {/* Image container */}
-                  <div className={`relative w-full overflow-hidden bg-[#102A43] ${isFeatured ? 'h-72 sm:h-96' : 'h-64 sm:h-72'}`}>
+                  <div className={`relative w-full overflow-hidden bg-[#102A43] ${isFeatured ? 'h-72 sm:h-96' : 'h-64 sm:h-80'}`}>
                     <img
                       src={item.src}
                       alt={item.alt}
                       loading="lazy"
                       decoding="async"
-                      className="w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-600 ease-out"
+                      className={`w-full h-full object-cover ${item.objectPosition || 'object-center'} group-hover:scale-[1.03] transition-transform duration-600 ease-out`}
                     />
 
                     {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#102A43]/80 via-[#102A43]/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#102A43]/85 via-[#102A43]/25 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
 
                     {/* Top Pill / Badge */}
-                    <div className="absolute top-4 left-4 z-10">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold bg-white/90 backdrop-blur-sm text-[#102A43] shadow-xs">
+                    <div className="absolute top-4 left-4 z-10 flex items-center gap-2">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold bg-white/95 backdrop-blur-sm text-[#102A43] shadow-xs">
                         <Sparkles className="w-3 h-3 text-[#0E4BA4]" />
-                        <span>Photo {index + 1} of {galleryItems.length}</span>
+                        <span>{item.badge || `Photo ${index + 1}`}</span>
                       </span>
                     </div>
 
                     {/* Expand Button Indicator */}
                     <div className="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="p-2 rounded-xl bg-white/90 text-[#102A43] shadow-md hover:bg-white transition-colors">
+                      <div className="p-2 rounded-xl bg-white/95 text-[#102A43] shadow-md hover:bg-white transition-colors">
                         <Maximize2 className="w-4 h-4 text-[#0E4BA4]" />
                       </div>
                     </div>
@@ -198,6 +397,9 @@ export default function GalleryPage() {
                     {/* Bottom Caption Pill */}
                     <div className="absolute bottom-4 left-4 right-4 z-10">
                       <div className="bg-black/60 backdrop-blur-md p-3.5 rounded-xl border border-white/15 text-white">
+                        <div className="text-[10px] font-bold uppercase tracking-wider text-[#FF914D] mb-1">
+                          {item.categoryLabel}
+                        </div>
                         <h3 className="text-sm font-bold tracking-tight text-white leading-tight">
                           {item.title}
                         </h3>
@@ -218,7 +420,7 @@ export default function GalleryPage() {
           <div className="mt-14 sm:mt-18 p-8 sm:p-10 rounded-3xl bg-[#EEF4FF] border border-[#E2E8F0] flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="space-y-2 text-center md:text-left">
               <span className="text-xs font-semibold uppercase tracking-wider text-[#0E4BA4]">
-                PLAN YOUR CAMPUS VISIT
+                PLAN YOUR VISIT
               </span>
               <h3 className="text-xl sm:text-2xl font-extrabold text-[#102A43] font-display">
                 Want to Experience Our Consultation in Person?
@@ -256,9 +458,12 @@ export default function GalleryPage() {
             <div className="flex items-center justify-between px-5 py-3.5 bg-black/40 border-b border-white/10 z-10">
               <div className="flex items-center gap-3 text-white">
                 <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-white/15 text-white/90">
-                  {selectedIndex + 1} / {galleryItems.length}
+                  {selectedIndex + 1} / {filteredItems.length}
                 </span>
-                <span className="text-sm font-bold truncate max-w-[240px] sm:max-w-md">
+                <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-[#0E4BA4] text-white">
+                  {activeItem.categoryLabel}
+                </span>
+                <span className="text-sm font-bold truncate max-w-[220px] sm:max-w-md hidden sm:inline">
                   {activeItem.title}
                 </span>
               </div>
@@ -275,11 +480,11 @@ export default function GalleryPage() {
             </div>
 
             {/* Main Image Stage */}
-            <div className="relative flex-1 bg-black/70 flex items-center justify-center overflow-hidden min-h-[300px] sm:min-h-[460px] max-h-[68vh]">
+            <div className="relative flex-1 bg-black/80 flex items-center justify-center overflow-hidden min-h-[300px] sm:min-h-[460px] max-h-[68vh] p-2">
               <img
                 src={activeItem.src}
                 alt={activeItem.alt}
-                className="max-w-full max-h-[68vh] w-auto h-auto object-contain select-none"
+                className="max-w-full max-h-[68vh] w-auto h-auto object-contain select-none rounded-lg"
               />
 
               {/* Prev Button */}
@@ -310,8 +515,13 @@ export default function GalleryPage() {
             {/* Bottom Caption Bar */}
             <div className="px-5 py-4 bg-[#102A43] border-t border-white/10 text-white/90 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div className="space-y-1 max-w-2xl">
-                <h4 className="text-sm font-bold text-white">
-                  {activeItem.title}
+                <h4 className="text-sm font-bold text-white flex items-center gap-2">
+                  <span>{activeItem.title}</span>
+                  {activeItem.badge && (
+                    <span className="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-[#FF914D] font-normal">
+                      {activeItem.badge}
+                    </span>
+                  )}
                 </h4>
                 <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-normal">
                   {activeItem.caption}
@@ -331,3 +541,4 @@ export default function GalleryPage() {
     </div>
   );
 }
+

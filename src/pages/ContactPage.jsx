@@ -7,7 +7,7 @@ import { FacebookIcon, InstagramIcon, TikTokIcon, GoogleMapsIcon } from '../comp
 
 export default function ContactPage() {
   return (
-    <div className="py-10 sm:py-14 lg:py-16 bg-[#FFFFFF]">
+    <div className="py-16 sm:py-24 lg:py-28 bg-[#FFFFFF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Modern Split Layout */}

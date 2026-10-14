@@ -13,11 +13,11 @@ export const companyData = {
     district: "Kathmandu",
     country: "Nepal",
     fullAddress: "New Plaza, Putalisadak-29, Kathmandu, Nepal",
-    googleMapUrl: "https://maps.app.goo.gl/qVYc2r5DNZWhnfmT9",
+    googleMapUrl: "https://maps.app.goo.gl/p3sXJ8FwuPdLZ4vh8",
     // Responsive embed URL using Google Maps query for the official business address
-    embedUrl: "https://maps.google.com/maps?q=Retina+Educational+Consultancy+Pvt.+Ltd.,+New+Plaza,+Putalisadak-29,+Kathmandu,+Nepal&t=&z=16&ie=UTF8&iwloc=&output=embed",
+    embedUrl: "https://maps.google.com/maps?q=Retina+Educational+Consultancy,+Putalisadak,+Kathmandu,+Nepal&t=&z=17&ie=UTF8&iwloc=&output=embed",
     // Dedicated directions URL opening in Google Maps
-    directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Retina+Educational+Consultancy+Pvt.+Ltd.,+New+Plaza,+Putalisadak-29,+Kathmandu,+Nepal"
+    directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Retina+Educational+Consultancy+Putalisadak+Kathmandu"
   },
   // Landline telephone
   landline: {
@@ -53,8 +53,8 @@ export const companyData = {
   whatsappNumber: "+977-9804880051",
   whatsappUrl: "https://wa.me/9779804880051",
   email: "consultretina8@gmail.com",
-  mapUrl: "https://maps.app.goo.gl/qVYc2r5DNZWhnfmT9",
-  googleMapUrl: "https://maps.app.goo.gl/qVYc2r5DNZWhnfmT9",
+  mapUrl: "https://maps.app.goo.gl/p3sXJ8FwuPdLZ4vh8",
+  googleMapUrl: "https://maps.app.goo.gl/p3sXJ8FwuPdLZ4vh8",
   status: "Always open",
   ratings: "100% recommend (13 reviews)",
   followers: "39K followers",
@@ -86,7 +86,7 @@ export const companyData = {
     googleMaps: {
       name: "Google Maps",
       handle: "Retina Educational Consultancy Pvt. Ltd.",
-      url: "https://maps.app.goo.gl/qVYc2r5DNZWhnfmT9",
+      url: "https://maps.app.goo.gl/p3sXJ8FwuPdLZ4vh8",
       isConfigured: true,
       ariaLabel: "View Retina Educational Consultancy on Google Maps"
     }

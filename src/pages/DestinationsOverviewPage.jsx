@@ -20,22 +20,22 @@ export default function DestinationsOverviewPage() {
       />
 
       {/* Destinations Grid with Staggered Entrance */}
-      <section className="py-10 sm:py-14 lg:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-24 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal y={14}>
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 space-y-3">
+          <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
             <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
               TARGET COUNTRIES
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
               Where Could Your Medical Career Take You?
             </h2>
-            <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+            <p className="text-sm sm:text-base text-[#5B6472] font-normal leading-relaxed">
               Select any country to explore medical college entry requirements, clinical hospital exposure, and doctor-led guidance.
             </p>
           </div>
         </ScrollReveal>
 
-        <StaggerGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" stagger={0.07}>
+        <StaggerGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10" stagger={0.07}>
           {destinations.map((dest) => (
             <StaggerItem key={dest.id}>
               <DestinationCard destination={dest} />

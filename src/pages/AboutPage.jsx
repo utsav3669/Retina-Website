@@ -59,7 +59,7 @@ export default function AboutPage() {
       />
 
       {/* 1. Who We Are Section */}
-      <section className="relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
+      <section className="relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           <div className="lg:col-span-6 space-y-6">
@@ -151,28 +151,28 @@ export default function AboutPage() {
       </section>
 
       {/* 2. What We Help With (Soft Blue: #EEF4FF) */}
-      <section className="py-10 sm:py-14 lg:py-16 bg-[#EEF4FF] border-t border-b border-[#E2E8F0]">
+      <section className="py-16 sm:py-24 lg:py-28 bg-[#EEF4FF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
-            <div className="max-w-2xl space-y-3 mb-8 sm:mb-10">
+            <div className="max-w-2xl space-y-3 mb-12 sm:mb-16">
               <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                 OUR SERVICES
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
                 What We Help With
               </h2>
-              <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+              <p className="text-sm sm:text-base text-[#5B6472] font-normal leading-relaxed">
                 From CEE exam form fill-up to top medical college enrollment abroad, we support students through every milestone.
               </p>
             </div>
           </ScrollReveal>
 
-          <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" stagger={0.07}>
+          <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10" stagger={0.07}>
             {helpAreas.map((item, idx) => (
               <StaggerItem key={idx}>
                 <div
-                  className="group p-8 bg-[#FFFFFF] rounded-3xl border border-[#E2E8F0] hover:border-[#0E4BA4]/30 shadow-xs hover:shadow-lg transition-all duration-400 ease-out transform hover:-translate-y-1 space-y-3 h-full"
+                  className="group p-8 sm:p-9 bg-[#FFFFFF] rounded-3xl border border-[#E2E8F0] hover:border-[#0E4BA4]/30 shadow-xs hover:shadow-lg transition-all duration-400 ease-out transform hover:-translate-y-1 space-y-3 h-full"
                 >
                   <div className="flex items-center justify-between">
                     <div className="text-xs font-bold text-[#0E4BA4] tracking-wider uppercase">
@@ -195,16 +195,16 @@ export default function AboutPage() {
       </section>
 
       {/* 3. Our Approach: 4 Editorial Steps (Pure White) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28">
         <ScrollReveal y={14}>
-          <div className="text-center max-w-2xl mx-auto space-y-3 mb-8 sm:mb-10">
+          <div className="text-center max-w-2xl mx-auto space-y-3 mb-12 sm:mb-16">
             <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
               STRUCTURED METHODOLOGY
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
               Our Approach
             </h2>
-            <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+            <p className="text-sm sm:text-base text-[#5B6472] font-normal leading-relaxed">
               A structured four-step methodology ensuring clarity and clinical insight at every stage.
             </p>
           </div>

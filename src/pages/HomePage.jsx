@@ -17,6 +17,7 @@ import DestinationCard from '../components/DestinationCard';
 import CourseCard from '../components/CourseCard';
 import BlogCard from '../components/BlogCard';
 import CTASection from '../components/CTASection';
+import OfficeMapSection from '../components/OfficeMapSection';
 import FAQAccordion from '../components/FAQAccordion';
 import GoogleReviewsSection from '../components/GoogleReviewsSection';
 import { 
@@ -117,9 +118,9 @@ export default function HomePage() {
     <div className="space-y-0">
       
       {/* ============================================================
-          1. HERO SECTION (White Background with Soft Entrance)
+          1. HERO SECTION (Refined Spacing)
           ============================================================ */}
-      <section className="relative overflow-hidden pt-10 pb-10 sm:pt-14 sm:pb-14 lg:pt-16 lg:pb-16 bg-[#FFFFFF]">
+      <section className="relative overflow-hidden pt-8 pb-8 sm:pt-16 sm:pb-16 lg:pt-20 lg:pb-24 bg-[#FFFFFF]">
         {/* Extremely soft subtle radial light */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[450px] bg-gradient-to-tr from-[#EEF4FF]/70 via-[#EEF4FF]/40 to-transparent blur-[120px] pointer-events-none -z-10" />
 
@@ -127,10 +128,10 @@ export default function HomePage() {
         <HeroRouteBackground />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Content Column with soft staggered entrance */}
-            <div className="lg:col-span-7 space-y-8 text-left">
+            <div className="lg:col-span-7 space-y-5 text-left">
               
               {/* Refined Eyebrow */}
               <HeroFadeIn delay={0.06} y={10}>
@@ -144,7 +145,7 @@ export default function HomePage() {
 
               {/* Large Headline */}
               <HeroFadeIn delay={0.14} y={12}>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#102A43] tracking-tight leading-[1.12] font-display">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#102A43] tracking-tight leading-[1.14] font-display">
                   Doctor-Led Guidance for<br />
                   <span className="text-[#0E4BA4]">Medical Admissions Abroad.</span>
                 </h1>
@@ -159,10 +160,10 @@ export default function HomePage() {
 
               {/* Action Buttons */}
               <HeroFadeIn delay={0.30} y={12}>
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-1">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center justify-center gap-2 h-13 px-8 rounded-xl bg-[#0E4BA4] hover:bg-[#0A3B82] text-white text-sm font-semibold tracking-wide transition-all duration-300 ease-out transform hover:-translate-y-0.5 shadow-sm hover:shadow-md"
+                    className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-xl bg-[#0E4BA4] hover:bg-[#0A3B82] text-white text-sm font-semibold tracking-wide transition-all duration-300 ease-out transform hover:-translate-y-0.5 shadow-sm hover:shadow-md"
                   >
                     <span>Talk to a Counselor</span>
                     <ArrowRight className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1" />
@@ -170,7 +171,7 @@ export default function HomePage() {
 
                   <Link
                     to="/courses"
-                    className="inline-flex items-center justify-center gap-2 h-13 px-8 rounded-xl bg-transparent border border-[#0E4BA4] text-[#0E4BA4] hover:bg-[#0E4BA4] hover:text-white text-sm font-semibold tracking-wide transition-all duration-300 ease-out transform hover:-translate-y-0.5"
+                    className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-xl bg-transparent border border-[#0E4BA4] text-[#0E4BA4] hover:bg-[#0E4BA4] hover:text-white text-sm font-semibold tracking-wide transition-all duration-300 ease-out transform hover:-translate-y-0.5"
                   >
                     <span>Explore Medical Programs</span>
                   </Link>
@@ -179,7 +180,7 @@ export default function HomePage() {
 
               {/* Micro-trust line */}
               <HeroFadeIn delay={0.38} y={10}>
-                <div className="pt-2 flex flex-wrap items-center gap-6 text-xs text-[#5B6472] font-medium">
+                <div className="pt-1 flex flex-wrap items-center gap-5 text-xs text-[#5B6472] font-medium">
                   <div className="flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4]"></span>
                     <a 
@@ -220,7 +221,7 @@ export default function HomePage() {
 
                   {/* EXACTLY ONE subtle floating frosted glass card */}
                   <div className="absolute -bottom-6 left-6 right-6 sm:left-8 sm:right-8 z-20">
-                    <div className="glass-frosted p-5 rounded-2xl">
+                    <div className="glass-frosted p-4.5 rounded-2xl">
                       <div className="flex items-center justify-between">
                         <div>
                           <div className="text-xs font-bold uppercase tracking-wider text-[#FF914D]">
@@ -249,9 +250,9 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          2. MESSAGE FROM OUR MD SECTION (White Background)
+          2. MESSAGE FROM OUR MD SECTION (Refined Spacing)
           ============================================================ */}
-      <section className="relative overflow-hidden py-10 sm:py-14 lg:py-16 bg-[#FFFFFF] border-t border-b border-[#E2E8F0]">
+      <section className="relative overflow-hidden py-8 sm:py-16 lg:py-20 bg-[#FFFFFF] border-t border-[#E2E8F0]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
@@ -373,16 +374,16 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          3. DESTINATIONS SECTION (Subtle Staggered Card Reveals)
+          3. DESTINATIONS SECTION (Clean Grid)
           ============================================================ */}
-      <section className="relative overflow-hidden py-10 sm:py-14 lg:py-16 bg-[#FFFFFF]">
+      <section className="relative overflow-hidden py-8 sm:py-16 lg:py-20 bg-[#FFFFFF]">
         <DestinationsPathBackground />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Section Heading */}
           <ScrollReveal y={14}>
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 gap-6">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-5 sm:mb-8 gap-4">
               <div className="space-y-2 max-w-2xl">
                 <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                   DESTINATIONS
@@ -390,7 +391,7 @@ export default function HomePage() {
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
                   Where Could Your Medical Career Take You?
                 </h2>
-                <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+                <p className="text-sm sm:text-base text-[#5B6472] font-normal leading-relaxed">
                   Explore leading destinations for MBBS, MD, MS, BDS, and nursing abroad, led by medical admission experts.
                 </p>
               </div>
@@ -406,7 +407,7 @@ export default function HomePage() {
           </ScrollReveal>
 
           {/* Grid with Subtle Staggered Card Reveals */}
-          <StaggerGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8" stagger={0.07}>
+          <StaggerGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7" stagger={0.07}>
             {destinations.map((dest) => (
               <StaggerItem key={dest.id}>
                 <DestinationCard destination={dest} />
@@ -420,28 +421,28 @@ export default function HomePage() {
       {/* ============================================================
           4. COURSES SECTION (Soft Blue: #EEF4FF)
           ============================================================ */}
-      <section className="relative overflow-hidden py-10 sm:py-14 lg:py-16 bg-[#EEF4FF] border-t border-b border-[#E2E8F0]">
+      <section className="relative overflow-hidden py-8 sm:py-16 lg:py-20 bg-[#EEF4FF]">
         <CourseProgressBackground />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Section Heading */}
           <ScrollReveal y={14}>
-            <div className="text-center max-w-2xl mx-auto space-y-3 mb-8 sm:mb-10">
+            <div className="text-center max-w-2xl mx-auto space-y-2 mb-5 sm:mb-8">
               <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                 OUR PROGRAMS
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
                 Empowering Your Medical Career.
               </h2>
-              <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+              <p className="text-sm sm:text-base text-[#5B6472] font-normal leading-relaxed">
                 Structured counseling and direct admissions support for MBBS, MD, MS, BDS, B.Sc. Nursing, AG, and DVM.
               </p>
             </div>
           </ScrollReveal>
 
           {/* Two Large Editorial Course Cards with Staggered Entrance */}
-          <StaggerGrid className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10" stagger={0.12}>
+          <StaggerGrid className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8" stagger={0.12}>
             <StaggerItem>
               <CourseCard course={courses.mbbs} />
             </StaggerItem>
@@ -451,7 +452,7 @@ export default function HomePage() {
           </StaggerGrid>
 
           <ScrollReveal y={12} delay={0.15}>
-            <div className="mt-12 text-center">
+            <div className="mt-7 text-center">
               <Link
                 to="/courses"
                 className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-xl bg-transparent border border-[#0E4BA4] text-[#0E4BA4] hover:bg-[#0E4BA4] hover:text-white text-xs font-semibold tracking-wide transition-all duration-300 ease-out"
@@ -466,33 +467,33 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          5. MBBS / MD COMPARISON (White Background)
+          5. MBBS / MD COMPARISON (Refined Spacing)
           ============================================================ */}
-      <section className="pt-10 pb-6 sm:pt-14 sm:pb-8 lg:pt-16 lg:pb-8 bg-[#FFFFFF]">
+      <section className="py-8 sm:py-16 lg:py-20 bg-[#FFFFFF]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
-            <div className="text-center max-w-2xl mx-auto space-y-3 mb-8 sm:mb-10">
+            <div className="text-center max-w-2xl mx-auto space-y-2 mb-5 sm:mb-8">
               <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                 MEDICAL EDUCATION PATHWAYS
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
                 Undergraduate vs Postgraduate Pathways
               </h2>
-              <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+              <p className="text-sm sm:text-base text-[#5B6472] font-normal leading-relaxed">
                 Whether preparing for your first medical degree or advancing to clinical specialization, our doctor counselors provide direct admission guidance.
               </p>
             </div>
           </ScrollReveal>
 
           {/* Two Minimal Editorial Columns with Staggered Entrance */}
-          <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 gap-8" stagger={0.1}>
+          <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8" stagger={0.1}>
             
             {/* Column 1: MBBS / BDS */}
             <StaggerItem>
-              <div className="bg-[#FFFFFF] rounded-3xl p-8 sm:p-10 border border-[#E2E8F0] shadow-xs flex flex-col justify-between space-y-8 h-full transition-all duration-400 ease-out hover:shadow-lg hover:-translate-y-1">
-                <div className="space-y-6">
-                  <div className="pb-4 border-b border-[#E2E8F0] flex items-start justify-between">
+              <div className="bg-[#FFFFFF] rounded-3xl p-6 sm:p-8 border border-[#E2E8F0] shadow-xs flex flex-col justify-between space-y-6 h-full transition-all duration-400 ease-out hover:shadow-lg hover:-translate-y-1">
+                <div className="space-y-5">
+                  <div className="pb-3 border-b border-[#E2E8F0] flex items-start justify-between">
                     <div>
                       <span className="text-xs font-semibold text-[#0E4BA4] uppercase tracking-wider">Primary Medical Degree</span>
                       <h3 className="text-2xl font-extrabold text-[#102A43] mt-1 font-display">MBBS & BDS</h3>
@@ -501,7 +502,7 @@ export default function HomePage() {
                     <CardProgressMotif className="opacity-70 mt-1" />
                   </div>
 
-                  <div className="space-y-4 text-xs sm:text-sm text-[#5B6472]">
+                  <div className="space-y-3.5 text-xs sm:text-sm text-[#5B6472]">
                     <div className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4] mt-2 shrink-0"></span>
                       <div>
@@ -536,7 +537,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div>
+                <div className="pt-2">
                   <Link
                     to="/courses/mbbs"
                     className="w-full inline-flex items-center justify-center gap-2 h-11 rounded-xl bg-transparent border border-[#0E4BA4] text-[#0E4BA4] hover:bg-[#0E4BA4] hover:text-white text-xs font-semibold transition-all duration-300 ease-out"
@@ -550,9 +551,9 @@ export default function HomePage() {
 
             {/* Column 2: MD / MS */}
             <StaggerItem>
-              <div className="bg-[#FFFFFF] rounded-3xl p-8 sm:p-10 border border-[#E2E8F0] shadow-xs flex flex-col justify-between space-y-8 h-full transition-all duration-400 ease-out hover:shadow-lg hover:-translate-y-1">
-                <div className="space-y-6">
-                  <div className="pb-4 border-b border-[#E2E8F0] flex items-start justify-between">
+              <div className="bg-[#FFFFFF] rounded-3xl p-6 sm:p-8 border border-[#E2E8F0] shadow-xs flex flex-col justify-between space-y-6 h-full transition-all duration-400 ease-out hover:shadow-lg hover:-translate-y-1">
+                <div className="space-y-5">
+                  <div className="pb-3 border-b border-[#E2E8F0] flex items-start justify-between">
                     <div>
                       <span className="text-xs font-semibold text-[#0E4BA4] uppercase tracking-wider">Clinical Specialization</span>
                       <h3 className="text-2xl font-extrabold text-[#102A43] mt-1 font-display">MD & MS</h3>
@@ -561,7 +562,7 @@ export default function HomePage() {
                     <CardProgressMotif className="opacity-70 mt-1" />
                   </div>
 
-                  <div className="space-y-4 text-xs sm:text-sm text-[#5B6472]">
+                  <div className="space-y-3.5 text-xs sm:text-sm text-[#5B6472]">
                     <div className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4] mt-2 shrink-0"></span>
                       <div>
@@ -588,7 +589,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div>
+                <div className="pt-2">
                   <Link
                     to="/courses/md"
                     className="w-full inline-flex items-center justify-center gap-2 h-11 rounded-xl bg-transparent border border-[#0E4BA4] text-[#0E4BA4] hover:bg-[#0E4BA4] hover:text-white text-xs font-semibold transition-all duration-300 ease-out"
@@ -604,7 +605,7 @@ export default function HomePage() {
 
           {/* Primary Counseling CTA */}
           <ScrollReveal y={12} delay={0.15}>
-            <div className="mt-12 text-center">
+            <div className="mt-7 text-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-xl bg-[#0E4BA4] hover:bg-[#0A3B82] text-white text-xs font-semibold tracking-wide transition-all duration-300 ease-out transform hover:-translate-y-0.5 shadow-xs hover:shadow-md"
@@ -619,31 +620,31 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          6. THE RETINA ADVANTAGE (Pure White Background: #FFFFFF)
+          6. THE RETINA ADVANTAGE (Refined 4 Pillars)
           ============================================================ */}
-      <section className="pt-6 pb-10 sm:pt-8 sm:pb-14 lg:pt-8 lg:pb-16 bg-[#FFFFFF]">
+      <section className="py-8 sm:py-16 lg:py-20 bg-[#FFFFFF] border-t border-[#E2E8F0]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
-            <div className="max-w-2xl space-y-3 mb-8 sm:mb-10">
+            <div className="max-w-2xl space-y-2 mb-5 sm:mb-8">
               <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                 THE RETINA ADVANTAGE
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
                 Four Pillars of Medical Counseling.
               </h2>
-              <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+              <p className="text-sm sm:text-base text-[#5B6472] font-normal leading-relaxed">
                 Direct expertise, verified top medical colleges, and genuine doctor-led mentorship for your medical career.
               </p>
             </div>
           </ScrollReveal>
 
           {/* 4 Large Number Points with Staggered Entrance */}
-          <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10" stagger={0.08}>
+          <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8" stagger={0.08}>
             {whyPoints.map((point) => (
               <StaggerItem key={point.num}>
-                <div className="space-y-4">
-                  <div className="text-4xl sm:text-5xl font-extrabold text-[#E2E8F0] font-display">
+                <div className="space-y-3">
+                  <div className="text-4xl sm:text-5xl font-extrabold text-[#CBD5E1] font-display">
                     {point.num}
                   </div>
                   <h3 className="text-lg font-bold text-[#102A43] font-display">
@@ -663,18 +664,18 @@ export default function HomePage() {
       {/* ============================================================
           7. STUDENT JOURNEY (Soft Blue: #EEF4FF)
           ============================================================ */}
-      <section className="py-10 sm:py-14 lg:py-16 bg-[#EEF4FF] border-t border-b border-[#E2E8F0]">
+      <section className="py-8 sm:py-16 lg:py-20 bg-[#EEF4FF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
-            <div className="text-center max-w-2xl mx-auto space-y-3 mb-8 sm:mb-10">
+            <div className="text-center max-w-2xl mx-auto space-y-2 mb-5 sm:mb-8">
               <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                 ADMISSION JOURNEY
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
                 A Clear, Step-by-Step Pathway.
               </h2>
-              <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+              <p className="text-sm sm:text-base text-[#5B6472] font-normal leading-relaxed">
                 From initial doctor consultation and zero-charge CEE form assistance to verified admission in top medical colleges.
               </p>
             </div>
@@ -684,14 +685,14 @@ export default function HomePage() {
           <div className="relative">
             <div className="hidden lg:block absolute top-6 left-[10%] right-[10%] h-[1px] bg-[#E2E8F0] -z-0" />
 
-            <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10" stagger={0.08}>
+            <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7 relative z-10" stagger={0.08}>
               {journeySteps.map((step) => (
                 <StaggerItem key={step.step}>
-                  <div className="bg-[#FFFFFF] lg:bg-transparent p-6 lg:p-0 rounded-2xl lg:rounded-none border border-[#E2E8F0] lg:border-none space-y-3 shadow-2xs lg:shadow-none">
-                    <div className="w-12 h-12 rounded-full bg-[#FFFFFF] border border-[#E2E8F0] flex items-center justify-center font-bold text-xs text-[#0E4BA4] shadow-xs">
+                  <div className="bg-[#FFFFFF] lg:bg-transparent p-5 lg:p-0 rounded-2xl lg:rounded-none border border-[#E2E8F0] lg:border-none space-y-2.5 shadow-2xs lg:shadow-none">
+                    <div className="w-11 h-11 rounded-full bg-[#FFFFFF] border border-[#E2E8F0] flex items-center justify-center font-bold text-xs text-[#0E4BA4] shadow-xs">
                       {step.step}
                     </div>
-                    <h3 className="text-base font-bold text-[#102A43] pt-1 font-display">
+                    <h3 className="text-base font-bold text-[#102A43] pt-0.5 font-display">
                       {step.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-[#5B6472] leading-relaxed font-normal">
@@ -707,92 +708,20 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          8. PHYSICAL CENTER BANNER (Dark Navy: #102A43)
+          8. FREQUENTLY ASKED QUESTIONS
           ============================================================ */}
-      <section className="py-8 sm:py-12 lg:py-14 bg-[#FFFFFF]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal y={16}>
-            <div className="bg-[#102A43] text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden border border-white/10 shadow-xl">
-              <div className="absolute top-0 right-0 w-[400px] h-[300px] bg-[#0E4BA4]/25 blur-3xl pointer-events-none" />
-
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-                
-                <div className="lg:col-span-8 space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="inline-flex items-center gap-2 text-xs font-semibold text-white/[0.70]">
-                      <MapPin className="w-3.5 h-3.5 text-[#FF914D]" />
-                      <a 
-                        href={companyData.mapUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="hover:text-white transition-colors"
-                      >
-                        New Plaza, Putalisadak-29, Kathmandu, Nepal
-                      </a>
-                    </div>
-                    <ConnectingNodeGraphic className="opacity-60 hidden sm:block" />
-                  </div>
-
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-[#FFFFFF] tracking-tight font-display">
-                    Visit Our Putalisadak Office
-                  </h3>
-                  <p className="text-xs sm:text-sm text-white/[0.78] leading-relaxed max-w-2xl font-normal">
-                    Meet our doctor counselors face-to-face, discuss your medical career ambitions, and get free CEE exam form fill-up assistance with expert advice.
-                  </p>
-                  <div className="flex flex-wrap items-center gap-6 pt-2 text-xs text-white/[0.60]">
-                    <div className="flex items-center gap-1.5">
-                      <Clock className="w-4 h-4 text-white/[0.60]" />
-                      <span>Always Open • 100% Recommend (13 Reviews)</span>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <Phone className="w-4 h-4 text-white/[0.60]" />
-                      <a href={companyData.landline.tel} className="hover:text-white transition-colors">{companyData.landline.number}</a>
-                      <span>•</span>
-                      <a href={companyData.phones[0].tel} className="hover:text-white transition-colors">{companyData.phones[0].number}</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-xl bg-[#FFFFFF] hover:bg-[#EEF4FF] text-[#0E4BA4] font-semibold text-xs transition-all duration-300 ease-out shadow-xs transform hover:-translate-y-0.5"
-                  >
-                    <span>Get Directions & Details</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                  <a
-                    href={companyData.whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-xl bg-white/10 hover:bg-white/[0.16] text-[#FFFFFF] font-semibold text-xs border border-white/20 transition-all duration-300 ease-out transform hover:-translate-y-0.5"
-                  >
-                    <MessageSquare className="w-3.5 h-3.5 fill-current text-emerald-400" />
-                    <span>WhatsApp Inquiry</span>
-                  </a>
-                </div>
-
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ============================================================
-          9. FREQUENTLY ASKED QUESTIONS (Animated Accordion Expansion)
-          ============================================================ */}
-      <section className="py-10 sm:py-14 lg:py-16 bg-[#FFFFFF] border-t border-b border-[#E2E8F0]">
+      <section className="py-8 sm:py-16 lg:py-20 bg-[#FFFFFF]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
-            <div className="text-center max-w-2xl mx-auto space-y-3 mb-8 sm:mb-10">
+            <div className="text-center max-w-2xl mx-auto space-y-2 mb-5 sm:mb-8">
               <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                 QUESTIONS & ANSWERS
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
                 Frequently Asked Questions
               </h2>
-              <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+              <p className="text-sm sm:text-base text-[#5B6472] font-normal leading-relaxed">
                 Clear answers regarding medical admissions, CEE form fill-up, Bangladesh colleges, and doctor counseling.
               </p>
             </div>
@@ -803,7 +732,7 @@ export default function HomePage() {
           </ScrollReveal>
 
           <ScrollReveal y={10} delay={0.16}>
-            <div className="mt-10 text-center text-xs text-[#5B6472]">
+            <div className="mt-6 text-center text-xs text-[#5B6472]">
               <span>Have a specific inquiry? </span>
               <Link to="/contact" className="font-semibold text-[#0E4BA4] hover:underline">
                 Contact our doctor counselors directly →
@@ -815,13 +744,13 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          10. EDITORIAL BLOG SECTION (Pure White Background: #FFFFFF)
+          9. EDITORIAL BLOG SECTION
           ============================================================ */}
-      <section className="py-10 sm:py-14 lg:py-16 bg-[#FFFFFF]">
+      <section className="py-8 sm:py-16 lg:py-20 bg-[#FFFFFF] border-t border-[#E2E8F0]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 gap-6">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-5 sm:mb-8 gap-4">
               <div className="space-y-2 max-w-2xl">
                 <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                   UPDATES & ANNOUNCEMENTS
@@ -829,7 +758,7 @@ export default function HomePage() {
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-[#102A43] tracking-tight font-display">
                   Featured Notices & Medical Insights
                 </h2>
-                <p className="text-sm sm:text-base text-[#5B6472] font-normal">
+                <p className="text-sm sm:text-base text-[#5B6472] font-normal leading-relaxed">
                   Stay updated on CEE nursing mock tests, MECEE alerts, Bangladesh admissions, and student guidance.
                 </p>
               </div>
@@ -845,12 +774,12 @@ export default function HomePage() {
           </ScrollReveal>
 
           {/* Featured Large Article with ScrollReveal */}
-          <ScrollReveal y={16} delay={0.05} className="mb-10">
+          <ScrollReveal y={16} delay={0.05} className="mb-6">
             <BlogCard blog={featuredBlog} featured={true} />
           </ScrollReveal>
 
           {/* Three Smaller Articles Below with Staggered Entrance */}
-          <StaggerGrid className="grid grid-cols-1 md:grid-cols-3 gap-8" stagger={0.08}>
+          <StaggerGrid className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7" stagger={0.08}>
             {secondaryBlogs.map((blog) => (
               <StaggerItem key={blog.id}>
                 <BlogCard blog={blog} />
@@ -862,7 +791,14 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          11. FINAL CTA (Dark Navy: #102A43 with Static Map & Airplane Journey)
+          10. RETINA OFFICE MAP LOCATION (Positioned directly above map animation in same type of box)
+          ============================================================ */}
+      <ScrollReveal y={14}>
+        <OfficeMapSection />
+      </ScrollReveal>
+
+      {/* ============================================================
+          11. FINAL CTA (Dark Navy: #102A43 with Asia Map & Airplane Journey)
           ============================================================ */}
       <ScrollReveal y={14}>
         <CTASection />
