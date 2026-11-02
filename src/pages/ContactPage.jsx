@@ -7,14 +7,14 @@ import { FacebookIcon, InstagramIcon, TikTokIcon, GoogleMapsIcon } from '../comp
 
 export default function ContactPage() {
   return (
-    <div className="py-16 sm:py-24 lg:py-28 bg-[#FFFFFF]">
+    <div className="py-8 sm:py-16 lg:py-20 bg-[#FFFFFF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Modern Split Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* LEFT: Heading, Paragraph, Contact info, WhatsApp CTA with soft entrance */}
-          <div className="lg:col-span-5 space-y-8">
+          <div className="lg:col-span-5 space-y-6">
             
             <HeroFadeIn delay={0.06} y={10}>
               <div className="space-y-4">
@@ -274,7 +274,7 @@ export default function ContactPage() {
         </div>
 
         {/* 2. RESPONSIVE GOOGLE MAPS EMBED SECTION (Below Contact Information) */}
-        <div className="mt-14 sm:mt-18 pt-10 border-t border-[#E2E8F0]">
+        <div className="mt-8 sm:mt-10 pt-6 border-t border-[#E2E8F0]">
           <ScrollReveal y={14}>
             <div className="bg-[#FFFFFF] rounded-2xl sm:rounded-3xl border border-[#E2E8F0] p-6 sm:p-8 shadow-xs">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">

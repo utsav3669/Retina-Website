@@ -59,8 +59,8 @@ export default function AboutPage() {
       />
 
       {/* 1. Who We Are Section */}
-      <section className="relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <section className="relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           <div className="lg:col-span-6 space-y-6">
             <ScrollReveal y={12}>
@@ -151,11 +151,11 @@ export default function AboutPage() {
       </section>
 
       {/* 2. What We Help With (Soft Blue: #EEF4FF) */}
-      <section className="py-16 sm:py-24 lg:py-28 bg-[#EEF4FF]">
+      <section className="py-8 sm:py-16 lg:py-20 bg-[#EEF4FF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <ScrollReveal y={14}>
-            <div className="max-w-2xl space-y-3 mb-12 sm:mb-16">
+            <div className="max-w-2xl space-y-3 mb-6 sm:mb-8">
               <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                 OUR SERVICES
               </span>
@@ -168,7 +168,7 @@ export default function AboutPage() {
             </div>
           </ScrollReveal>
 
-          <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10" stagger={0.07}>
+          <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" stagger={0.07}>
             {helpAreas.map((item, idx) => (
               <StaggerItem key={idx}>
                 <div
@@ -195,9 +195,9 @@ export default function AboutPage() {
       </section>
 
       {/* 3. Our Approach: 4 Editorial Steps (Pure White) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 lg:py-20">
         <ScrollReveal y={14}>
-          <div className="text-center max-w-2xl mx-auto space-y-3 mb-12 sm:mb-16">
+          <div className="text-center max-w-2xl mx-auto space-y-3 mb-6 sm:mb-8">
             <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
               STRUCTURED METHODOLOGY
             </span>
@@ -210,7 +210,7 @@ export default function AboutPage() {
           </div>
         </ScrollReveal>
 
-        <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" stagger={0.08}>
+        <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" stagger={0.08}>
           {approachSteps.map((step) => (
             <StaggerItem key={step.num}>
               <div className="space-y-4">

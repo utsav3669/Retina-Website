@@ -59,7 +59,7 @@ export default function BlogPostPage() {
       </PageHeader>
 
       {/* Main Blog Article Content */}
-      <article className="py-10 sm:py-14 lg:py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <article className="py-8 sm:py-10 lg:py-12 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Featured Image */}
         <ScrollReveal y={16}>
@@ -160,7 +160,7 @@ export default function BlogPostPage() {
       </article>
 
       {/* Related Articles Strip */}
-      <section className="py-10 sm:py-14 lg:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[#E2E8F0]">
+      <section className="py-8 sm:py-10 lg:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[#E2E8F0]">
         <ScrollReveal y={14}>
           <h3 className="text-2xl font-bold text-[#102A43] mb-6 sm:mb-8 font-display">
             More from Retina Updates & Insights

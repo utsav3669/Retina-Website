@@ -20,9 +20,9 @@ export default function DestinationsOverviewPage() {
       />
 
       {/* Destinations Grid with Staggered Entrance */}
-      <section className="py-16 sm:py-24 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 sm:py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal y={14}>
-          <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
+          <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8 space-y-3">
             <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
               TARGET COUNTRIES
             </span>
@@ -35,7 +35,7 @@ export default function DestinationsOverviewPage() {
           </div>
         </ScrollReveal>
 
-        <StaggerGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10" stagger={0.07}>
+        <StaggerGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8" stagger={0.07}>
           {destinations.map((dest) => (
             <StaggerItem key={dest.id}>
               <DestinationCard destination={dest} />
@@ -45,9 +45,9 @@ export default function DestinationsOverviewPage() {
       </section>
 
       {/* Honest Advisory Notice (Soft Blue: #EEF4FF) */}
-      <section className="py-8 sm:py-12 lg:py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-6 sm:py-8 lg:py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal y={14}>
-          <div className="bg-[#EEF4FF] border border-[#E2E8F0] rounded-3xl p-8 sm:p-12">
+          <div className="bg-[#EEF4FF] border border-[#E2E8F0] rounded-3xl p-6 sm:p-8">
             <div className="flex flex-col sm:flex-row items-start gap-5">
               <div className="w-11 h-11 rounded-2xl bg-white border border-[#E2E8F0] text-[#0E4BA4] flex items-center justify-center shrink-0 shadow-xs">
                 <ShieldCheck className="w-6 h-6" />

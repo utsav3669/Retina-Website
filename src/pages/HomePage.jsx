@@ -3,10 +3,7 @@ import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
   MapPin, 
-  Clock, 
   Check, 
-  Phone,
-  MessageSquare,
   CheckCircle2
 } from 'lucide-react';
 import { companyData } from '../data/companyData';
@@ -20,6 +17,9 @@ import CTASection from '../components/CTASection';
 import OfficeMapSection from '../components/OfficeMapSection';
 import FAQAccordion from '../components/FAQAccordion';
 import GoogleReviewsSection from '../components/GoogleReviewsSection';
+import CollegePhoto from '../components/CollegePhoto';
+import { bangladeshColleges } from '../data/bangladeshCollegesData';
+import usePageMetadata from '../hooks/usePageMetadata';
 import { 
   ScrollReveal, 
   StaggerGrid, 
@@ -31,7 +31,6 @@ import {
   AboutOrbitsBackground, 
   DestinationsPathBackground, 
   CourseProgressBackground,
-  ConnectingNodeGraphic,
   BoxCampusWaypoint,
   BoxIntegrityOrbits,
   CardProgressMotif
@@ -41,6 +40,12 @@ export default function HomePage() {
   // Editorial blog layout: 1 featured article + 3 smaller articles
   const featuredBlog = blogs.find(b => b.featuredOnHome) || blogs[0];
   const secondaryBlogs = blogs.filter(b => b.id !== featuredBlog.id).slice(0, 3);
+  const featuredBangladeshColleges = bangladeshColleges.filter((college) => college.featuredOnHome).slice(0, 3);
+
+  usePageMetadata(
+    'Retina Educational Consultancy | Medical Admissions Abroad',
+    "Nepal's No. 1 consultancy for medical admission in Bangladesh. MBBS and BDS admission, local guardian for 6 years, and NMCLE preparation classes."
+  );
 
   // Retina 4 Core Advantages (From Banner)
   const whyPoints = [
@@ -145,17 +150,21 @@ export default function HomePage() {
 
               {/* Large Headline */}
               <HeroFadeIn delay={0.14} y={12}>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#102A43] tracking-tight leading-[1.14] font-display">
-                  Doctor-Led Guidance for<br />
-                  <span className="text-[#0E4BA4]">Medical Admissions Abroad.</span>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#102A43] tracking-tight leading-[1.14] font-display">
+                  Nepal's No. 1 Consultancy for Medical Admission in Bangladesh
                 </h1>
               </HeroFadeIn>
 
               {/* Supporting Paragraph */}
               <HeroFadeIn delay={0.22} y={12}>
-                <p className="text-base sm:text-lg text-[#5B6472] max-w-xl leading-relaxed font-normal">
-                  Run by a team of doctors who graduated from Dhaka University, we bring 16 years of trusted expertise in guiding students for medical admissions in Bangladesh, China, India, and the Philippines.
-                </p>
+                <div className="space-y-3">
+                  <p className="text-base sm:text-lg text-[#5B6472] max-w-xl leading-relaxed font-normal">
+                    Retina Educational Consultancy Pvt. Ltd. is Nepal's No. 1 consultancy for medical admission in Bangladesh. Based in Putalisadak, Kathmandu, we help Nepali students get MBBS and BDS admission in top private medical and dental colleges of Bangladesh.
+                  </p>
+                  <p className="text-sm sm:text-base text-[#5B6472] max-w-xl leading-relaxed font-normal">
+                    From counselling and college selection to admission, documentation, visa, travel, guardianship and licensing exam preparation, Retina stands with you at every step. If you are looking for the best consultancy for MBBS in Bangladesh from Nepal, Retina Educational Consultancy is the name students and parents trust.
+                  </p>
+                </div>
               </HeroFadeIn>
 
               {/* Action Buttons */}
@@ -189,7 +198,7 @@ export default function HomePage() {
                       rel="noopener noreferrer" 
                       className="hover:text-[#0E4BA4] transition-colors"
                     >
-                      New Plaza, Putalisadak-29
+                      New Plaza, Putalisadak-29, Kathmandu
                     </a>
                   </div>
                   <div className="flex items-center gap-1.5">
@@ -200,6 +209,17 @@ export default function HomePage() {
                     <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4]"></span>
                     <span>Dhaka University Graduate Doctors</span>
                   </div>
+                </div>
+              </HeroFadeIn>
+
+              <HeroFadeIn delay={0.44} y={10}>
+                <div className="pt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-[#5B6472] font-medium">
+                  <span className="font-semibold text-[#102A43]">Contact:</span>
+                  <a href="tel:9804880051" className="hover:text-[#0E4BA4] transition-colors">9804880051</a>
+                  <span aria-hidden="true">|</span>
+                  <a href="tel:9851363213" className="hover:text-[#0E4BA4] transition-colors">9851363213</a>
+                  <span aria-hidden="true">|</span>
+                  <a href="tel:014547423" className="hover:text-[#0E4BA4] transition-colors">01-4547423</a>
                 </div>
               </HeroFadeIn>
             </div>
@@ -254,7 +274,7 @@ export default function HomePage() {
           ============================================================ */}
       <section className="relative overflow-hidden py-8 sm:py-16 lg:py-20 bg-[#FFFFFF] border-t border-[#E2E8F0]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left: MD Portrait with Credentials & Doctor-Led Badge */}
             <div className="lg:col-span-5 relative">
@@ -374,7 +394,129 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          3. DESTINATIONS SECTION (Clean Grid)
+          3. STUDY MBBS IN BANGLADESH PREVIEW
+          ============================================================ */}
+      <section className="py-10 sm:py-12 bg-[#F8FAFC] border-y border-[#E2E8F0]/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 sm:mb-8">
+            <div className="max-w-2xl space-y-2">
+              <span className="text-xs font-semibold tracking-widest uppercase text-[#0F559E]">
+                BANGLADESH MEDICAL COLLEGES
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#102A43] tracking-tight font-display">
+                Study MBBS in Bangladesh
+              </h2>
+              <p className="text-sm text-[#5B6472] leading-relaxed">
+                Discover leading medical colleges in Bangladesh, explore their facilities, understand admission options, and find the information you need to begin your medical journey.
+              </p>
+            </div>
+            <Link
+              to="/study-mbbs-bangladesh"
+              className="inline-flex items-center gap-2 h-11 px-5 rounded-xl bg-[#0F559E] hover:bg-[#0A3B82] text-white text-xs font-semibold tracking-wide transition-all shrink-0"
+            >
+              <span>Explore All Medical Colleges</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+            {featuredBangladeshColleges.map((college) => (
+              <article key={college.id} className="overflow-hidden rounded-2xl bg-white border border-[#E2E8F0] shadow-xs">
+                <Link to={`/study-mbbs-bangladesh/${college.slug}`} className="block h-44 sm:h-48 overflow-hidden bg-[#102A43]">
+                  <CollegePhoto
+                    college={college}
+                    className="h-full w-full"
+                    imageClassName="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.03]"
+                  />
+                </Link>
+                <div className="p-4 sm:p-5">
+                  <p className="flex items-start gap-1.5 text-[11px] text-[#5B6472]">
+                    <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[#EE851B]" />
+                    <span>{college.location}</span>
+                  </p>
+                  <h3 className="mt-2 text-lg font-bold text-[#102A43] leading-snug">
+                    <Link to={`/study-mbbs-bangladesh/${college.slug}`} className="hover:text-[#0F559E]">
+                      {college.name}
+                    </Link>
+                  </h3>
+                  <p className="mt-2 text-xs text-[#5B6472] leading-relaxed line-clamp-2">
+                    {college.shortDescription}
+                  </p>
+                  {college.image && college.imageSourceUrl && (
+                    <div className="mt-3 flex flex-wrap items-center gap-x-2 text-[10px] leading-relaxed text-[#5B6472]">
+                      <span>Photo credit:</span>
+                      <a
+                        href={college.imageSourcePageUrl || college.imageSourceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title={college.imageCredit || college.imageSource}
+                        className="underline underline-offset-2 hover:text-[#0F559E]"
+                      >
+                        {college.imageCredit || college.imageSource}
+                      </a>
+                      {college.imageLicenseUrl && (
+                        <a
+                          href={college.imageLicenseUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline underline-offset-2 hover:text-[#0F559E]"
+                        >
+                          CC BY-SA
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
+          LOCAL STUDENT SUPPORT
+          ============================================================ */}
+      <section className="py-8 sm:py-14 bg-[#FFFFFF] border-y border-[#E2E8F0]/70">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal y={14}>
+            <div className="max-w-2xl space-y-2 mb-5 sm:mb-8">
+              <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
+                SUPPORT BEYOND ADMISSION
+              </span>
+              <p className="text-sm sm:text-base text-[#5B6472] leading-relaxed">
+                But our support does not end with admission. Retina supports students and parents during study in Bangladesh and as graduates prepare for licensing.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+            <ScrollReveal y={14}>
+              <article className="h-full rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-5 sm:p-6">
+                <h2 className="text-xl sm:text-2xl font-bold text-[#102A43] font-display">
+                  Local Guardian in Bangladesh
+                </h2>
+                <p className="mt-2 text-sm text-[#5B6472] leading-relaxed">
+                  Retina provides a local guardian throughout the 6 years of study in Bangladesh, so students and parents always have someone reliable nearby.
+                </p>
+              </article>
+            </ScrollReveal>
+
+            <ScrollReveal y={14} delay={0.08}>
+              <article className="h-full rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-5 sm:p-6">
+                <h2 className="text-xl sm:text-2xl font-bold text-[#102A43] font-display">
+                  NMCLE Preparation Classes
+                </h2>
+                <p className="mt-2 text-sm text-[#5B6472] leading-relaxed">
+                  After passing MBBS, when students enter their internship, we guide them in NMCLE preparation with online classes and study materials.
+                </p>
+              </article>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
+          4. DESTINATIONS SECTION (Clean Grid)
           ============================================================ */}
       <section className="relative overflow-hidden py-8 sm:py-16 lg:py-20 bg-[#FFFFFF]">
         <DestinationsPathBackground />

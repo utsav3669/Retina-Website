@@ -10,6 +10,8 @@ import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import CeoMessagePage from './pages/CeoMessagePage';
+import StudyMBBSBangladeshPage from './pages/StudyMBBSBangladeshPage';
+import BangladeshCollegeDetailPage from './pages/BangladeshCollegeDetailPage';
 import CoursesOverviewPage from './pages/CoursesOverviewPage';
 import CourseDetailPage from './pages/CourseDetailPage';
 import DestinationsOverviewPage from './pages/DestinationsOverviewPage';
@@ -43,6 +45,10 @@ export default function App() {
             <Route path="/md-message" element={<CeoMessagePage />} />
             <Route path="/message-from-ceo" element={<CeoMessagePage />} />
             <Route path="/ceo-message" element={<CeoMessagePage />} />
+
+            {/* Study MBBS in Bangladesh */}
+            <Route path="/study-mbbs-bangladesh" element={<StudyMBBSBangladeshPage />} />
+            <Route path="/study-mbbs-bangladesh/:slug" element={<BangladeshCollegeDetailPage />} />
 
             {/* Medical Programs */}
             <Route path="/courses" element={<CoursesOverviewPage />} />

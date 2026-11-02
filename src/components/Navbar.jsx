@@ -12,6 +12,7 @@ import { companyData } from '../data/companyData';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
   const [destinationsOpen, setDestinationsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,6 +39,7 @@ export default function Navbar() {
         : 'text-[#102A43] hover:text-[#0E4BA4] font-normal'
     }`;
 
+  const isAboutActive = location.pathname === '/about' || location.pathname.startsWith('/message-from-md') || location.pathname.startsWith('/md-message') || location.pathname.startsWith('/message-from-ceo') || location.pathname.startsWith('/ceo-message');
   const isCoursesActive = location.pathname.startsWith('/courses');
   const isDestinationsActive = location.pathname.startsWith('/destinations');
 
@@ -58,7 +60,7 @@ export default function Navbar() {
           </div>
 
           {/* Minimal Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden xl:flex items-center space-x-5 xl:space-x-8">
             <NavLink to="/" className={navLinkClass}>
               {({ isActive }) => (
                 <>
@@ -68,19 +70,45 @@ export default function Navbar() {
               )}
             </NavLink>
 
-            <NavLink to="/about" className={navLinkClass}>
-              {({ isActive }) => (
-                <>
-                  <span>About</span>
-                  {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[#FF914D]" />}
-                </>
+            <div
+              className="relative"
+              onMouseEnter={() => setAboutOpen(true)}
+              onMouseLeave={() => setAboutOpen(false)}
+            >
+              <button
+                type="button"
+                onClick={() => setAboutOpen((open) => !open)}
+                className={`flex items-center gap-1.5 text-sm tracking-tight transition-colors cursor-pointer py-1 ${
+                  isAboutActive
+                    ? 'text-[#0E4BA4] font-semibold'
+                    : 'text-[#102A43] hover:text-[#0E4BA4] font-normal'
+                }`}
+                aria-haspopup="true"
+                aria-expanded={aboutOpen}
+                aria-controls="desktop-about-menu"
+              >
+                <span>About Us</span>
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${aboutOpen ? 'rotate-180 text-[#0E4BA4]' : 'text-[#8D98AA]'}`} />
+                {isAboutActive && <span className="w-1.5 h-1.5 rounded-full bg-[#FF914D]" />}
+              </button>
+              {aboutOpen && (
+                <div id="desktop-about-menu" className="absolute top-full left-0 w-56 pt-3 z-50 animate-in fade-in duration-150">
+                  <div className="rounded-2xl border border-[#E2E8F0] bg-white p-2 shadow-xl">
+                    <Link to="/about" onClick={() => setAboutOpen(false)} className="block rounded-xl px-3 py-2.5 text-sm font-medium text-[#102A43] hover:bg-[#EEF4FF] hover:text-[#0E4BA4]">
+                      About Us
+                    </Link>
+                    <Link to="/message-from-md" onClick={() => setAboutOpen(false)} className="block rounded-xl px-3 py-2.5 text-sm font-medium text-[#102A43] hover:bg-[#EEF4FF] hover:text-[#0E4BA4]">
+                      MD Message
+                    </Link>
+                  </div>
+                </div>
               )}
-            </NavLink>
+            </div>
 
-            <NavLink to="/message-from-md" className={navLinkClass}>
+            <NavLink to="/study-mbbs-bangladesh" className={navLinkClass}>
               {({ isActive }) => (
                 <>
-                  <span>MD's Message</span>
+                  <span>Study MBBS in Bangladesh</span>
                   {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[#FF914D]" />}
                 </>
               )}
@@ -287,7 +315,7 @@ export default function Navbar() {
           </nav>
 
           {/* Right Action: Primary CTA Button (#0E4BA4 -> #0A3B82) */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden xl:flex items-center gap-4">
             <Link
               to="/contact"
               className="inline-flex items-center justify-center h-11 px-5 rounded-xl bg-[#0E4BA4] hover:bg-[#0A3B82] text-white text-xs font-semibold tracking-wide transition-all duration-200 transform hover:-translate-y-0.5 shadow-sm hover:shadow-md"
@@ -297,7 +325,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Actions */}
-          <div className="flex lg:hidden items-center gap-2">
+          <div className="flex xl:hidden items-center gap-2">
             <a
               href={companyData.whatsappUrl}
               target="_blank"
@@ -322,24 +350,48 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-[#FFFFFF] border-b border-[#E2E8F0] px-5 pt-4 pb-6 space-y-3 animate-in slide-in-from-top-2 duration-200 max-h-[85vh] overflow-y-auto">
+        <div className="xl:hidden bg-[#FFFFFF] border-b border-[#E2E8F0] px-5 pt-4 pb-6 space-y-3 animate-in slide-in-from-top-2 duration-200 max-h-[85vh] overflow-y-auto">
           <Link
             to="/"
             className="block py-2 text-base font-semibold text-[#102A43] border-b border-[#E2E8F0]"
           >
             Home
           </Link>
+          <div className="border-b border-[#E2E8F0] pb-2">
+            <button
+              type="button"
+              onClick={() => setAboutOpen((open) => !open)}
+              className="flex w-full items-center justify-between py-2 text-base font-semibold text-[#102A43]"
+              aria-expanded={aboutOpen}
+              aria-controls="mobile-about-menu"
+            >
+              <span>About Us</span>
+              <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${aboutOpen ? 'rotate-180 text-[#0E4BA4]' : ''}`} />
+            </button>
+            {aboutOpen && (
+              <div id="mobile-about-menu" className="mt-1 space-y-1 rounded-xl bg-[#F8FAFC] p-2">
+                <Link
+                  to="/about"
+                  onClick={() => setAboutOpen(false)}
+                  className="block rounded-lg px-3 py-2 text-sm font-medium text-[#102A43] hover:bg-[#EEF4FF] hover:text-[#0E4BA4]"
+                >
+                  About Us
+                </Link>
+                <Link
+                  to="/message-from-md"
+                  onClick={() => setAboutOpen(false)}
+                  className="block rounded-lg px-3 py-2 text-sm font-medium text-[#102A43] hover:bg-[#EEF4FF] hover:text-[#0E4BA4]"
+                >
+                  MD Message
+                </Link>
+              </div>
+            )}
+          </div>
           <Link
-            to="/about"
+            to="/study-mbbs-bangladesh"
             className="block py-2 text-base font-semibold text-[#102A43] border-b border-[#E2E8F0]"
           >
-            About Us
-          </Link>
-          <Link
-            to="/message-from-md"
-            className="block py-2 text-base font-semibold text-[#102A43] border-b border-[#E2E8F0]"
-          >
-            Message from MD
+            Study MBBS in Bangladesh
           </Link>
 
           <div className="border-b border-[#E2E8F0] pb-2">

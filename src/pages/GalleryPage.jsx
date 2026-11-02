@@ -291,9 +291,9 @@ export default function GalleryPage() {
       />
 
       {/* 2. Gallery Grid Section */}
-      <section className="py-16 sm:py-24 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 sm:py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal y={12}>
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10 pb-6 border-b border-[#E2E8F0]">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-5 sm:mb-7 pb-6 border-b border-[#E2E8F0]">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EEF4FF] text-[#0E4BA4] text-xs font-semibold mb-2">
                 <Sparkles className="w-3.5 h-3.5 text-[#0E4BA4]" />

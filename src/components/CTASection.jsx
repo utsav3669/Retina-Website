@@ -9,7 +9,7 @@ export default function CTASection({
   paragraph = "Speak directly with doctors graduated from Dhaka University and experienced counselors. We guide you toward top medical colleges and scholarship opportunities in Bangladesh and beyond."
 }) {
   return (
-    <section className="relative overflow-hidden bg-[#102A43] text-white py-14 sm:py-20 lg:py-24 my-10 sm:my-14 lg:my-16 rounded-3xl mx-4 sm:mx-6 lg:mx-8 border border-white/10 shadow-xl">
+    <section className="relative overflow-hidden bg-[#102A43] text-white py-8 sm:py-12 lg:py-16 my-4 sm:my-6 lg:my-8 rounded-3xl mx-4 sm:mx-6 lg:mx-8 border border-white/10 shadow-xl">
       {/* Subtle brand radial glow: #102A43 -> #0E4BA4 */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-gradient-to-r from-[#0E4BA4]/30 to-[#102A43]/10 blur-[100px] pointer-events-none" />
 
@@ -19,7 +19,7 @@ export default function CTASection({
         className="opacity-90 scale-105 pointer-events-none" 
       />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-8">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-5 sm:space-y-6">
         
         {/* Editorial Eyebrow with #FF914D Accent */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md text-white/[0.70] text-xs font-medium border border-white/15">
