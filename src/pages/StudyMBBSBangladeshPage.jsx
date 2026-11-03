@@ -242,7 +242,7 @@ export default function StudyMBBSBangladeshPage() {
             <article className="h-full rounded-2xl border border-[#E2E8F0] bg-white p-5 sm:p-6">
               <p className="text-xs font-bold uppercase tracking-wider text-[#0F559E]">01 · During study</p>
               <h3 className="mt-2 text-lg sm:text-xl font-bold text-[#102A43] font-display">
-                Local Guardian in Bangladesh
+                Local Guardianship in Bangladesh
               </h3>
               <p className="mt-2 text-sm text-[#5B6472] leading-relaxed">
                 Retina provides a local guardian throughout the six years of study in Bangladesh, so students and parents have someone reliable nearby.

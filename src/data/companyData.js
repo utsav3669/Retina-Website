@@ -77,10 +77,9 @@ export const companyData = {
     },
     tiktok: {
       name: "TikTok",
-      handle: "@retina_educational",
-      // Official TikTok account pending configuration - clearly marked for replacement
-      url: "https://www.tiktok.com/@REPLACE_WITH_OFFICIAL_RETINA_TIKTOK",
-      isConfigured: false,
+      handle: "@retina_consultancy",
+      url: "https://www.tiktok.com/@retina_consultancy?_r=1&_t=ZS-9B5rebs5BS8",
+      isConfigured: true,
       ariaLabel: "Follow Retina Educational Consultancy on TikTok"
     },
     googleMaps: {

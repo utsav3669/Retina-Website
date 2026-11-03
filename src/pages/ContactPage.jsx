@@ -198,9 +198,6 @@ export default function ContactPage() {
                   <div className="text-sm font-medium text-emerald-600">
                     Always Open
                   </div>
-                  <div className="text-xs text-[#5B6472]">
-                    100% recommend (13 reviews) • 39K followers • Walk-ins welcomed
-                  </div>
                 </div>
 
                 {/* Social Media Links: Facebook, Instagram, TikTok, Google Maps */}

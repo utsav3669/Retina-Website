@@ -497,7 +497,7 @@ export default function HomePage() {
               <article className="h-full rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-5 sm:p-6">
                 <p className="text-xs font-bold uppercase tracking-wider text-[#0F559E]">01 · During study</p>
                 <h3 className="mt-2 text-xl sm:text-2xl font-bold text-[#102A43] font-display">
-                  Local Guardian in Bangladesh
+                  Local Guardianship in Bangladesh
                 </h3>
                 <p className="mt-2 text-sm text-[#5B6472] leading-relaxed">
                   Retina provides a local guardian throughout the 6 years of study in Bangladesh, so students and parents always have someone reliable nearby.
