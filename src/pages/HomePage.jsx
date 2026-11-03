@@ -244,14 +244,14 @@ export default function HomePage() {
                     <div className="glass-frosted p-4.5 rounded-2xl">
                       <div className="flex items-center justify-between">
                         <div>
-                          <div className="text-xs font-bold uppercase tracking-wider text-[#FF914D]">
+                          <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#0F559E]">
                             MBBS • MD • BDS • NURSING
                           </div>
-                          <div className="text-sm font-bold text-[#102A43] mt-0.5 font-display">
-                            Doctor-Led Guidance
+                          <div className="text-[11px] sm:text-sm font-bold text-[#102A43] mt-0.5 font-display">
+                            100% Job Placement Guarantee
                           </div>
-                          <div className="text-xs text-[#5B6472] mt-0.5">
-                            16 Years Expertise • Putalisadak
+                          <div className="text-[10px] sm:text-xs text-[#5B6472] mt-0.5">
+                            After NMCLE.
                           </div>
                         </div>
                         <div className="w-9 h-9 rounded-xl bg-[#0E4BA4] text-white flex items-center justify-center shrink-0 shadow-xs">
@@ -476,25 +476,29 @@ export default function HomePage() {
       {/* ============================================================
           LOCAL STUDENT SUPPORT
           ============================================================ */}
-      <section className="py-8 sm:py-14 bg-[#FFFFFF] border-y border-[#E2E8F0]/70">
+      <section id="student-support" className="py-8 sm:py-14 bg-[#FFFFFF] border-y border-[#E2E8F0]/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal y={14}>
             <div className="max-w-2xl space-y-2 mb-5 sm:mb-8">
               <span className="text-xs font-semibold tracking-widest uppercase text-[#0E4BA4]">
                 SUPPORT BEYOND ADMISSION
               </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#102A43] tracking-tight font-display">
+                Your Support Through Study, Internship, and Beyond
+              </h2>
               <p className="text-sm sm:text-base text-[#5B6472] leading-relaxed">
-                But our support does not end with admission. Retina supports students and parents during study in Bangladesh and as graduates prepare for licensing.
+                Retina supports students through six years of study in Bangladesh, NMCLE preparation during internship, and job placement support after passing NMCLE.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
             <ScrollReveal y={14}>
               <article className="h-full rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-5 sm:p-6">
-                <h2 className="text-xl sm:text-2xl font-bold text-[#102A43] font-display">
+                <p className="text-xs font-bold uppercase tracking-wider text-[#0F559E]">01 · During study</p>
+                <h3 className="mt-2 text-xl sm:text-2xl font-bold text-[#102A43] font-display">
                   Local Guardian in Bangladesh
-                </h2>
+                </h3>
                 <p className="mt-2 text-sm text-[#5B6472] leading-relaxed">
                   Retina provides a local guardian throughout the 6 years of study in Bangladesh, so students and parents always have someone reliable nearby.
                 </p>
@@ -503,14 +507,51 @@ export default function HomePage() {
 
             <ScrollReveal y={14} delay={0.08}>
               <article className="h-full rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-5 sm:p-6">
-                <h2 className="text-xl sm:text-2xl font-bold text-[#102A43] font-display">
+                <p className="text-xs font-bold uppercase tracking-wider text-[#0F559E]">02 · During internship</p>
+                <h3 className="mt-2 text-xl sm:text-2xl font-bold text-[#102A43] font-display">
                   NMCLE Preparation Classes
-                </h2>
+                </h3>
                 <p className="mt-2 text-sm text-[#5B6472] leading-relaxed">
                   After passing MBBS, when students enter their internship, we guide them in NMCLE preparation with online classes and study materials.
                 </p>
               </article>
             </ScrollReveal>
+
+            <ScrollReveal y={14} delay={0.16}>
+              <article className="h-full rounded-2xl border border-[#EE851B]/35 bg-[#FFF8F1] p-5 sm:p-6">
+                <p className="text-xs font-bold uppercase tracking-wider text-[#B85B0A]">03 · After passing NMCLE</p>
+                <h3 className="mt-2 text-xl sm:text-2xl font-bold text-[#102A43] font-display">
+                  Job Placement Support
+                </h3>
+                <p className="mt-2 text-sm text-[#5B6472] leading-relaxed">
+                  Retina provides job placement support through its guaranteed job placement service list after students pass NMCLE.
+                </p>
+              </article>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Job placement highlight */}
+      <section className="py-6 sm:py-8 bg-[#EEF4FF] border-b border-[#0F559E]/15">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5 sm:p-6 rounded-2xl bg-[#102A43] text-white">
+            <div className="max-w-3xl">
+              <p className="text-xs font-bold uppercase tracking-widest text-[#FFB366]">AFTER NMCLE</p>
+              <h2 className="mt-1 text-xl sm:text-2xl font-extrabold font-display text-white">
+                Job Placement Support After NMCLE
+              </h2>
+              <p className="mt-2 text-sm text-white/80 leading-relaxed">
+                After passing NMCLE, students can access Retina’s job placement support through its guaranteed job placement service list.
+              </p>
+            </div>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center gap-2 h-11 px-5 rounded-xl bg-[#EE851B] hover:bg-[#d97412] text-white text-xs font-semibold tracking-wide transition-colors shrink-0"
+            >
+              <span>Contact Retina</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>

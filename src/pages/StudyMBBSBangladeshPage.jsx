@@ -221,6 +221,75 @@ export default function StudyMBBSBangladeshPage() {
         </div>
       </section>
 
+      {/* ============================================================
+          STUDENT SUPPORT THROUGH STUDY AND AFTER NMCLE
+          ============================================================ */}
+      <section id="student-support" className="py-12 sm:py-16 bg-[#EEF4FF] border-y border-[#0F559E]/15">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl space-y-2 mb-6 sm:mb-8">
+            <span className="text-xs font-semibold tracking-widest uppercase text-[#0F559E]">
+              SUPPORT BEYOND ADMISSION
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#102A43] tracking-tight font-display">
+              Support Through Study, Internship, and Beyond
+            </h2>
+            <p className="text-sm sm:text-base text-[#5B6472] leading-relaxed">
+              Retina’s support continues as students study in Bangladesh, prepare for NMCLE during internship, and move to the next step after passing the exam.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+            <article className="h-full rounded-2xl border border-[#E2E8F0] bg-white p-5 sm:p-6">
+              <p className="text-xs font-bold uppercase tracking-wider text-[#0F559E]">01 · During study</p>
+              <h3 className="mt-2 text-lg sm:text-xl font-bold text-[#102A43] font-display">
+                Local Guardian in Bangladesh
+              </h3>
+              <p className="mt-2 text-sm text-[#5B6472] leading-relaxed">
+                Retina provides a local guardian throughout the six years of study in Bangladesh, so students and parents have someone reliable nearby.
+              </p>
+            </article>
+
+            <article className="h-full rounded-2xl border border-[#E2E8F0] bg-white p-5 sm:p-6">
+              <p className="text-xs font-bold uppercase tracking-wider text-[#0F559E]">02 · During internship</p>
+              <h3 className="mt-2 text-lg sm:text-xl font-bold text-[#102A43] font-display">
+                NMCLE Preparation Classes
+              </h3>
+              <p className="mt-2 text-sm text-[#5B6472] leading-relaxed">
+                After completing MBBS and entering internship, students receive guidance for NMCLE preparation through online classes and study materials.
+              </p>
+            </article>
+
+            <article className="h-full rounded-2xl border border-[#EE851B]/35 bg-[#FFF8F1] p-5 sm:p-6">
+              <p className="text-xs font-bold uppercase tracking-wider text-[#B85B0A]">03 · After passing NMCLE</p>
+              <h3 className="mt-2 text-lg sm:text-xl font-bold text-[#102A43] font-display">
+                Job Placement Support
+              </h3>
+              <p className="mt-2 text-sm text-[#5B6472] leading-relaxed">
+                After passing NMCLE, Retina provides job placement support through its guaranteed job placement service list.
+              </p>
+            </article>
+          </div>
+
+          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-2xl bg-[#102A43] p-5 sm:p-6 text-white">
+            <div>
+              <h3 className="text-lg sm:text-xl font-bold font-display text-white">
+                Job Placement Support After NMCLE
+              </h3>
+              <p className="mt-1 text-sm text-white/80 leading-relaxed">
+                Job placement support through Retina’s guaranteed job placement service list is available after passing NMCLE.
+              </p>
+            </div>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center gap-2 h-11 px-5 rounded-xl bg-[#EE851B] hover:bg-[#d97412] text-white text-xs font-semibold tracking-wide transition-colors shrink-0"
+            >
+              <span>Contact Retina</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <CTASection 
         badge="Direct Admission Support"
         heading="Ready to Begin Your Medical Career in Bangladesh?"

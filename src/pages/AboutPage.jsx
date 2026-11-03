@@ -22,7 +22,10 @@ export default function AboutPage() {
     { title: 'B.Sc. Nursing Preparation', desc: 'Dedicated guidance, Friday 3 PM mock tests, and marks-boosting sessions for CEE Nursing aspirants.' },
     { title: 'CEE Online Form Submission', desc: 'Free exam form-fillup at our Putalisadak office with ZERO charges (Pay Rs. 0 only).' },
     { title: 'Scholarship Opportunities', desc: 'Evaluation and application support for government, merit, and institutional medical scholarships.' },
-    { title: 'Doctor-to-Student Mentorship', desc: 'Direct consultation with practicing medical doctors who understand curriculum and clinical training.' }
+    { title: 'Doctor-to-Student Mentorship', desc: 'Direct consultation with practicing medical doctors who understand curriculum and clinical training.' },
+    { title: 'Local Guardian in Bangladesh', desc: 'A local guardian for students throughout the 6 years of study in Bangladesh.' },
+    { title: 'NMCLE Preparation Classes', desc: 'Online classes and study materials to support NMCLE preparation during internship after MBBS.' },
+    { title: 'Job Placement Support After NMCLE', desc: 'After passing NMCLE, Retina provides job placement support through its guaranteed job placement service list.' }
   ];
 
   const approachSteps = [
