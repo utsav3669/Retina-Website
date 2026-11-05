@@ -41,4 +41,5 @@ export default defineConfig({
     tailwindcss(),
     inquiryApiPlugin(),
   ],
+  base: '/', // Set the base path for your app
 });
