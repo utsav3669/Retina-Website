@@ -248,6 +248,10 @@ export default function Footer() {
             >
               Direct WhatsApp Support
             </a>
+            <span>â€¢</span>
+            <a href="/sitemap.xml" className="hover:text-white transition-colors">
+              Sitemap
+            </a>
           </div>
         </div>
       </div>

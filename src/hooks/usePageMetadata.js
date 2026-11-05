@@ -6,6 +6,11 @@ const DEFAULT_DESCRIPTION =
   "Doctor-led guidance for medical admissions abroad from Retina Educational Consultancy in Kathmandu, Nepal.";
 const DEFAULT_IMAGE = '/images/hero.jpg';
 const DESCRIPTION_LIMIT = 160;
+const CANONICAL_ROUTE_ALIASES = new Map([
+  ['/md-message', '/message-from-md'],
+  ['/message-from-ceo', '/message-from-md'],
+  ['/ceo-message', '/message-from-md'],
+]);
 
 function toPlainText(value) {
   if (typeof value !== 'string' && typeof value !== 'number') return '';
@@ -38,6 +43,7 @@ function currentCanonicalUrl() {
   url.search = '';
   url.hash = '';
   if (url.pathname.length > 1) url.pathname = url.pathname.replace(/\/+$/, '');
+  url.pathname = CANONICAL_ROUTE_ALIASES.get(url.pathname) || url.pathname;
   return url.href;
 }
 
