@@ -39,6 +39,10 @@ export default function BlogPostPage() {
         title={blog.title}
         subtitle={blog.excerpt}
         breadcrumbs={breadcrumbs}
+        metaType="article"
+        metaImage={blog.image}
+        metaAuthor={blog.author}
+        metaPublishedTime={blog.publishDate}
       >
         <div className="flex flex-wrap items-center gap-4 text-xs text-white/75 font-medium pt-2">
           <div className="flex items-center gap-1.5">

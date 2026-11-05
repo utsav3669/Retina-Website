@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -16,10 +16,6 @@ import { ScrollReveal } from '../components/MotionReveal';
 
 export default function CeoMessagePage() {
   const [isExpanded, setIsExpanded] = useState(false);
-
-  useEffect(() => {
-    document.title = "Message from Our MD | Retina Educational Consultancy";
-  }, []);
 
   const breadcrumbs = [
     { label: 'Message from Our MD' }

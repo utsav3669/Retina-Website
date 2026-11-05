@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import usePageMetadata from '../hooks/usePageMetadata';
 
 const easeCubic = [0.22, 1, 0.36, 1];
 
@@ -10,8 +11,23 @@ export default function PageHeader({
   title,
   subtitle,
   breadcrumbs = [],
-  children
+  children,
+  metaType = 'website',
+  metaImage,
+  metaAuthor,
+  metaPublishedTime,
+  metaRobots = 'index,follow'
 }) {
+  // Standard pages inherit SEO metadata from their visible heading and summary.
+  // Articles can override the social image and add author/date details here.
+  usePageMetadata(title, subtitle, {
+    type: metaType,
+    image: metaImage,
+    author: metaAuthor,
+    publishedTime: metaPublishedTime,
+    robots: metaRobots,
+  });
+
   return (
     <div className="relative overflow-hidden bg-[#102A43] text-white pt-8 pb-10 sm:pt-12 sm:pb-14 border-b border-white/10">
       {/* Subtle brand radial glow: #102A43 -> #0E4BA4 */}

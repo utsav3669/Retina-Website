@@ -1,8 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home } from 'lucide-react';
+import usePageMetadata from '../hooks/usePageMetadata';
 
 export default function NotFoundPage() {
+  usePageMetadata(
+    'Page Not Found',
+    "The page you're looking for doesn't exist or may have moved. Browse Retina Educational Consultancy's courses and study destinations.",
+    { robots: 'noindex,follow' }
+  );
+
   return (
     <div className="min-h-[60vh] flex flex-col items-center justify-center text-center px-4 py-20">
       <div className="w-16 h-16 rounded-3xl bg-[#EEF4FF] text-[#0E4BA4] flex items-center justify-center font-bold text-2xl font-display mb-6">

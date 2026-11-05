@@ -4,8 +4,14 @@ import ContactForm from '../components/ContactForm';
 import { companyData } from '../data/companyData';
 import { HeroFadeIn, ScrollReveal } from '../components/MotionReveal';
 import { FacebookIcon, InstagramIcon, TikTokIcon, GoogleMapsIcon } from '../components/SocialIcons';
+import usePageMetadata from '../hooks/usePageMetadata';
 
 export default function ContactPage() {
+  usePageMetadata(
+    "Contact Retina Educational Consultancy | Medical Admission Guidance",
+    'Connect with our doctor counselors in Putalisadak, Kathmandu for guidance on MBBS, BDS, nursing, MD/MS admissions, and CEE form support.'
+  );
+
   return (
     <div className="py-8 sm:py-16 lg:py-20 bg-[#FFFFFF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
