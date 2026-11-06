@@ -37,9 +37,9 @@ import {
 } from '../components/AbstractElements';
 
 const HOME_SEO = {
-  title: 'Retina Educational Consultancy | MBBS in Bangladesh & Abroad',
-  description: "Retina Educational Consultancy is Nepal's No. 1 consultancy for MBBS Admission and study in Bangladesh. Get expert guidance for MBBS study and admission in international colleges, local guardianship, and NMCLE coaching.",
-  keywords: "retina educational consultancy, mbbs study and admission in international colleges, Mbbs in bangladesh, Nepal's No. 1 consultancy for MBBS Admission and study in Bangladesh, local guardian in Bangladesh, NMCLE preparation classes",
+  title: 'Retina Educational Consultancy | MBBS Admission in Bangladesh & Abroad',
+  description: "Retina Educational Consultancy is Nepal's No. 1 consultancy for medical admission in Bangladesh. Get expert guidance for MBBS admission in international medical colleges, local guardianship, and NMCLE coaching.",
+  keywords: "retina educational consultancy, medical admission in international colleges, MBBS admission in Bangladesh, Nepal's No. 1 consultancy for medical admission in Bangladesh, local guardian in Bangladesh, NMCLE preparation classes",
   canonical: 'https://retinaconsultancy.edu.np/',
   image: 'https://retinaconsultancy.edu.np/images/retina-hero.jpg',
 };
@@ -184,7 +184,7 @@ export default function HomePage() {
 
               <HeroFadeIn delay={0.18} y={12}>
                 <h2 className="text-xl sm:text-2xl font-bold text-[#102A43] tracking-tight leading-snug font-display">
-                  Nepal's No. 1 Consultancy for MBBS Admission and Study in Bangladesh
+                  Nepal's No. 1 Consultancy for Medical Admission in Bangladesh
                 </h2>
               </HeroFadeIn>
 
@@ -192,10 +192,10 @@ export default function HomePage() {
               <HeroFadeIn delay={0.24} y={12}>
                 <div className="space-y-3">
                   <p className="text-base sm:text-lg text-[#5B6472] max-w-xl leading-relaxed font-normal">
-                    Retina Educational Consultancy Pvt. Ltd. is Nepal's No. 1 consultancy for <strong>MBBS Study and Admission in International Colleges</strong>. Based in Putalisadak, Kathmandu, we help Nepali students find pathways for <strong>MBBS in Bangladesh</strong> and other leading international medical programs.
+                    Retina Educational Consultancy Pvt. Ltd. is Nepal's No. 1 consultancy for <strong>Medical Admission in International Colleges</strong>. Based in Putalisadak, Kathmandu, we help Nepali students secure <strong>MBBS Admission in Bangladesh</strong> and other leading international medical programs.
                   </p>
                   <p className="text-sm sm:text-base text-[#5B6472] max-w-xl leading-relaxed font-normal">
-                    From counselling and college selection to admission, documentation, visa, travel, guardianship and licensing exam preparation, Retina stands with you at every step. If you are looking for the best consultancy for MBBS in Bangladesh from Nepal, Retina Educational Consultancy is the name students and parents trust.
+                    From counselling and college selection to admission, documentation, visa, travel, guardianship and licensing exam preparation, Retina stands with you at every step. If you are looking for the best consultancy for MBBS admission in Bangladesh from Nepal, Retina Educational Consultancy is the name students and parents trust.
                   </p>
                 </div>
               </HeroFadeIn>
@@ -427,7 +427,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          3. STUDY MBBS IN BANGLADESH PREVIEW
+          3. MBBS ADMISSION IN BANGLADESH PREVIEW
           ============================================================ */}
       <section className="py-10 sm:py-12 bg-[#F8FAFC] border-y border-[#E2E8F0]/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -437,7 +437,7 @@ export default function HomePage() {
                 BANGLADESH MEDICAL COLLEGES
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#102A43] tracking-tight font-display">
-                Study MBBS in Bangladesh
+                MBBS Admission in Bangladesh
               </h2>
               <p className="text-sm text-[#5B6472] leading-relaxed">
                 Discover leading medical colleges in Bangladesh, explore their facilities, understand admission options, and find the information you need to begin your medical journey.
@@ -528,12 +528,12 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
             <ScrollReveal y={14}>
               <article className="h-full rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-5 sm:p-6">
-                <p className="text-xs font-bold uppercase tracking-wider text-[#0F559E]">01 · During study</p>
+                <p className="text-xs font-bold uppercase tracking-wider text-[#0F559E]">01 · After admission</p>
                 <h3 className="mt-2 text-xl sm:text-2xl font-bold text-[#102A43] font-display">
-                  Support During Your Study
+                  Local Support in Bangladesh
                 </h3>
                 <p className="mt-2 text-sm text-[#5B6472] leading-relaxed">
-                  Retina provides a local guardian throughout the 6 years of study in Bangladesh, so students and parents always have someone reliable nearby.
+                  Retina provides a local guardian throughout the six-year medical program in Bangladesh, so students and parents have a reliable point of contact nearby.
                 </p>
               </article>
             </ScrollReveal>
@@ -738,7 +738,7 @@ export default function HomePage() {
                     <div className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#0E4BA4] mt-2 shrink-0"></span>
                       <div>
-                        <strong className="text-[#102A43] block">Top Study Destinations:</strong>
+                        <strong className="text-[#102A43] block">Medical Admission Destinations:</strong>
                         Bangladesh (highest clinical bed flow and similar syllabus), China, India, and Philippines.
                       </div>
                     </div>
