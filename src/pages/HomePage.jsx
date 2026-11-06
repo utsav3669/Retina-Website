@@ -133,6 +133,8 @@ export default function HomePage() {
     <div className="space-y-0">
       <Helmet>
         <title>{HOME_SEO.title}</title>
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
         <meta name="description" content={HOME_SEO.description} />
         <meta name="keywords" content={HOME_SEO.keywords} />
         <meta name="robots" content="index,follow" />
