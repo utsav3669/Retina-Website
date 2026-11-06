@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { 
   ArrowRight, 
   MapPin, 
@@ -19,7 +20,6 @@ import FAQAccordion from '../components/FAQAccordion';
 import GoogleReviewsSection from '../components/GoogleReviewsSection';
 import CollegePhoto from '../components/CollegePhoto';
 import { bangladeshColleges } from '../data/bangladeshCollegesData';
-import usePageMetadata from '../hooks/usePageMetadata';
 import { 
   ScrollReveal, 
   StaggerGrid, 
@@ -36,16 +36,26 @@ import {
   CardProgressMotif
 } from '../components/AbstractElements';
 
+const HOME_SEO = {
+  title: 'Retina Educational Consultancy | MBBS in Bangladesh & Abroad',
+  description: "Retina Educational Consultancy is Nepal's No. 1 consultancy for MBBS Admission and study in Bangladesh. Get expert guidance for MBBS study and admission in international colleges, local guardianship, and NMCLE coaching.",
+  keywords: "retina educational consultancy, mbbs study and admission in international colleges, Mbbs in bangladesh, Nepal's No. 1 consultancy for MBBS Admission and study in Bangladesh, local guardian in Bangladesh, NMCLE preparation classes",
+  canonical: 'https://retinaconsultancy.edu.np/',
+  image: 'https://retinaconsultancy.edu.np/images/retina-hero.jpg',
+};
+
 export default function HomePage() {
   // Editorial blog layout: 1 featured article + 3 smaller articles
   const featuredBlog = blogs.find(b => b.featuredOnHome) || blogs[0];
   const secondaryBlogs = blogs.filter(b => b.id !== featuredBlog.id).slice(0, 3);
   const featuredBangladeshColleges = bangladeshColleges.filter((college) => college.featuredOnHome).slice(0, 3);
 
-  usePageMetadata(
-    'Retina Educational Consultancy | Medical Admissions Abroad',
-    "Nepal's No. 1 consultancy for medical admission in Bangladesh. MBBS and BDS admission, local guardian for 6 years, and NMCLE preparation classes."
-  );
+  React.useEffect(() => {
+    // HomePage uses Helmet; clear the static or previous route's managed tags.
+    document.head
+      .querySelectorAll('meta[data-page-meta], link[data-page-canonical], title[data-default-title]')
+      .forEach((element) => element.remove());
+  }, []);
 
   // Retina 4 Core Advantages (From Banner)
   const whyPoints = [
@@ -121,6 +131,23 @@ export default function HomePage() {
 
   return (
     <div className="space-y-0">
+      <Helmet>
+        <title>{HOME_SEO.title}</title>
+        <meta name="description" content={HOME_SEO.description} />
+        <meta name="keywords" content={HOME_SEO.keywords} />
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href={HOME_SEO.canonical} />
+        <meta property="og:title" content={HOME_SEO.title} />
+        <meta property="og:description" content={HOME_SEO.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={HOME_SEO.canonical} />
+        <meta property="og:site_name" content="Retina Educational Consultancy" />
+        <meta property="og:image" content={HOME_SEO.image} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={HOME_SEO.title} />
+        <meta name="twitter:description" content={HOME_SEO.description} />
+        <meta name="twitter:image" content={HOME_SEO.image} />
+      </Helmet>
       
       {/* ============================================================
           1. HERO SECTION (Refined Spacing)
@@ -151,15 +178,21 @@ export default function HomePage() {
               {/* Large Headline */}
               <HeroFadeIn delay={0.14} y={12}>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#102A43] tracking-tight leading-[1.14] font-display">
-                  Nepal's No. 1 Consultancy for Medical Admission in Bangladesh
+                  Retina Educational Consultancy
                 </h1>
               </HeroFadeIn>
 
+              <HeroFadeIn delay={0.18} y={12}>
+                <h2 className="text-xl sm:text-2xl font-bold text-[#102A43] tracking-tight leading-snug font-display">
+                  Nepal's No. 1 Consultancy for MBBS Admission and Study in Bangladesh
+                </h2>
+              </HeroFadeIn>
+
               {/* Supporting Paragraph */}
-              <HeroFadeIn delay={0.22} y={12}>
+              <HeroFadeIn delay={0.24} y={12}>
                 <div className="space-y-3">
                   <p className="text-base sm:text-lg text-[#5B6472] max-w-xl leading-relaxed font-normal">
-                    Retina Educational Consultancy Pvt. Ltd. is Nepal's No. 1 consultancy for medical admission in Bangladesh. Based in Putalisadak, Kathmandu, we help Nepali students get MBBS and BDS admission in top private medical and dental colleges of Bangladesh.
+                    Retina Educational Consultancy Pvt. Ltd. is Nepal's No. 1 consultancy for <strong>MBBS Study and Admission in International Colleges</strong>. Based in Putalisadak, Kathmandu, we help Nepali students find pathways for <strong>MBBS in Bangladesh</strong> and other leading international medical programs.
                   </p>
                   <p className="text-sm sm:text-base text-[#5B6472] max-w-xl leading-relaxed font-normal">
                     From counselling and college selection to admission, documentation, visa, travel, guardianship and licensing exam preparation, Retina stands with you at every step. If you are looking for the best consultancy for MBBS in Bangladesh from Nepal, Retina Educational Consultancy is the name students and parents trust.
@@ -484,10 +517,10 @@ export default function HomePage() {
                 SUPPORT BEYOND ADMISSION
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#102A43] tracking-tight font-display">
-                Your Support Through Study, Internship, and Beyond
+                6 Years of Local Guardianship in Bangladesh
               </h2>
               <p className="text-sm sm:text-base text-[#5B6472] leading-relaxed">
-                Retina supports students through six years of study in Bangladesh, NMCLE preparation during internship, and job placement support after passing NMCLE.
+                Retina Educational Consultancy provides complete, 24/7 local assistance and full guardianship throughout your entire 6-year medical study period from our dedicated Dhaka office.
               </p>
             </div>
           </ScrollReveal>
@@ -497,7 +530,7 @@ export default function HomePage() {
               <article className="h-full rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-5 sm:p-6">
                 <p className="text-xs font-bold uppercase tracking-wider text-[#0F559E]">01 · During study</p>
                 <h3 className="mt-2 text-xl sm:text-2xl font-bold text-[#102A43] font-display">
-                  Local Guardianship in Bangladesh
+                  Support During Your Study
                 </h3>
                 <p className="mt-2 text-sm text-[#5B6472] leading-relaxed">
                   Retina provides a local guardian throughout the 6 years of study in Bangladesh, so students and parents always have someone reliable nearby.
@@ -508,11 +541,11 @@ export default function HomePage() {
             <ScrollReveal y={14} delay={0.08}>
               <article className="h-full rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-5 sm:p-6">
                 <p className="text-xs font-bold uppercase tracking-wider text-[#0F559E]">02 · During internship</p>
-                <h3 className="mt-2 text-xl sm:text-2xl font-bold text-[#102A43] font-display">
-                  NMCLE Preparation Classes
-                </h3>
+                <h2 className="mt-2 text-xl sm:text-2xl font-bold text-[#102A43] font-display">
+                  NMCLE Preparation Classes &amp; Coaching
+                </h2>
                 <p className="mt-2 text-sm text-[#5B6472] leading-relaxed">
-                  After passing MBBS, when students enter their internship, we guide them in NMCLE preparation with online classes and study materials.
+                  Get a head start on your medical license with free NMCLE exam preparation books, comprehensive study materials, and a complimentary one-year online subscription to NMCLE coaching starting on day one of your internship.
                 </p>
               </article>
             </ScrollReveal>
